@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import LuxuryGrid from "@/components/LuxuryGrid";
+import OurMission from "@/components/OurMission";
 import InsuranceProducts from "@/components/InsuranceProducts";
 import SecondaryInsurance from "@/components/SecondaryInsurance";
 import WhyLifePlans from "@/components/WhyLifePlans";
@@ -16,6 +17,7 @@ const Index = () => {
       <Header />
       <Hero />
       <LuxuryGrid />
+      <OurMission />
       <InsuranceProducts />
       <SecondaryInsurance />
       <WhyLifePlans />

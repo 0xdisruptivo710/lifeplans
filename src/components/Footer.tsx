@@ -93,15 +93,21 @@ const Footer = () => {
             <ul className="space-y-4 text-sm">
               <li className="text-gray-medium">
                 <span className="block font-light text-white mb-1">Telefone</span>
-                (15) 4141-2625
+                <a href="tel:+551541412625" className="hover:text-gold-accent transition-colors">
+                  (15) 4141-2625
+                </a>
               </li>
               <li className="text-gray-medium">
                 <span className="block font-light text-white mb-1">WhatsApp</span>
-                (15) 4141-2625
+                <a href="https://wa.me/551541412625?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es" target="_blank" rel="noopener noreferrer" className="hover:text-gold-accent transition-colors">
+                  (15) 4141-2625
+                </a>
               </li>
               <li className="text-gray-medium">
                 <span className="block font-light text-white mb-1">E-mail</span>
-                financeiro@lifeplans.com.br
+                <a href="mailto:financeiro@lifeplans.com.br" className="hover:text-gold-accent transition-colors">
+                  financeiro@lifeplans.com.br
+                </a>
               </li>
               <li className="text-gray-medium">
                 <span className="block font-light text-white mb-1">Localização</span>

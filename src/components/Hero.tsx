@@ -36,19 +36,23 @@ const Hero = () => {
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-5">
-            <Button
-              size="lg"
-              className="bg-gradient-gold text-black-primary hover:opacity-90 font-light px-10 py-6 rounded-none text-base hover:-translate-y-1 transition-all duration-300 shadow-elegant uppercase tracking-wider"
-            >
-              Solicitar Cotação
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-2 border-gold-accent text-gold-accent hover:bg-gold-accent hover:text-black-primary font-light px-10 py-6 rounded-none text-base transition-all duration-300 uppercase tracking-wider"
-            >
-              Conhecer Planos
-            </Button>
+            <a href="https://wa.me/551541412625?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es" target="_blank" rel="noopener noreferrer">
+              <Button
+                size="lg"
+                className="bg-gradient-gold text-black-primary hover:opacity-90 font-light px-10 py-6 rounded-none text-base hover:-translate-y-1 transition-all duration-300 shadow-elegant uppercase tracking-wider w-full sm:w-auto"
+              >
+                Solicitar Cotação
+              </Button>
+            </a>
+            <a href="#planos">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-2 border-gold-accent text-gold-accent hover:bg-gold-accent hover:text-black-primary font-light px-10 py-6 rounded-none text-base transition-all duration-300 uppercase tracking-wider w-full sm:w-auto"
+              >
+                Conhecer Planos
+              </Button>
+            </a>
           </div>
         </div>
       </div>

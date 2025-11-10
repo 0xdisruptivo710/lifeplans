@@ -33,22 +33,25 @@ const ContactForm = () => {
     {
       icon: Phone,
       title: "Telefone",
-      info: "(11) 3456-7890",
+      info: "(15) 4141-2625",
+      link: "tel:+551541412625",
     },
     {
       icon: Mail,
       title: "E-mail",
-      info: "contato@lifeplans.com.br",
+      info: "financeiro@lifeplans.com.br",
+      link: "mailto:financeiro@lifeplans.com.br",
     },
     {
       icon: MapPin,
       title: "Endereço",
-      info: "Av. Paulista, 1000 - São Paulo, SP",
+      info: "Sorocaba - SP",
     },
     {
       icon: MessageCircle,
       title: "WhatsApp",
-      info: "(11) 98765-4321",
+      info: "(15) 4141-2625",
+      link: "https://wa.me/551541412625?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es",
     },
   ];
 
@@ -75,7 +78,13 @@ const ContactForm = () => {
                       <h4 className="font-semibold text-white mb-1">
                         {item.title}
                       </h4>
-                      <p className="text-gray-medium">{item.info}</p>
+                      {item.link ? (
+                        <a href={item.link} target={item.link.startsWith('http') ? '_blank' : undefined} rel={item.link.startsWith('http') ? 'noopener noreferrer' : undefined} className="text-gray-medium hover:text-gold-accent transition-colors">
+                          {item.info}
+                        </a>
+                      ) : (
+                        <p className="text-gray-medium">{item.info}</p>
+                      )}
                     </div>
                   </div>
                 );

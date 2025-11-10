@@ -59,12 +59,14 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
-            <Button
-              variant="default"
-              className="bg-gradient-gold text-black-primary hover:opacity-90 font-light px-7 py-5 rounded-none shadow-elegant hover:scale-105 transition-all duration-300 uppercase tracking-wider text-sm"
-            >
-              Faça sua Cotação
-            </Button>
+            <a href="https://wa.me/551541412625?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es" target="_blank" rel="noopener noreferrer">
+              <Button
+                variant="default"
+                className="bg-gradient-gold text-black-primary hover:opacity-90 font-light px-7 py-5 rounded-none shadow-elegant hover:scale-105 transition-all duration-300 uppercase tracking-wider text-sm"
+              >
+                Faça sua Cotação
+              </Button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -95,12 +97,14 @@ const Header = () => {
                 {item.label}
               </a>
             ))}
-            <Button
-              variant="default"
-              className="bg-gradient-gold text-black-primary hover:opacity-90 font-light rounded-none w-full uppercase tracking-wider"
-            >
-              Faça sua Cotação
-            </Button>
+            <a href="https://wa.me/551541412625?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es" target="_blank" rel="noopener noreferrer" className="w-full">
+              <Button
+                variant="default"
+                className="bg-gradient-gold text-black-primary hover:opacity-90 font-light rounded-none w-full uppercase tracking-wider"
+              >
+                Faça sua Cotação
+              </Button>
+            </a>
           </nav>
         </div>
       )}

@@ -4,6 +4,14 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
+import PlanoSaudeIndividual from "./pages/PlanoSaudeIndividual";
+import PlanoSaudeFamiliar from "./pages/PlanoSaudeFamiliar";
+import PlanoSaudeEmpresarial from "./pages/PlanoSaudeEmpresarial";
+import PlanoOdontologico from "./pages/PlanoOdontologico";
+import SeguroVida from "./pages/SeguroVida";
+import SeguroAuto from "./pages/SeguroAuto";
+import SeguroResidencial from "./pages/SeguroResidencial";
+import SeguroEmpresarial from "./pages/SeguroEmpresarial";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -16,6 +24,14 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/plano-saude-individual" element={<PlanoSaudeIndividual />} />
+          <Route path="/plano-saude-familiar" element={<PlanoSaudeFamiliar />} />
+          <Route path="/plano-saude-empresarial" element={<PlanoSaudeEmpresarial />} />
+          <Route path="/plano-odontologico" element={<PlanoOdontologico />} />
+          <Route path="/seguro-vida" element={<SeguroVida />} />
+          <Route path="/seguro-auto" element={<SeguroAuto />} />
+          <Route path="/seguro-residencial" element={<SeguroResidencial />} />
+          <Route path="/seguro-empresarial" element={<SeguroEmpresarial />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

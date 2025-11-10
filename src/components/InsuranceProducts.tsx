@@ -36,14 +36,14 @@ const products = [
 
 const InsuranceProducts = () => {
   return (
-    <section id="seguros" className="section-padding bg-secondary">
+    <section id="seguros" className="section-padding bg-black-secondary">
       <div className="container-custom">
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="text-accent font-semibold text-sm tracking-wider uppercase">
+          <span className="text-gold-accent font-semibold text-sm tracking-wider uppercase">
             NOSSOS PRODUTOS
           </span>
-          <h2 className="text-navy-primary mt-4 mb-6">
+          <h2 className="text-white mt-4 mb-6">
             Seguros para Cada Momento da Sua Vida
           </h2>
           <p className="text-gray-medium text-lg max-w-2xl mx-auto">
@@ -58,18 +58,18 @@ const InsuranceProducts = () => {
             return (
               <Card
                 key={index}
-                className="group p-8 bg-white border border-border hover-lift cursor-pointer"
+                className="group p-8 bg-black-primary border border-gray-dark hover-lift cursor-pointer"
                 style={{
                   animationDelay: `${index * 0.1}s`,
                 }}
               >
                 <div className="mb-6">
-                  <div className="w-14 h-14 rounded-full bg-accent/10 flex items-center justify-center group-hover:bg-accent transition-colors duration-300">
-                    <Icon className="text-accent group-hover:text-white transition-colors duration-300" size={28} />
+                  <div className="w-14 h-14 rounded-full bg-gold-accent/10 flex items-center justify-center group-hover:bg-gold-accent transition-colors duration-300">
+                    <Icon className="text-gold-accent group-hover:text-black-primary transition-colors duration-300" size={28} />
                   </div>
                 </div>
                 
-                <h3 className="text-navy-primary mb-4 text-2xl font-semibold">
+                <h3 className="text-white mb-4 text-2xl font-semibold">
                   {product.title}
                 </h3>
                 
@@ -79,7 +79,7 @@ const InsuranceProducts = () => {
                 
                 <a
                   href="#contato"
-                  className="inline-flex items-center text-accent font-semibold hover:gap-2 transition-all duration-300 group"
+                  className="inline-flex items-center text-gold-accent font-semibold hover:gap-2 transition-all duration-300 group"
                 >
                   Saiba mais
                   <ArrowRight className="ml-1 group-hover:translate-x-1 transition-transform duration-300" size={18} />

@@ -29,14 +29,14 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-black-primary">
       <div className="container-custom">
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="text-accent font-semibold text-sm tracking-wider uppercase">
+          <span className="text-gold-accent font-semibold text-sm tracking-wider uppercase">
             PROCESSO SIMPLES
           </span>
-          <h2 className="text-navy-primary mt-4 mb-6">
+          <h2 className="text-white mt-4 mb-6">
             Como Contratar Seu Seguro
           </h2>
           <p className="text-gray-medium text-lg max-w-2xl mx-auto">
@@ -47,7 +47,7 @@ const HowItWorks = () => {
         {/* Steps Timeline */}
         <div className="relative">
           {/* Connection Line */}
-          <div className="hidden lg:block absolute top-16 left-0 right-0 h-0.5 bg-border" style={{ width: 'calc(100% - 10rem)', marginLeft: '5rem' }} />
+          <div className="hidden lg:block absolute top-16 left-0 right-0 h-0.5 bg-gray-dark" style={{ width: 'calc(100% - 10rem)', marginLeft: '5rem' }} />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
             {steps.map((step, index) => {
@@ -61,19 +61,19 @@ const HowItWorks = () => {
                   }}
                 >
                   {/* Number Circle */}
-                  <div className="relative z-10 w-32 h-32 rounded-full bg-gradient-to-br from-accent to-blue-600 flex items-center justify-center mb-6 shadow-elegant group-hover:scale-110 transition-transform duration-300">
-                    <span className="text-white text-4xl font-bold font-montserrat">
+                  <div className="relative z-10 w-32 h-32 rounded-full bg-gradient-gold flex items-center justify-center mb-6 shadow-elegant group-hover:scale-110 transition-transform duration-300">
+                    <span className="text-black-primary text-4xl font-bold font-montserrat">
                       {step.number}
                     </span>
                   </div>
 
                   {/* Icon */}
                   <div className="mb-4">
-                    <Icon className="text-accent" size={32} />
+                    <Icon className="text-gold-accent" size={32} />
                   </div>
 
                   {/* Content */}
-                  <h3 className="text-navy-primary text-xl font-semibold mb-3">
+                  <h3 className="text-white text-xl font-semibold mb-3">
                     {step.title}
                   </h3>
                   <p className="text-gray-medium leading-relaxed">

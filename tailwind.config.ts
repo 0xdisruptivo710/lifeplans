@@ -47,11 +47,17 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        navy: {
-          primary: "hsl(var(--navy-primary))",
-          dark: "hsl(var(--navy-dark))",
+        black: {
+          primary: "hsl(var(--black-primary))",
+          secondary: "hsl(var(--black-secondary))",
         },
+        gold: {
+          accent: "hsl(var(--gold-accent))",
+          light: "hsl(var(--gold-light))",
+        },
+        'gray-dark': "hsl(var(--gray-dark))",
         'gray-medium': "hsl(var(--gray-medium))",
+        'gray-light': "hsl(var(--gray-light))",
       },
       boxShadow: {
         elegant: "var(--shadow-elegant)",
@@ -61,6 +67,7 @@ export default {
       backgroundImage: {
         'gradient-hero': "var(--gradient-hero)",
         'gradient-cta': "var(--gradient-cta)",
+        'gradient-gold': "var(--gradient-gold)",
       },
       borderRadius: {
         lg: "var(--radius)",

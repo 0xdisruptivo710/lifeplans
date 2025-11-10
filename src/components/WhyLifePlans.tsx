@@ -26,7 +26,7 @@ const differentials = [
 
 const WhyLifePlans = () => {
   return (
-    <section id="sobre" className="section-padding bg-navy-primary relative overflow-hidden">
+    <section id="sobre" className="section-padding bg-black-primary relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -38,13 +38,13 @@ const WhyLifePlans = () => {
       <div className="container-custom relative z-10">
         {/* Header */}
         <div className="text-center mb-20">
-          <span className="text-accent font-semibold text-sm tracking-wider uppercase">
+          <span className="text-gold-accent font-semibold text-sm tracking-wider uppercase">
             DIFERENCIAIS
           </span>
           <h2 className="text-white mt-4 mb-6">
             Por Que Escolher a Life Plans
           </h2>
-          <p className="text-white/80 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-light text-lg max-w-2xl mx-auto">
             Compromisso com excelência e proteção que vai além do seguro
           </p>
         </div>
@@ -62,13 +62,13 @@ const WhyLifePlans = () => {
                 }}
               >
                 <div className="mb-6 flex justify-center">
-                  <div className="w-20 h-20 rounded-full border-2 border-white/20 flex items-center justify-center group-hover:border-accent transition-colors duration-300">
-                    <Icon className="text-white group-hover:text-accent transition-colors duration-300" size={36} />
+                  <div className="w-20 h-20 rounded-full border-2 border-gray-dark flex items-center justify-center group-hover:border-gold-accent transition-colors duration-300">
+                    <Icon className="text-gray-light group-hover:text-gold-accent transition-colors duration-300" size={36} />
                   </div>
                 </div>
 
                 {item.number && (
-                  <div className="text-5xl font-bold text-white mb-3 font-montserrat">
+                  <div className="text-5xl font-bold text-gold-accent mb-3 font-montserrat">
                     {item.number}
                   </div>
                 )}
@@ -77,7 +77,7 @@ const WhyLifePlans = () => {
                   {item.title}
                 </h3>
 
-                <p className="text-white/70 leading-relaxed">
+                <p className="text-gray-medium leading-relaxed">
                   {item.description}
                 </p>
               </div>

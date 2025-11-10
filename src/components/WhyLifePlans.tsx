@@ -3,24 +3,24 @@ import { Headset, Award, Zap, Clock } from "lucide-react";
 const differentials = [
   {
     icon: Headset,
-    number: "15+",
+    number: "13+",
     title: "Anos de Experiência",
-    description: "Expertise consolidada no mercado de seguros",
+    description: "Expertise consolidada em planos de saúde e seguros em Sorocaba",
   },
   {
     icon: Award,
-    title: "Melhores Seguradoras",
-    description: "Parcerias com as empresas mais confiáveis do mercado",
+    title: "Melhores Operadoras",
+    description: "Amil, SulAmérica, Bradesco, Unimed, Intermédica e mais",
   },
   {
     icon: Zap,
-    title: "Agilidade no Atendimento",
-    description: "Resposta rápida em cotações e acionamentos de sinistro",
+    title: "Atendimento Personalizado",
+    description: "Consultoria especializada pensando no seu perfil e necessidades",
   },
   {
     icon: Clock,
-    title: "Suporte 24/7",
-    description: "Assistência disponível quando você mais precisa",
+    title: "Custo x Benefício",
+    description: "As melhores soluções com transparência e profissionalismo",
   },
 ];
 
@@ -41,11 +41,11 @@ const WhyLifePlans = () => {
           <span className="text-gold-accent font-semibold text-sm tracking-wider uppercase">
             DIFERENCIAIS
           </span>
-          <h2 className="text-white mt-4 mb-6">
+          <h2 className="text-white mt-4 mb-6 font-raleway font-light">
             Por Que Escolher a Life Plans
           </h2>
-          <p className="text-gray-light text-lg max-w-2xl mx-auto">
-            Compromisso com excelência e proteção que vai além do seguro
+          <p className="text-gray-light text-lg max-w-2xl mx-auto font-extralight">
+            Profissionais especializados com atendimento de excelência
           </p>
         </div>
 
@@ -73,11 +73,11 @@ const WhyLifePlans = () => {
                   </div>
                 )}
 
-                <h3 className="text-white text-xl font-semibold mb-4">
+                <h3 className="text-white text-xl font-light mb-4">
                   {item.title}
                 </h3>
 
-                <p className="text-gray-medium leading-relaxed">
+                <p className="text-gray-medium leading-relaxed font-extralight">
                   {item.description}
                 </p>
               </div>

@@ -1,53 +1,54 @@
-import { Card } from "@/components/ui/card";
-import { Heart, Home, Car, Building2, PiggyBank, Plane, ArrowRight } from "lucide-react";
+import { Heart, Smile, Shield, Car, Home, Building2 } from "lucide-react";
 
 const products = [
   {
     icon: Heart,
-    title: "Seguro de Vida",
-    description: "Proteção financeira para sua família com coberturas personalizadas e assistência completa",
+    title: "Planos de Saúde",
+    description: "Individual, familiar e empresarial com as melhores operadoras: Amil, SulAmérica, Bradesco, Unimed e mais",
+    featured: true,
   },
   {
-    icon: Home,
-    title: "Seguro Residencial",
-    description: "Proteja seu lar contra imprevistos com cobertura completa e assistência 24h",
+    icon: Smile,
+    title: "Planos Odontológicos",
+    description: "Cuide da saúde bucal da sua família com planos completos e rede credenciada",
+    featured: true,
+  },
+  {
+    icon: Shield,
+    title: "Seguro de Vida",
+    description: "Proteja sua família e garanta tranquilidade financeira em qualquer situação",
   },
   {
     icon: Car,
     title: "Seguro Auto",
-    description: "Proteção total para seu veículo com coberturas flexíveis e atendimento ágil",
+    description: "Proteção completa para seu veículo com assistência 24h",
+  },
+  {
+    icon: Home,
+    title: "Seguro Residencial",
+    description: "Proteja seu lar contra imprevistos com cobertura total",
   },
   {
     icon: Building2,
     title: "Seguro Empresarial",
-    description: "Soluções corporativas para proteger seu negócio e garantir a continuidade operacional",
-  },
-  {
-    icon: PiggyBank,
-    title: "Previdência Privada",
-    description: "Planeje seu futuro com tranquilidade através de investimentos seguros e rentáveis",
-  },
-  {
-    icon: Plane,
-    title: "Seguro Viagem",
-    description: "Viaje com segurança total, cobertura internacional e assistência em qualquer lugar",
+    description: "Soluções completas para proteger seu negócio",
   },
 ];
 
 const InsuranceProducts = () => {
   return (
-    <section id="seguros" className="section-padding bg-black-secondary">
+    <section id="planos" className="section-padding bg-black-secondary relative overflow-hidden">
       <div className="container-custom">
         {/* Header */}
-        <div className="text-center mb-16">
-          <span className="text-gold-accent font-semibold text-sm tracking-wider uppercase">
-            NOSSOS PRODUTOS
+        <div className="text-center mb-20">
+          <span className="text-gold-accent font-light text-sm tracking-wider uppercase mb-4 block">
+            NOSSOS SERVIÇOS
           </span>
-          <h2 className="text-white mt-4 mb-6">
-            Seguros para Cada Momento da Sua Vida
+          <h2 className="text-white mt-4 mb-6 font-raleway font-light">
+            Planos de Saúde e Seguros em Sorocaba
           </h2>
-          <p className="text-gray-medium text-lg max-w-2xl mx-auto">
-            Proteção completa e personalizada para o que você mais valoriza
+          <p className="text-gray-light text-lg max-w-2xl mx-auto font-extralight">
+            Soluções completas com as melhores operadoras do mercado
           </p>
         </div>
 
@@ -56,35 +57,39 @@ const InsuranceProducts = () => {
           {products.map((product, index) => {
             const Icon = product.icon;
             return (
-              <Card
+              <div
                 key={index}
-                className="group p-8 bg-black-primary border border-gray-dark hover-lift cursor-pointer"
+                className={`bg-black-primary border ${product.featured ? 'border-gold-accent' : 'border-gray-dark'} p-8 hover:border-gold-accent transition-all duration-500 group hover:-translate-y-2 relative`}
                 style={{
                   animationDelay: `${index * 0.1}s`,
                 }}
               >
-                <div className="mb-6">
-                  <div className="w-14 h-14 rounded-full bg-gold-accent/10 flex items-center justify-center group-hover:bg-gold-accent transition-colors duration-300">
-                    <Icon className="text-gold-accent group-hover:text-black-primary transition-colors duration-300" size={28} />
+                {product.featured && (
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gold-accent text-black-primary px-4 py-1 text-xs font-light uppercase tracking-wider">
+                    Destaque
                   </div>
+                )}
+                
+                <div className="mb-6">
+                  <Icon className="text-gray-light group-hover:text-gold-accent transition-colors duration-300" size={48} strokeWidth={1.5} />
                 </div>
                 
-                <h3 className="text-white mb-4 text-2xl font-semibold">
+                <h3 className="text-white text-2xl font-light mb-4 group-hover:text-gold-accent transition-colors duration-300">
                   {product.title}
                 </h3>
                 
-                <p className="text-gray-medium leading-relaxed mb-6">
+                <p className="text-gray-medium leading-relaxed mb-6 font-extralight">
                   {product.description}
                 </p>
                 
-                <a
+                <a 
                   href="#contato"
-                  className="inline-flex items-center text-gold-accent font-semibold hover:gap-2 transition-all duration-300 group"
+                  className="inline-flex items-center text-gold-accent font-light hover:gap-3 gap-2 transition-all duration-300"
                 >
                   Saiba mais
-                  <ArrowRight className="ml-1 group-hover:translate-x-1 transition-transform duration-300" size={18} />
+                  <span className="text-lg">→</span>
                 </a>
-              </Card>
+              </div>
             );
           })}
         </div>

@@ -100,7 +100,7 @@ export default {
         "bounce-subtle": "bounce-subtle 2s ease-in-out infinite",
       },
       fontFamily: {
-        'montserrat': ['Montserrat', 'sans-serif'],
+        'raleway': ['Raleway', 'sans-serif'],
         'inter': ['Inter', 'sans-serif'],
       },
     },

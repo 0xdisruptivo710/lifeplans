@@ -25,29 +25,29 @@ const Hero = () => {
       {/* Content */}
       <div className="container-custom relative z-10">
         <div className="max-w-3xl animate-fade-in-up">
-          <h1 className="text-white mb-6 text-balance">
-            A Solução em Seguros
+          <h1 className="text-white mb-6 text-balance font-raleway font-extralight">
+            Planos de Saúde e Seguros
             <br />
-            Para Você e Sua Empresa
+            Para Você e Sua Família
           </h1>
-          <p className="text-gray-light text-xl md:text-2xl font-light mb-12 leading-relaxed max-w-2xl">
-            Sinta-se seguro com a gente, venha para a Life Plans
+          <p className="text-gray-light text-xl md:text-2xl font-extralight mb-12 leading-relaxed max-w-2xl">
+            13 anos protegendo o que realmente importa em Sorocaba-SP
           </p>
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-5">
             <Button
               size="lg"
-              className="bg-gradient-gold text-black-primary hover:opacity-90 font-semibold px-10 py-6 rounded-none text-lg hover:-translate-y-1 transition-all duration-300 shadow-elegant uppercase tracking-wider"
+              className="bg-gradient-gold text-black-primary hover:opacity-90 font-light px-10 py-6 rounded-none text-base hover:-translate-y-1 transition-all duration-300 shadow-elegant uppercase tracking-wider"
             >
               Solicitar Cotação
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="border-2 border-gold-accent text-gold-accent hover:bg-gold-accent hover:text-black-primary font-semibold px-10 py-6 rounded-none text-lg transition-all duration-300 uppercase tracking-wider"
+              className="border-2 border-gold-accent text-gold-accent hover:bg-gold-accent hover:text-black-primary font-light px-10 py-6 rounded-none text-base transition-all duration-300 uppercase tracking-wider"
             >
-              Conhecer Produtos
+              Conhecer Planos
             </Button>
           </div>
         </div>

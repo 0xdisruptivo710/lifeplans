@@ -1,38 +1,83 @@
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
-import heroImage from "@/assets/hero-geometric.jpg";
+import { useState, useEffect } from "react";
+import heroImage1 from "@/assets/hero-geometric-1.jpg";
+import heroImage2 from "@/assets/hero-geometric-2.jpg";
+
+const slides = [
+  {
+    image: heroImage1,
+    title: "Planos de Saúde e Seguros",
+    subtitle: "Para Você e Sua Família",
+    description: "16 anos protegendo o que realmente importa em Sorocaba-SP",
+  },
+  {
+    image: heroImage2,
+    title: "Proteção Completa",
+    subtitle: "Com as Melhores Operadoras",
+    description: "16 anos de experiência e confiança em Sorocaba-SP",
+  },
+];
 
 const Hero = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 5000); // Troca a cada 5 segundos
+
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section id="inicio" className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* Background with Geometric Pattern */}
-      <div className="absolute inset-0 z-0">
+      {/* Background Slides */}
+      {slides.map((slide, index) => (
         <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url(${heroImage})`,
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-hero" />
-        
-        {/* Diagonal Gold Accent Lines */}
-        <div className="absolute inset-0 overflow-hidden opacity-20">
-          <div className="absolute top-0 right-0 w-96 h-2 bg-gradient-gold transform rotate-45 translate-x-32 -translate-y-32"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-64 h-1 bg-gold-accent transform -rotate-45"></div>
+          key={index}
+          className={`absolute inset-0 z-0 transition-opacity duration-1000 ${
+            index === currentSlide ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{
+              backgroundImage: `url(${slide.image})`,
+            }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent" />
+          
+          {/* Diagonal Gold Accent Lines */}
+          <div className="absolute inset-0 overflow-hidden opacity-20">
+            <div className="absolute top-0 right-0 w-96 h-2 bg-gradient-gold transform rotate-45 translate-x-32 -translate-y-32"></div>
+            <div className="absolute bottom-1/4 right-1/4 w-64 h-1 bg-gold-accent transform -rotate-45"></div>
+          </div>
         </div>
-      </div>
+      ))}
 
       {/* Content */}
       <div className="container-custom relative z-10">
-        <div className="max-w-3xl animate-fade-in-up">
-          <h1 className="text-white mb-6 text-balance font-raleway font-extralight">
-            Planos de Saúde e Seguros
-            <br />
-            Para Você e Sua Família
-          </h1>
-          <p className="text-gray-light text-xl md:text-2xl font-extralight mb-12 leading-relaxed max-w-2xl">
-            13 anos protegendo o que realmente importa em Sorocaba-SP
-          </p>
+        <div className="max-w-3xl">
+          {slides.map((slide, index) => (
+            <div
+              key={index}
+              className={`transition-all duration-1000 ${
+                index === currentSlide 
+                  ? "opacity-100 translate-y-0" 
+                  : "opacity-0 absolute translate-y-4"
+              }`}
+            >
+              <h1 className="text-white mb-6 text-balance font-raleway font-extralight">
+                {slide.title}
+                <br />
+                {slide.subtitle}
+              </h1>
+              <p className="text-gray-light text-xl md:text-2xl font-extralight mb-12 leading-relaxed max-w-2xl">
+                {slide.description}
+              </p>
+            </div>
+          ))}
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-5">
@@ -55,6 +100,20 @@ const Hero = () => {
             </a>
           </div>
         </div>
+      </div>
+
+      {/* Slide Indicators */}
+      <div className="absolute bottom-20 left-1/2 -translate-x-1/2 z-10 flex gap-2">
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentSlide(index)}
+            className={`w-12 h-1 transition-all duration-300 ${
+              index === currentSlide ? "bg-gold-accent" : "bg-white/30"
+            }`}
+            aria-label={`Ir para slide ${index + 1}`}
+          />
+        ))}
       </div>
 
       {/* Scroll Indicator */}

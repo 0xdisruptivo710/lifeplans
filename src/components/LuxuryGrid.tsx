@@ -1,76 +1,85 @@
+import { Shield, Heart, Award, Users } from "lucide-react";
+import luxuryCar from "@/assets/luxury-car-diagonal.jpg";
+
 const LuxuryGrid = () => {
-  const images = [
+  return (
+    <>
+      {/* Diagonal Luxury Car Section */}
+      <section className="relative w-full h-48 overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: `url(${luxuryCar})`,
+            clipPath: "polygon(0 30%, 100% 0, 100% 70%, 0 100%)",
+          }}
+        />
+        <div 
+          className="absolute inset-0 bg-gradient-to-r from-gold-accent/20 via-transparent to-gold-accent/20" 
+          style={{
+            clipPath: "polygon(0 30%, 100% 0, 100% 70%, 0 100%)",
+          }}
+        />
+      </section>
+
+      {/* Features Section */}
+      <FeatureGrid />
+    </>
+  );
+};
+
+const FeatureGrid = () => {
+  const features = [
     {
-      url: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80",
-      alt: "Luxury Sports Car"
+      icon: Shield,
+      title: "Segurança",
+      description: "Proteção completa para você e sua família com as melhores operadoras"
     },
     {
-      url: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80",
-      alt: "Modern Architecture"
+      icon: Heart,
+      title: "Cuidado",
+      description: "Atendimento humanizado e personalizado para suas necessidades"
     },
     {
-      url: "https://images.unsplash.com/photo-1540932239986-30128078f3c5?w=800&q=80",
-      alt: "Luxury Yacht"
+      icon: Award,
+      title: "Excelência",
+      description: "16 anos de experiência e credibilidade no mercado"
     },
     {
-      url: "https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=800&q=80",
-      alt: "Private Jet"
-    },
-    {
-      url: "https://images.unsplash.com/photo-1584515933487-779824d29309?w=800&q=80",
-      alt: "Medical Equipment"
-    },
-    {
-      url: "https://images.unsplash.com/photo-1622321663345-9c0c0a7d57c3?w=800&q=80",
-      alt: "Luxury Watch"
-    },
-    {
-      url: "https://images.unsplash.com/photo-1596495578065-6e0763fa1178?w=800&q=80",
-      alt: "Equestrian Sport"
-    },
-    {
-      url: "https://images.unsplash.com/photo-1565008576549-57569a49371d?w=800&q=80",
-      alt: "Modern Architecture Interior"
+      icon: Users,
+      title: "Família",
+      description: "Planos adaptados para indivíduos, famílias e empresas"
     }
   ];
 
   return (
-    <section className="section-padding bg-black-primary">
+    <section className="section-padding bg-black-secondary">
       <div className="container-custom">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <span className="text-gold-accent font-semibold text-sm tracking-wider uppercase">
-            NOSSO POSICIONAMENTO
-          </span>
-          <h2 className="text-white mt-4 mb-6">
-            Proteção Premium para um Estilo de Vida Exclusivo
-          </h2>
-          <p className="text-gray-medium text-lg max-w-3xl mx-auto">
-            Soluções de seguros personalizadas para ativos de alto valor e momentos que realmente importam
-          </p>
-        </div>
-
-        {/* Image Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {images.map((image, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {features.map((feature, index) => (
             <div
               key={index}
-              className="relative aspect-square overflow-hidden group cursor-pointer"
-              style={{
-                animationDelay: `${index * 0.05}s`,
-              }}
+              className="group relative bg-black-primary p-8 border border-gray-dark hover:border-gold-accent transition-all duration-500 overflow-hidden"
             >
-              <div
-                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-                style={{
-                  backgroundImage: `url(${image.url})`,
-                }}
-              />
-              {/* Dark overlay with gold accent on hover */}
-              <div className="absolute inset-0 bg-black-primary/40 group-hover:bg-gradient-to-t group-hover:from-black-primary/80 group-hover:via-transparent transition-all duration-500" />
+              {/* Hover Effect Background */}
+              <div className="absolute inset-0 bg-gradient-gold opacity-0 group-hover:opacity-5 transition-opacity duration-500" />
               
-              {/* Gold border on hover */}
-              <div className="absolute inset-0 border-2 border-transparent group-hover:border-gold-accent transition-all duration-300" />
+              {/* Content */}
+              <div className="relative z-10">
+                <feature.icon 
+                  className="text-gold-accent mb-6 group-hover:scale-110 transition-transform duration-300" 
+                  size={40} 
+                  strokeWidth={1.5} 
+                />
+                <h3 className="text-white text-2xl font-raleway font-light mb-4 group-hover:text-gold-accent transition-colors duration-300">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-medium font-extralight leading-relaxed">
+                  {feature.description}
+                </p>
+              </div>
+
+              {/* Corner Accent */}
+              <div className="absolute top-0 right-0 w-20 h-20 border-t-2 border-r-2 border-gold-accent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </div>
           ))}
         </div>

@@ -65,22 +65,6 @@ const InsuranceCategories = () => {
                     alt={category.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
-                  
-                  {/* Overlay Gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black-primary via-black-primary/60 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300" />
-                  
-                  {/* Content */}
-                  <div className="absolute bottom-0 left-0 right-0 p-6">
-                    <h3 className="text-white text-2xl font-raleway font-light mb-2 group-hover:text-gold-accent transition-colors duration-300">
-                      {category.title}
-                    </h3>
-                    <p className="text-gray-light font-extralight text-sm leading-relaxed">
-                      {category.description}
-                    </p>
-                  </div>
-
-                  {/* Corner Accent */}
-                  <div className="absolute top-4 right-4 w-12 h-12 border-t border-r border-gold-accent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
               </div>
             </div>

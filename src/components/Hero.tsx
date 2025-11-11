@@ -60,7 +60,7 @@ const Hero = () => {
 
       {/* Content */}
       <div className="container-custom relative z-10">
-        <div className="max-w-3xl">
+        <div className="max-w-3xl mx-auto text-center">
           {slides.map((slide, index) => (
             <div
               key={index}
@@ -70,19 +70,19 @@ const Hero = () => {
                   : "opacity-0 absolute translate-y-4"
               }`}
             >
-              <h1 className="text-white mb-6 text-balance font-raleway font-extralight">
+              <h1 className="text-white mb-6 text-balance font-raleway font-extralight drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
                 {slide.title}
                 <br />
                 {slide.subtitle}
               </h1>
-              <p className="text-gray-light text-xl md:text-2xl font-extralight mb-12 leading-relaxed max-w-2xl">
+              <p className="text-gray-light text-xl md:text-2xl font-extralight mb-12 leading-relaxed max-w-2xl mx-auto drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
                 {slide.description}
               </p>
             </div>
           ))}
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-5">
+          <div className="flex flex-col sm:flex-row gap-5 justify-center">
             <a href="https://wa.me/551541412625?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es" target="_blank" rel="noopener noreferrer">
               <GradientButton className="w-full sm:w-auto uppercase tracking-wider">
                 Solicitar Cotação

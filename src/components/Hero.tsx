@@ -25,7 +25,7 @@ const Hero = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000); // Troca a cada 5 segundos
+    }, 8000); // Troca a cada 8 segundos
 
     return () => clearInterval(timer);
   }, []);
@@ -36,7 +36,7 @@ const Hero = () => {
       {slides.map((slide, index) => (
         <div
           key={index}
-          className={`absolute inset-0 z-0 transition-all duration-[2000ms] ease-in-out ${
+          className={`absolute inset-0 z-0 transition-all duration-[3000ms] ease-in-out ${
             index === currentSlide 
               ? "opacity-100 translate-y-0" 
               : "opacity-0 -translate-y-full"

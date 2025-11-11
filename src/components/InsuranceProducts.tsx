@@ -1,41 +1,41 @@
-import { Heart, Smile, Shield, Car, Home, Building2 } from "lucide-react";
+import { User, Users, Building2, Smile, Heart, Car, Home, Briefcase } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const healthProducts = [
   {
-    icon: Heart,
+    icon: User,
     title: "Plano de Saúde Individual",
     description: "Cobertura completa para você com as melhores operadoras: Amil, SulAmérica, Bradesco, Unimed",
     slug: "plano-saude-individual",
-    featured: true,
+    featured: false,
   },
   {
-    icon: Heart,
+    icon: Users,
     title: "Plano de Saúde Familiar",
     description: "Proteção para toda sua família com coberturas personalizadas e rede credenciada ampla",
     slug: "plano-saude-familiar",
-    featured: true,
+    featured: false,
   },
   {
-    icon: Heart,
+    icon: Building2,
     title: "Plano de Saúde Empresarial",
     description: "Soluções corporativas para empresas de todos os portes com as melhores condições",
     slug: "plano-saude-empresarial",
-    featured: true,
+    featured: false,
   },
   {
     icon: Smile,
     title: "Planos Odontológicos",
     description: "Cuide da saúde bucal da sua família com planos completos e rede credenciada em Sorocaba",
     slug: "plano-odontologico",
-    featured: true,
+    featured: false,
   },
 ];
 
 const insuranceProducts = [
   {
-    icon: Shield,
+    icon: Heart,
     title: "Seguro de Vida",
     description: "Proteja sua família e garanta tranquilidade financeira em qualquer situação",
     slug: "seguro-vida",
@@ -56,7 +56,7 @@ const insuranceProducts = [
     featured: false,
   },
   {
-    icon: Building2,
+    icon: Briefcase,
     title: "Seguro Empresarial",
     description: "Soluções completas para proteger seu negócio e garantir continuidade operacional",
     slug: "seguro-empresarial",
@@ -128,12 +128,6 @@ const InsuranceProducts = () => {
                 
                 {/* Content */}
                 <div className="p-8 border border-gray-dark group-hover:border-gold-accent transition-all duration-500 flex flex-col h-full">
-                  {product.featured && (
-                    <div className="absolute -top-3 right-8 bg-gold-accent text-black-primary px-4 py-1 text-xs font-light uppercase tracking-wider">
-                      Destaque
-                    </div>
-                  )}
-                  
                   <div className="mb-6">
                     <Icon className="text-gray-light group-hover:text-gold-accent transition-colors duration-300" size={48} strokeWidth={1.5} />
                   </div>

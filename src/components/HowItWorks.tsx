@@ -1,4 +1,5 @@
 import { FileText, ListChecks, Scale, Shield } from "lucide-react";
+import { GradientButton } from "@/components/ui/gradient-button";
 
 const steps = [
   {
@@ -29,7 +30,7 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <section className="section-padding bg-black-primary">
+    <section id="como-funciona" className="section-padding bg-black-primary">
       <div className="container-custom">
         {/* Header */}
         <div className="text-center mb-16">
@@ -61,10 +62,13 @@ const HowItWorks = () => {
                   }}
                 >
                   {/* Number Circle */}
-                  <div className="relative z-10 w-32 h-32 rounded-full bg-gradient-gold flex items-center justify-center mb-6 shadow-elegant group-hover:scale-110 transition-transform duration-300">
-                    <span className="text-black-primary text-4xl font-bold font-montserrat">
+                  <div className="relative z-10 w-32 h-32 rounded-full flex items-center justify-center mb-6 overflow-hidden">
+                    <GradientButton 
+                      className="w-full h-full rounded-full text-4xl font-bold"
+                      disabled
+                    >
                       {step.number}
-                    </span>
+                    </GradientButton>
                   </div>
 
                   {/* Icon */}

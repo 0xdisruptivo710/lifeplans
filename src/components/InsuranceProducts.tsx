@@ -127,7 +127,7 @@ const InsuranceProducts = () => {
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-gold transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
                 
                 {/* Content */}
-                <div className="p-8 border border-gray-dark group-hover:border-gold-accent transition-all duration-500">
+                <div className="p-8 border border-gray-dark group-hover:border-gold-accent transition-all duration-500 flex flex-col h-full">
                   {product.featured && (
                     <div className="absolute -top-3 right-8 bg-gold-accent text-black-primary px-4 py-1 text-xs font-light uppercase tracking-wider">
                       Destaque
@@ -138,21 +138,23 @@ const InsuranceProducts = () => {
                     <Icon className="text-gray-light group-hover:text-gold-accent transition-colors duration-300" size={48} strokeWidth={1.5} />
                   </div>
                   
-                  <h3 className="text-white text-xl font-light mb-4 group-hover:text-gold-accent transition-colors duration-300 min-h-[56px]">
+                  <h3 className="text-white text-xl font-light mb-4 group-hover:text-gold-accent transition-colors duration-300">
                     {product.title}
                   </h3>
                   
-                  <p className="text-gray-medium leading-relaxed mb-6 font-extralight text-sm">
+                  <p className="text-gray-medium leading-relaxed mb-6 font-extralight text-sm min-h-[60px]">
                     {product.description}
                   </p>
                   
-                  <Link 
-                    to={`/${product.slug}`}
-                    className="inline-flex items-center text-gold-accent font-light hover:gap-3 gap-2 transition-all duration-300 text-sm"
-                  >
-                    Saiba mais
-                    <span className="text-lg">→</span>
-                  </Link>
+                  <div className="mt-auto">
+                    <Link 
+                      to={`/${product.slug}`}
+                      className="inline-flex items-center text-gold-accent font-light hover:gap-3 gap-2 transition-all duration-300 text-sm"
+                    >
+                      Saiba mais
+                      <span className="text-lg">→</span>
+                    </Link>
+                  </div>
                 </div>
 
                 {/* Hover Overlay Effect */}

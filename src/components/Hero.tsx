@@ -1,8 +1,8 @@
-import { Button } from "@/components/ui/button";
+import { GradientButton } from "@/components/ui/gradient-button";
 import { ChevronDown } from "lucide-react";
 import { useState, useEffect } from "react";
-import heroImage1 from "@/assets/hero-geometric-1.jpg";
-import heroImage2 from "@/assets/hero-geometric-2.jpg";
+import heroImage1 from "@/assets/hero-geometric-3.jpg";
+import heroImage2 from "@/assets/hero-geometric-4.jpg";
 
 const slides = [
   {
@@ -36,8 +36,10 @@ const Hero = () => {
       {slides.map((slide, index) => (
         <div
           key={index}
-          className={`absolute inset-0 z-0 transition-opacity duration-1000 ${
-            index === currentSlide ? "opacity-100" : "opacity-0"
+          className={`absolute inset-0 z-0 transition-all duration-[2000ms] ease-in-out ${
+            index === currentSlide 
+              ? "opacity-100 translate-y-0" 
+              : "opacity-0 -translate-y-full"
           }`}
         >
           <div
@@ -82,21 +84,14 @@ const Hero = () => {
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-5">
             <a href="https://wa.me/551541412625?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es" target="_blank" rel="noopener noreferrer">
-              <Button
-                size="lg"
-                className="bg-gradient-gold text-black-primary hover:opacity-90 font-light px-10 py-6 rounded-none text-base hover:-translate-y-1 transition-all duration-300 shadow-elegant uppercase tracking-wider w-full sm:w-auto"
-              >
+              <GradientButton className="w-full sm:w-auto uppercase tracking-wider">
                 Solicitar Cotação
-              </Button>
+              </GradientButton>
             </a>
             <a href="#planos">
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-2 border-gold-accent text-gold-accent hover:bg-gold-accent hover:text-black-primary font-light px-10 py-6 rounded-none text-base transition-all duration-300 uppercase tracking-wider w-full sm:w-auto"
-              >
+              <GradientButton variant="variant" className="w-full sm:w-auto uppercase tracking-wider">
                 Conhecer Planos
-              </Button>
+              </GradientButton>
             </a>
           </div>
         </div>

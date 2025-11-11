@@ -1,4 +1,5 @@
 import { GlowingEffect } from "@/components/ui/glowing-effect";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import horseJumping from "@/assets/horse-jumping.jpg";
 import bikeLuxury from "@/assets/bike-luxury.jpg";
 import healthInsurance from "@/assets/health-insurance.jpg";
@@ -44,11 +45,17 @@ const InsuranceCategories = () => {
     <section className="section-padding bg-black-primary">
       <div className="container-custom">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {categories.map((category, index) => (
-            <div
-              key={index}
-              className="relative h-[320px] overflow-hidden group"
-            >
+          {categories.map((category, index) => {
+            const { ref, isVisible } = useScrollAnimation(0.1);
+            return (
+              <div
+                key={index}
+                ref={ref}
+                className={`relative h-[320px] overflow-hidden group transition-all duration-700 ${
+                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                }`}
+                style={{ transitionDelay: `${index * 100}ms` }}
+              >
               <div className="relative h-full rounded-lg border-[0.75px] border-gray-dark p-2">
                 <GlowingEffect
                   spread={40}
@@ -68,7 +75,8 @@ const InsuranceCategories = () => {
                 </div>
               </div>
             </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

@@ -1,4 +1,5 @@
 import { FileText, ListChecks, Scale, Shield } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const steps = [
   {
@@ -52,13 +53,15 @@ const HowItWorks = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
             {steps.map((step, index) => {
               const Icon = step.icon;
+              const { ref, isVisible } = useScrollAnimation(0.1);
               return (
                 <div
                   key={index}
-                  className="relative flex flex-col items-center text-center"
-                  style={{
-                    animationDelay: `${index * 0.2}s`,
-                  }}
+                  ref={ref}
+                  className={`relative flex flex-col items-center text-center transition-all duration-700 ${
+                    isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                  }`}
+                  style={{ transitionDelay: `${index * 100}ms` }}
                 >
                   {/* Number Circle */}
                   <div className="relative z-10 w-32 h-32 rounded-full bg-gold-accent flex items-center justify-center mb-6">

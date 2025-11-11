@@ -1,4 +1,5 @@
 import { Headset, Award, Zap, Clock } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const differentials = [
   {
@@ -53,13 +54,15 @@ const WhyLifePlans = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {differentials.map((item, index) => {
             const Icon = item.icon;
+            const { ref, isVisible } = useScrollAnimation(0.1);
             return (
               <div
                 key={index}
-                className="text-center group"
-                style={{
-                  animationDelay: `${index * 0.15}s`,
-                }}
+                ref={ref}
+                className={`text-center group transition-all duration-700 ${
+                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                }`}
+                style={{ transitionDelay: `${index * 100}ms` }}
               >
                 <div className="mb-6 flex justify-center">
                   <div className="w-20 h-20 rounded-full border-2 border-gray-dark flex items-center justify-center group-hover:border-gold-accent transition-colors duration-300">

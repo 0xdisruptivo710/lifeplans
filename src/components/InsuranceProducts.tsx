@@ -2,6 +2,7 @@ import { User, Users, Building2, Smile, Heart, Car, Home, Briefcase } from "luci
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { GradientButton } from "@/components/ui/gradient-button";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const healthProducts = [
   {
@@ -110,13 +111,15 @@ const InsuranceProducts = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {currentProducts.map((product, index) => {
             const Icon = product.icon;
+            const { ref, isVisible } = useScrollAnimation(0.1);
             return (
               <div
                 key={index}
-                className="bg-black-primary relative group overflow-hidden"
-                style={{
-                  animationDelay: `${index * 0.1}s`,
-                }}
+                ref={ref}
+                className={`bg-black-primary relative group overflow-hidden transition-all duration-700 ${
+                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                }`}
+                style={{ transitionDelay: `${index * 100}ms` }}
               >
                 {/* Gold Accent Top Border */}
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-gold transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>

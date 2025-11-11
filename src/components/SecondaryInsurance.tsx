@@ -1,4 +1,5 @@
 import { Shield, Car, Home, Building2 } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const insurances = [
   {
@@ -44,13 +45,15 @@ const SecondaryInsurance = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {insurances.map((insurance, index) => {
             const Icon = insurance.icon;
+            const { ref, isVisible } = useScrollAnimation(0.1);
             return (
               <div
                 key={index}
-                className="bg-black-secondary border border-gray-dark p-8 hover:border-gold-accent transition-all duration-500 group hover:-translate-y-2"
-                style={{
-                  animationDelay: `${index * 0.1}s`,
-                }}
+                ref={ref}
+                className={`bg-black-secondary border border-gray-dark p-8 hover:border-gold-accent group hover:-translate-y-2 transition-all duration-700 ${
+                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                }`}
+                style={{ transitionDelay: `${index * 100}ms` }}
               >
                 <div className="mb-6">
                   <Icon className="text-gray-light group-hover:text-gold-accent transition-colors duration-300" size={40} strokeWidth={1.5} />

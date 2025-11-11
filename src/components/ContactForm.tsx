@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
+import { GradientButton } from "@/components/ui/gradient-button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
@@ -195,13 +195,12 @@ const ContactForm = () => {
                 </Label>
               </div>
 
-              <Button
+              <GradientButton
                 type="submit"
-                size="lg"
-                className="w-full h-14 bg-gradient-gold text-black-primary hover:opacity-90 font-semibold rounded-none hover:-translate-y-1 transition-all duration-300 uppercase tracking-wider"
+                className="w-full h-14 font-semibold hover:-translate-y-1 transition-all duration-300 uppercase tracking-wider"
               >
                 Enviar Solicitação
-              </Button>
+              </GradientButton>
             </form>
           </div>
         </div>

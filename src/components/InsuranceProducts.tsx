@@ -1,6 +1,7 @@
 import { User, Users, Building2, Smile, Heart, Car, Home, Briefcase } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { GradientButton } from "@/components/ui/gradient-button";
 
 const healthProducts = [
   {
@@ -87,27 +88,21 @@ const InsuranceProducts = () => {
 
         {/* Tabs */}
         <div className="flex justify-center mb-16">
-          <div className="inline-flex bg-black-primary border border-gray-dark rounded-none overflow-hidden">
-            <button
+          <div className="inline-flex gap-4">
+            <GradientButton
               onClick={() => setActiveTab("saude")}
-              className={`px-12 py-4 text-base font-light tracking-wider transition-all duration-300 ${
-                activeTab === "saude"
-                  ? "bg-gold-accent text-black-primary"
-                  : "text-gray-light hover:text-white"
-              }`}
+              variant={activeTab === "saude" ? "default" : "variant"}
+              className="px-12 py-4 text-base font-light tracking-wider"
             >
               SAÚDE
-            </button>
-            <button
+            </GradientButton>
+            <GradientButton
               onClick={() => setActiveTab("seguros")}
-              className={`px-12 py-4 text-base font-light tracking-wider transition-all duration-300 ${
-                activeTab === "seguros"
-                  ? "bg-gold-accent text-black-primary"
-                  : "text-gray-light hover:text-white"
-              }`}
+              variant={activeTab === "seguros" ? "default" : "variant"}
+              className="px-12 py-4 text-base font-light tracking-wider"
             >
               SEGUROS
-            </button>
+            </GradientButton>
           </div>
         </div>
 

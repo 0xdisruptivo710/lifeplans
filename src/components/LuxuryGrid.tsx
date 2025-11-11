@@ -1,20 +1,50 @@
 import { Shield, Heart, Award, Users } from "lucide-react";
-import luxuryCar from "@/assets/luxury-car-diagonal.jpg";
+import { useState, useEffect, useRef } from "react";
+import porscheLuxury from "@/assets/porsche-luxury.jpg";
 
 const LuxuryGrid = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   return (
     <>
-      {/* Diagonal Luxury Car Section */}
-      <section className="relative w-full h-48 overflow-hidden">
+      {/* Diagonal Porsche Luxury Section with Scroll Reveal */}
+      <section 
+        ref={sectionRef}
+        className={`relative w-full h-64 overflow-hidden transition-all duration-1000 ${
+          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
+      >
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `url(${luxuryCar})`,
+            backgroundImage: `url(${porscheLuxury})`,
             clipPath: "polygon(0 30%, 100% 0, 100% 70%, 0 100%)",
           }}
         />
         <div 
-          className="absolute inset-0 bg-gradient-to-r from-gold-accent/20 via-transparent to-gold-accent/20" 
+          className="absolute inset-0 bg-gradient-to-r from-gold-accent/10 via-transparent to-gold-accent/10" 
           style={{
             clipPath: "polygon(0 30%, 100% 0, 100% 70%, 0 100%)",
           }}

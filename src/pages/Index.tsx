@@ -7,6 +7,7 @@ import InsuranceProducts from "@/components/InsuranceProducts";
 import SecondaryInsurance from "@/components/SecondaryInsurance";
 import WhyLifePlans from "@/components/WhyLifePlans";
 import HowItWorks from "@/components/HowItWorks";
+import FAQ from "@/components/FAQ";
 import CTASection from "@/components/CTASection";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
@@ -24,6 +25,7 @@ const Index = () => {
       <SecondaryInsurance />
       <WhyLifePlans />
       <HowItWorks />
+      <FAQ />
       <CTASection />
       <ContactForm />
       <Footer />

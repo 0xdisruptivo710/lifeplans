@@ -1,5 +1,4 @@
 import { FileText, ListChecks, Scale, Shield } from "lucide-react";
-import { GradientButton } from "@/components/ui/gradient-button";
 
 const steps = [
   {
@@ -62,13 +61,10 @@ const HowItWorks = () => {
                   }}
                 >
                   {/* Number Circle */}
-                  <div className="relative z-10 w-32 h-32 rounded-full flex items-center justify-center mb-6 overflow-hidden">
-                    <GradientButton 
-                      className="w-full h-full rounded-full text-4xl font-bold"
-                      disabled
-                    >
+                  <div className="relative z-10 w-32 h-32 rounded-full bg-gold-accent flex items-center justify-center mb-6">
+                    <span className="text-black-primary text-4xl font-bold">
                       {step.number}
-                    </GradientButton>
+                    </span>
                   </div>
 
                   {/* Icon */}

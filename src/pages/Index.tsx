@@ -25,8 +25,8 @@ const Index = () => {
       <SecondaryInsurance />
       <WhyLifePlans />
       <HowItWorks />
-      <FAQ />
       <CTASection />
+      <FAQ />
       <ContactForm />
       <Footer />
       <WhatsAppButton />

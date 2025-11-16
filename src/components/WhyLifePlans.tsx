@@ -26,6 +26,8 @@ const differentials = [
 ];
 
 const WhyLifePlans = () => {
+  const { ref: titleRef, isVisible: titleVisible } = useScrollAnimation(0.2);
+  
   return (
     <section id="sobre" className="section-padding bg-black-primary relative overflow-hidden">
       {/* Background Pattern */}
@@ -36,9 +38,13 @@ const WhyLifePlans = () => {
         }} />
       </div>
 
-      <div className="container-custom relative z-10">
+      <div className="container-custom">
         {/* Header */}
-        <div className="text-center mb-20">
+        <div
+          className={`text-center mb-20 transition-all duration-700 ${
+            titleVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        >
           <span className="text-gold-accent font-semibold text-sm tracking-wider uppercase">
             DIFERENCIAIS
           </span>

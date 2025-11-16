@@ -4,10 +4,13 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Phone, Mail, MapPin, MessageCircle } from "lucide-react";
 
 const ContactForm = () => {
   const { toast } = useToast();
+  const { ref: leftRef, isVisible: leftVisible } = useScrollAnimation(0.2);
+  const { ref: rightRef, isVisible: rightVisible } = useScrollAnimation(0.2);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -60,7 +63,12 @@ const ContactForm = () => {
       <div className="container-custom">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Left Column - Contact Info */}
-          <div>
+          <div
+            ref={leftRef}
+            className={`transition-all duration-700 ${
+              leftVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
+          >
             <h2 className="text-white mb-6">Fale com a Life Plans</h2>
             <p className="text-gray-medium text-lg mb-12 leading-relaxed">
               Nossa equipe está pronta para ajudar você a encontrar a proteção ideal
@@ -107,7 +115,12 @@ const ContactForm = () => {
           </div>
 
           {/* Right Column - Form */}
-          <div>
+          <div
+            ref={rightRef}
+            className={`transition-all duration-700 delay-200 ${
+              rightVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
+          >
             <h3 className="text-2xl font-semibold text-white mb-8">
               Solicite sua Cotação
             </h3>

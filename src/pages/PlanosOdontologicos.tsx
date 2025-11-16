@@ -5,6 +5,12 @@ import { GradientButton } from "@/components/ui/gradient-button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Smile, Shield, Star, Clock, Users, CheckCircle } from "lucide-react";
 import healthImage from "@/assets/health-insurance.jpg";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const benefits = [
   {
@@ -26,6 +32,33 @@ const benefits = [
     icon: Clock,
     title: "Atendimento Ágil",
     description: "Marque suas consultas com facilidade e rapidez",
+  },
+];
+
+const faqs = [
+  {
+    question: "Qual a diferença entre plano odontológico individual e familiar?",
+    answer: "O plano individual cobre apenas o titular, enquanto o familiar permite incluir dependentes (cônjuge, filhos e pais) com condições e preços mais vantajosos. O plano familiar oferece economia quando comparado à contratação de planos individuais separados."
+  },
+  {
+    question: "Quais procedimentos estão cobertos no plano odontológico?",
+    answer: "Os planos cobrem consultas, limpeza, restaurações, tratamento de canal, extrações, radiografias, periodontia e prevenção. Planos mais completos incluem ortodontia, próteses, implantes e procedimentos estéticos. A cobertura específica varia conforme o plano escolhido."
+  },
+  {
+    question: "Como funciona a carência do plano odontológico?",
+    answer: "A carência varia conforme o procedimento: consultas e limpeza geralmente têm carência de 24h, procedimentos básicos de 3 meses, e tratamentos mais complexos como ortodontia e implantes podem ter carência de 6 a 24 meses. Emergências têm cobertura imediata após 24h."
+  },
+  {
+    question: "Posso escolher qualquer dentista?",
+    answer: "Você pode escolher entre os dentistas credenciados à rede do plano. Oferecemos planos com ampla rede de profissionais em Sorocaba e região. Alguns planos também oferecem cobertura nacional para atendimento em outras cidades."
+  },
+  {
+    question: "O plano odontológico cobre aparelho ortodôntico?",
+    answer: "Depende do plano escolhido. Planos mais completos incluem ortodontia (aparelho fixo e móvel). É importante verificar se há carência específica para esse procedimento e se há limite de tempo de tratamento coberto."
+  },
+  {
+    question: "Como funciona o atendimento de emergência?",
+    answer: "O plano oferece atendimento de emergência 24h para situações como dor aguda, trauma dental, sangramento ou infecção. Após 24h da contratação, você já pode utilizar o serviço de emergência entrando em contato com a central do plano."
   },
 ];
 
@@ -203,6 +236,42 @@ const PlanosOdontologicos = () => {
                 </a>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 bg-black-primary">
+        <div className="container-custom">
+          <div className="text-center mb-16">
+            <span className="text-gold-accent font-light text-sm tracking-wider uppercase mb-4 block">
+              DÚVIDAS FREQUENTES
+            </span>
+            <h2 className="text-3xl md:text-5xl font-raleway font-light mb-6 text-white">
+              Perguntas Sobre Planos Odontológicos
+            </h2>
+            <p className="text-gray-light text-lg max-w-2xl mx-auto font-light">
+              Tire suas principais dúvidas sobre nossos planos odontológicos
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <Accordion type="single" collapsible className="space-y-4">
+              {faqs.map((faq, index) => (
+                <AccordionItem
+                  key={index}
+                  value={`item-${index}`}
+                  className="bg-black-secondary border border-gray-dark rounded-lg px-6 hover:border-gold-accent transition-colors"
+                >
+                  <AccordionTrigger className="text-white font-raleway font-light text-lg py-6 hover:no-underline">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-light font-light leading-relaxed pb-6">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
           </div>
         </div>
       </section>

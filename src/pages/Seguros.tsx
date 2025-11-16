@@ -6,6 +6,39 @@ import { Shield, Car, Home, Building2, CheckCircle, ArrowRight } from "lucide-re
 import { Link } from "react-router-dom";
 import luxuryCar from "@/assets/luxury-car-diagonal.jpg";
 import privateJet from "@/assets/private-jet.jpg";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+
+const faqs = [
+  {
+    question: "Qual a diferença entre os tipos de seguro?",
+    answer: "Cada seguro protege um bem específico: o seguro de vida protege sua família financeiramente, o auto protege seu veículo, o residencial protege seu lar e patrimônio, e o empresarial protege seu negócio. Cada um tem coberturas específicas para suas necessidades."
+  },
+  {
+    question: "Como funciona o pagamento de indenização?",
+    answer: "Após a ocorrência de um sinistro coberto, você aciona a seguradora, que analisa o caso e, se aprovado, paga a indenização conforme o valor segurado contratado. O prazo varia de acordo com o tipo de sinistro e seguradora, mas geralmente é de 30 dias."
+  },
+  {
+    question: "Posso contratar mais de um seguro?",
+    answer: "Sim, é altamente recomendável ter múltiplas proteções para diferentes aspectos da sua vida: seguro de vida para sua família, auto para seu veículo, residencial para seu lar. Oferecemos pacotes combinados com condições especiais."
+  },
+  {
+    question: "O que fazer em caso de sinistro?",
+    answer: "Entre em contato imediatamente com a seguradora através dos canais 24h, forneça as informações necessárias e documentação solicitada. Nossa equipe auxilia em todo o processo, desde a abertura até o recebimento da indenização."
+  },
+  {
+    question: "Como é calculado o valor do seguro?",
+    answer: "O prêmio (valor pago) é calculado com base em diversos fatores: tipo de cobertura, valor segurado, perfil do segurado, histórico de sinistros, localização e características específicas do bem a ser segurado. Fazemos cotações personalizadas para encontrar o melhor custo-benefício."
+  },
+  {
+    question: "O seguro cobre todos os tipos de danos?",
+    answer: "Depende das coberturas contratadas. Cada apólice especifica quais riscos estão cobertos (incêndio, roubo, danos naturais, etc.) e quais são exclusões. Nossa consultoria ajuda a escolher as coberturas adequadas para sua necessidade real."
+  },
+];
 
 const insurances = [
   {
@@ -171,6 +204,42 @@ const Seguros = () => {
                 ))}
               </ul>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 bg-black-primary">
+        <div className="container-custom">
+          <div className="text-center mb-16">
+            <span className="text-gold-accent font-light text-sm tracking-wider uppercase mb-4 block">
+              DÚVIDAS FREQUENTES
+            </span>
+            <h2 className="text-3xl md:text-5xl font-raleway font-light mb-6 text-white">
+              Perguntas Sobre Seguros
+            </h2>
+            <p className="text-gray-light text-lg max-w-2xl mx-auto font-light">
+              Tire suas principais dúvidas sobre nossos seguros
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <Accordion type="single" collapsible className="space-y-4">
+              {faqs.map((faq, index) => (
+                <AccordionItem
+                  key={index}
+                  value={`item-${index}`}
+                  className="bg-black-secondary border border-gray-dark rounded-lg px-6 hover:border-gold-accent transition-colors"
+                >
+                  <AccordionTrigger className="text-white font-raleway font-light text-lg py-6 hover:no-underline">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-light font-light leading-relaxed pb-6">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
           </div>
         </div>
       </section>

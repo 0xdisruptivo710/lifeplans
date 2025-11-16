@@ -48,7 +48,7 @@ const PlanoSaudeFamiliar = () => {
                 Vantagens do Plano Familiar
               </h2>
               <p className="text-gray-light text-lg font-extralight leading-relaxed mb-6">
-                Com o plano de saúde familiar da Life Plans, você garante proteção completa para todos os membros 
+                Com o plano de saúde familiar da Lifeplans, você garante proteção completa para todos os membros
                 da sua família com economia e praticidade. Um único plano, uma única mensalidade.
               </p>
               <p className="text-gray-light text-lg font-extralight leading-relaxed">

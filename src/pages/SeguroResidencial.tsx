@@ -52,7 +52,7 @@ const SeguroResidencial = () => {
                 cobre diversos tipos de sinistros e ainda oferece assistência para pequenos reparos do dia a dia.
               </p>
               <p className="text-gray-light text-lg font-extralight leading-relaxed">
-                Com a Life Plans, você encontra planos com coberturas flexíveis que se adaptam ao 
+                Com a Lifeplans, você encontra planos com coberturas flexíveis que se adaptam ao
                 valor do seu imóvel e ao seu padrão de vida, com preços acessíveis.
               </p>
             </div>

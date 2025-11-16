@@ -38,8 +38,8 @@ const Header = () => {
           <a href="#inicio" className="flex items-center">
             <img 
               src={logoLifePlans} 
-              alt="Life Plans - Planos de Saúde e Seguros" 
-              className="h-12 md:h-14 w-auto object-contain mix-blend-lighten"
+              alt="Lifeplans - Planos de Saúde e Seguros" 
+              className="h-12 md:h-14 w-auto object-contain"
             />
           </a>
 

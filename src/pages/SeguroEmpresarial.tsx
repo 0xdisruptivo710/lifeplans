@@ -52,7 +52,7 @@ const SeguroEmpresarial = () => {
                 de sinistros. Proteja seu patrimônio, seus colaboradores e sua operação contra diversos riscos.
               </p>
               <p className="text-gray-light text-lg font-extralight leading-relaxed">
-                Com a Life Plans, você conta com consultoria especializada para identificar os riscos 
+                Com a Lifeplans, você conta com consultoria especializada para identificar os riscos
                 específicos do seu segmento e montar uma proteção sob medida para sua empresa.
               </p>
             </div>

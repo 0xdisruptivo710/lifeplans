@@ -26,7 +26,7 @@ const insurances = [
 
 const SecondaryInsurance = () => {
   return (
-    <section id="seguros" className="section-padding bg-black-primary relative overflow-hidden">
+    <section id="seguros" className="py-16 md:py-20 bg-black-primary relative overflow-hidden">
       <div className="container-custom">
         {/* Header */}
         <div className="text-center mb-20">

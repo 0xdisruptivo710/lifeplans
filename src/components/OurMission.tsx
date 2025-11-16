@@ -1,6 +1,9 @@
 import missionImage from "@/assets/mission-image.jpg";
+import { useParallax } from "@/hooks/use-parallax";
 
 const OurMission = () => {
+  const parallaxImage = useParallax(0.2);
+  
   return (
     <section className="section-padding bg-black-primary relative overflow-hidden">
       <div className="container-custom">
@@ -46,6 +49,7 @@ const OurMission = () => {
               style={{
                 backgroundImage: `url(${missionImage})`,
                 clipPath: 'polygon(25% 0%, 100% 0%, 100% 100%, 5% 100%)',
+                transform: `translateY(${parallaxImage}px)`,
               }}
             ></div>
           </div>

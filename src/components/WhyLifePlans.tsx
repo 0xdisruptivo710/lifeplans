@@ -49,7 +49,7 @@ const WhyLifePlans = () => {
             DIFERENCIAIS
           </span>
           <h2 className="text-white mt-4 mb-6 font-raleway font-light">
-            Por Que Escolher a Life Plans
+            Por Que Escolher a Lifeplans
           </h2>
           <p className="text-gray-light text-lg max-w-2xl mx-auto font-extralight">
             Profissionais especializados com atendimento de excelência

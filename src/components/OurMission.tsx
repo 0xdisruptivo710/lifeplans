@@ -42,7 +42,7 @@ const OurMission = () => {
             >
               <p className="text-gray-light text-base lg:text-lg leading-relaxed font-extralight">
                 A indústria brasileira de planos de saúde e seguros vem se modernizando e está cada vez mais alinhada ao nível de 
-                governança e complexidade de mercados mais desenvolvidos. Neste cenário, a Life Plans vem contribuindo 
+                governança e complexidade de mercados mais desenvolvidos. Neste cenário, a Lifeplans vem contribuindo
                 para a consolidação de um novo modelo de corretoras que assumem um papel consultivo e 100% 
                 orientado para o cliente. Oferecemos nossa competência técnica ao mercado para atender as expectativas 
                 e demandas de toda a cadeia, construindo uma relação agregadora entre todas as partes.

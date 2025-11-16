@@ -11,7 +11,7 @@ const Footer = () => {
   ];
 
   const company = [
-    "Sobre a Life Plans",
+    "Sobre a Lifeplans",
     "Como Funciona",
     "Blog",
     "Trabalhe Conosco",
@@ -28,7 +28,7 @@ const Footer = () => {
             <div className="mb-6">
               <img 
                 src={logoLifePlans} 
-                alt="Life Plans" 
+                alt="Lifeplans" 
                 className="h-16 w-auto"
               />
             </div>
@@ -126,7 +126,7 @@ const Footer = () => {
         <div className="border-t border-gray-dark pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-gray-medium text-sm">
-              © 2024 Life Plans. Todos os direitos reservados.
+              © 2024 Lifeplans. Todos os direitos reservados.
             </p>
             <div className="flex space-x-6 text-sm">
               <a href="#" className="text-gray-medium hover:text-gold-accent transition-colors">

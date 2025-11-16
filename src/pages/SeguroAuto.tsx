@@ -52,7 +52,7 @@ const SeguroAuto = () => {
                 Além de obrigatório em muitos casos de financiamento, oferece cobertura completa para imprevistos.
               </p>
               <p className="text-gray-light text-lg font-extralight leading-relaxed">
-                Com a Life Plans, você encontra as melhores opções do mercado com coberturas flexíveis 
+                Com a Lifeplans, você encontra as melhores opções do mercado com coberturas flexíveis
                 e preços competitivos para todos os perfis de motoristas.
               </p>
             </div>

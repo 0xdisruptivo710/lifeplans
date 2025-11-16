@@ -49,7 +49,7 @@ const PlanoOdontologico = () => {
               </h2>
               <p className="text-gray-light text-lg font-extralight leading-relaxed mb-6">
                 O plano odontológico é fundamental para manter a saúde bucal em dia e prevenir problemas 
-                mais graves. Com a Life Plans, você tem acesso a uma rede credenciada de dentistas 
+                mais graves. Com a Lifeplans, você tem acesso a uma rede credenciada de dentistas
                 qualificados em Sorocaba e região.
               </p>
               <p className="text-gray-light text-lg font-extralight leading-relaxed">

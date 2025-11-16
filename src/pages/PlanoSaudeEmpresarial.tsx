@@ -52,7 +52,7 @@ const PlanoSaudeEmpresarial = () => {
                 estratégico que melhora o clima organizacional, aumenta a produtividade e reduz o turnover.
               </p>
               <p className="text-gray-light text-lg font-extralight leading-relaxed">
-                Com a Life Plans, você conta com consultoria especializada para encontrar o plano ideal 
+                Com a Lifeplans, você conta com consultoria especializada para encontrar o plano ideal
                 para sua empresa, com as melhores operadoras e condições do mercado.
               </p>
             </div>

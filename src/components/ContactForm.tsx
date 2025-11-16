@@ -69,7 +69,7 @@ const ContactForm = () => {
               leftVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            <h2 className="text-white mb-6">Fale com a Life Plans</h2>
+            <h2 className="text-white mb-6">Fale com a Lifeplans</h2>
             <p className="text-gray-medium text-lg mb-12 leading-relaxed">
               Nossa equipe está pronta para ajudar você a encontrar a proteção ideal
             </p>

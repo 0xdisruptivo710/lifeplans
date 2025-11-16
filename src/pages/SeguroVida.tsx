@@ -52,7 +52,7 @@ const SeguroVida = () => {
                 de dificuldade. Mais do que uma proteção, é um ato de amor e responsabilidade.
               </p>
               <p className="text-gray-light text-lg font-extralight leading-relaxed">
-                Com a Life Plans, você encontra planos com coberturas flexíveis e valores acessíveis, 
+                Com a Lifeplans, você encontra planos com coberturas flexíveis e valores acessíveis,
                 adaptados às suas necessidades e ao seu orçamento.
               </p>
             </div>

@@ -60,7 +60,7 @@ const PlanoSaudeIndividual = () => {
               </h2>
               <p className="text-gray-light text-lg font-extralight leading-relaxed mb-6">
                 O plano de saúde individual é ideal para quem busca autonomia e proteção completa. 
-                Com a Life Plans, você tem acesso às melhores operadoras do mercado e um atendimento 
+                Com a Lifeplans, você tem acesso às melhores operadoras do mercado e um atendimento
                 consultivo para encontrar o plano perfeito para seu perfil.
               </p>
               <p className="text-gray-light text-lg font-extralight leading-relaxed">

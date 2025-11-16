@@ -6,6 +6,39 @@ import { Heart, Users, Building2, Stethoscope, CheckCircle, ArrowRight } from "l
 import { Link } from "react-router-dom";
 import heroFamily from "@/assets/hero-family.jpg";
 import healthInsurance from "@/assets/health-insurance.jpg";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+
+const faqs = [
+  {
+    question: "Qual a diferença entre plano de saúde individual, familiar e empresarial?",
+    answer: "O plano individual é para uma pessoa, o familiar cobre você e seus dependentes (cônjuge, filhos, pais), e o empresarial é voltado para empresas com colaboradores. Os planos empresariais geralmente têm melhores preços e condições, além de menos restrições na contratação."
+  },
+  {
+    question: "Como funciona a carência dos planos de saúde?",
+    answer: "A carência é o período de espera para utilizar determinados procedimentos. Consultas têm carência de 24h, exames simples de 3 meses, procedimentos de alta complexidade de 180 dias e partos de 300 dias. Urgência e emergência têm cobertura após 24h da contratação."
+  },
+  {
+    question: "Quais são as principais operadoras disponíveis?",
+    answer: "Trabalhamos com as melhores operadoras do mercado: Amil, SulAmérica, Bradesco Saúde, Unimed, Intermédica, entre outras. Cada uma oferece diferentes tipos de cobertura e redes credenciadas para atender suas necessidades específicas em Sorocaba e região."
+  },
+  {
+    question: "Como escolher o melhor plano de saúde?",
+    answer: "Avaliamos diversos fatores: tamanho da rede credenciada na sua região, tipo de acomodação (enfermaria ou apartamento), cobertura nacional ou regional, tipos de procedimentos cobertos e seu orçamento. Nossa consultoria personalizada ajuda a encontrar o equilíbrio ideal."
+  },
+  {
+    question: "O plano de saúde cobre exames e procedimentos?",
+    answer: "Sim, os planos cobrem consultas, exames laboratoriais, de imagem, internações, cirurgias, tratamentos e terapias conforme o rol da ANS. A cobertura específica varia de acordo com o tipo de plano e segmentação escolhida (ambulatorial, hospitalar ou referência)."
+  },
+  {
+    question: "Posso incluir dependentes no meu plano?",
+    answer: "Sim, você pode incluir dependentes como cônjuge/companheiro(a), filhos (até 21 anos ou 24 anos se estudante universitário) e pais. A inclusão de dependentes pode ser feita no momento da contratação ou posteriormente, respeitando as carências."
+  },
+];
 
 const plans = [
   {
@@ -162,6 +195,42 @@ const PlanosSaude = () => {
                 className="w-full h-full object-cover"
               />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 bg-black-primary">
+        <div className="container-custom">
+          <div className="text-center mb-16">
+            <span className="text-gold-accent font-light text-sm tracking-wider uppercase mb-4 block">
+              DÚVIDAS FREQUENTES
+            </span>
+            <h2 className="text-3xl md:text-5xl font-raleway font-light mb-6 text-white">
+              Perguntas Sobre Planos de Saúde
+            </h2>
+            <p className="text-gray-light text-lg max-w-2xl mx-auto font-light">
+              Tire suas principais dúvidas sobre nossos planos de saúde
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <Accordion type="single" collapsible className="space-y-4">
+              {faqs.map((faq, index) => (
+                <AccordionItem
+                  key={index}
+                  value={`item-${index}`}
+                  className="bg-black-secondary border border-gray-dark rounded-lg px-6 hover:border-gold-accent transition-colors"
+                >
+                  <AccordionTrigger className="text-white font-raleway font-light text-lg py-6 hover:no-underline">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-light font-light leading-relaxed pb-6">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
           </div>
         </div>
       </section>

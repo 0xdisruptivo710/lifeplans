@@ -18,11 +18,12 @@ const Header = () => {
   }, []);
 
   const navItems = [
-    { label: "Início", href: "/" },
+    { label: "Home", href: "/" },
+    { label: "Quem Somos", href: "/sobre" },
     { label: "Planos de Saúde", href: "/planos-saude" },
+    { label: "Planos Odontológicos", href: "/planos-odontologicos" },
     { label: "Seguros", href: "/seguros" },
-    { label: "Sobre", href: "/sobre" },
-    { label: "Contato", href: "/#contato" },
+    { label: "Trabalhe Conosco", href: "/trabalhe-conosco" },
   ];
 
   return (

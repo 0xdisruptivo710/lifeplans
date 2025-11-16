@@ -3,7 +3,7 @@ import { useParallax } from "@/hooks/use-parallax";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const OurMission = () => {
-  const parallaxImage = useParallax(0.2);
+  const parallaxImage = useParallax(0.05);
   const { ref: titleRef, isVisible: titleVisible } = useScrollAnimation(0.2);
   const { ref: textRef, isVisible: textVisible } = useScrollAnimation(0.2);
   

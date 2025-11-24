@@ -1,6 +1,6 @@
 import { GlowingEffect } from "@/components/ui/glowing-effect";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import horseJumping from "@/assets/horse-jumping.jpg";
+import fleetTrucks from "@/assets/fleet-trucks.png";
 import bikeLuxury from "@/assets/bike-luxury.jpg";
 import healthInsurance from "@/assets/health-insurance.jpg";
 import privateJet from "@/assets/private-jet.jpg";
@@ -9,9 +9,9 @@ import corporateBuildings from "@/assets/corporate-buildings.jpg";
 
 const categories = [
   {
-    image: horseJumping,
-    title: "Seguro Equestre",
-    description: "Proteção completa para cavalos e atividades equestres"
+    image: fleetTrucks,
+    title: "Seguro Frota",
+    description: "Proteção completa para frotas e veículos comerciais"
   },
   {
     image: bikeLuxury,

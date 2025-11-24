@@ -3,7 +3,7 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import fleetTrucks from "@/assets/fleet-trucks.png";
 import bikeLuxury from "@/assets/bike-luxury.jpg";
 import healthInsurance from "@/assets/health-insurance.jpg";
-import privateJet from "@/assets/private-jet.jpg";
+import luxuryMotorcycle from "@/assets/luxury-motorcycle.png";
 import luxuryYachts from "@/assets/luxury-yachts.jpg";
 import corporateBuildings from "@/assets/corporate-buildings.jpg";
 
@@ -24,9 +24,9 @@ const categories = [
     description: "Assistência médica completa para você e sua família"
   },
   {
-    image: privateJet,
-    title: "Seguro Aeronáutico",
-    description: "Proteção para aeronaves e aviação executiva"
+    image: luxuryMotorcycle,
+    title: "Seguro Moto",
+    description: "Proteção completa para motocicletas de alto valor"
   },
   {
     image: luxuryYachts,

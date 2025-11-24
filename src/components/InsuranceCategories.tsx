@@ -5,7 +5,7 @@ import bikeLuxury from "@/assets/bike-luxury.jpg";
 import healthInsurance from "@/assets/health-insurance.jpg";
 import privateJet from "@/assets/private-jet.jpg";
 import luxuryYachts from "@/assets/luxury-yachts.jpg";
-import businessTrucks from "@/assets/business-trucks.png";
+import corporateBuildings from "@/assets/corporate-buildings.jpg";
 
 const categories = [
   {
@@ -34,7 +34,7 @@ const categories = [
     description: "Cobertura para embarcações e iatess de luxo"
   },
   {
-    image: businessTrucks,
+    image: corporateBuildings,
     title: "Seguro Empresarial",
     description: "Soluções corporativas e proteção patrimonial"
   }

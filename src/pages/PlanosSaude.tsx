@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import { PartnerOperators } from "@/components/PartnerOperators";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Heart, Users, Building2, Stethoscope, CheckCircle, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -234,6 +235,8 @@ const PlanosSaude = () => {
           </div>
         </div>
       </section>
+
+      <PartnerOperators />
 
       <Footer />
       <WhatsAppButton />

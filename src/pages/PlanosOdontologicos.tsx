@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import { PartnerOperators } from "@/components/PartnerOperators";
 import { GradientButton } from "@/components/ui/gradient-button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Smile, Shield, Star, Clock, Users, CheckCircle } from "lucide-react";
@@ -292,6 +293,8 @@ const PlanosOdontologicos = () => {
           </a>
         </div>
       </section>
+
+      <PartnerOperators />
 
       <Footer />
       <WhatsAppButton />

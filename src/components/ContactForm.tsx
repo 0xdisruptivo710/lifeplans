@@ -42,8 +42,8 @@ const ContactForm = () => {
     {
       icon: Mail,
       title: "E-mail",
-      info: "financeiro@lifeplans.com.br",
-      link: "mailto:financeiro@lifeplans.com.br",
+      info: "contato@lifeplans.com.br",
+      link: "mailto:contato@lifeplans.com.br",
     },
     {
       icon: MapPin,

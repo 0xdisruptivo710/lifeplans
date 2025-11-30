@@ -11,6 +11,7 @@ import PlanoOdontologico from "./pages/PlanoOdontologico";
 import SeguroVida from "./pages/SeguroVida";
 import SeguroAuto from "./pages/SeguroAuto";
 import SeguroMoto from "./pages/SeguroMoto";
+import SeguroFrotas from "./pages/SeguroFrotas";
 import SeguroResidencial from "./pages/SeguroResidencial";
 import SeguroEmpresarial from "./pages/SeguroEmpresarial";
 import PlanosSaude from "./pages/PlanosSaude";
@@ -37,6 +38,7 @@ const App = () => (
           <Route path="/seguro-vida" element={<SeguroVida />} />
           <Route path="/seguro-auto" element={<SeguroAuto />} />
           <Route path="/seguro-moto" element={<SeguroMoto />} />
+          <Route path="/seguro-frotas" element={<SeguroFrotas />} />
           <Route path="/seguro-residencial" element={<SeguroResidencial />} />
           <Route path="/seguro-empresarial" element={<SeguroEmpresarial />} />
           <Route path="/planos-saude" element={<PlanosSaude />} />

@@ -1,12 +1,12 @@
 import { Shield, Heart, Award, Users } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import { useParallax } from "@/hooks/use-parallax";
-import porscheLuxury from "@/assets/porsche-luxury.jpg";
+import porscheLuxury from "@/assets/porsche-gold.jpg";
 
 const LuxuryGrid = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
-  const parallaxImage = useParallax(0.3);
+  const parallaxImage = useParallax(0.1);
 
   useEffect(() => {
     const observer = new IntersectionObserver(

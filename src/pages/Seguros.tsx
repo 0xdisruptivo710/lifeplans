@@ -5,7 +5,7 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Shield, Car, Home, Building2, CheckCircle, ArrowRight, Bike, Truck } from "lucide-react";
 import { Link } from "react-router-dom";
 import luxuryCar from "@/assets/luxury-car-diagonal.jpg";
-import privateJet from "@/assets/private-jet.jpg";
+import luxuryYacht from "@/assets/luxury-yacht.png";
 import {
   Accordion,
   AccordionContent,
@@ -191,7 +191,7 @@ const Seguros = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative h-[400px] lg:h-[500px] overflow-hidden rounded-lg order-2 lg:order-1">
               <img 
-                src={privateJet} 
+                src={luxuryYacht} 
                 alt="Proteção premium" 
                 className="w-full h-full object-cover"
               />

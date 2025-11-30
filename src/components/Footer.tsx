@@ -105,8 +105,8 @@ const Footer = () => {
               </li>
               <li className="text-gray-medium">
                 <span className="block font-light text-white mb-1">E-mail</span>
-                <a href="mailto:financeiro@lifeplans.com.br" className="hover:text-gold-accent transition-colors">
-                  financeiro@lifeplans.com.br
+                <a href="mailto:contato@lifeplans.com.br" className="hover:text-gold-accent transition-colors">
+                  contato@lifeplans.com.br
                 </a>
               </li>
               <li className="text-gray-medium">

@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import { Shield, Car, Home, Building2, CheckCircle, ArrowRight } from "lucide-react";
+import { Shield, Car, Home, Building2, CheckCircle, ArrowRight, Bike } from "lucide-react";
 import { Link } from "react-router-dom";
 import luxuryCar from "@/assets/luxury-car-diagonal.jpg";
 import privateJet from "@/assets/private-jet.jpg";
@@ -54,6 +54,13 @@ const insurances = [
     description: "Proteção completa para seu veículo",
     features: ["Assistência 24h", "Carro reserva", "Cobertura nacional", "Proteção vidros"],
     link: "/seguro-auto",
+  },
+  {
+    icon: Bike,
+    title: "Seguro de Motos",
+    description: "Proteção especializada para sua moto",
+    features: ["Assistência 24h", "Guincho especializado", "Cobertura de equipamentos", "Proteção total"],
+    link: "/seguro-moto",
   },
   {
     icon: Home,

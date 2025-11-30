@@ -30,10 +30,11 @@ const values = [
 ];
 
 const milestones = [
-  { year: "2010", title: "Fundação", description: "Início das operações em Sorocaba" },
+  { year: "2009", title: "Fundação", description: "Início das operações em Sorocaba" },
   { year: "2015", title: "Expansão", description: "Alcançamos 5.000 clientes atendidos" },
   { year: "2020", title: "Consolidação", description: "Parcerias com as maiores operadoras" },
   { year: "2024", title: "Liderança", description: "Referência regional em planos de saúde e seguros" },
+  { year: "2025", title: "Prêmio Porto Bank", description: "Destaque em Consórcio no mercado regional" },
 ];
 
 const Sobre = () => {

@@ -1,4 +1,4 @@
-import { User, Users, Building2, Smile, Heart, Car, Home, Briefcase, Bike } from "lucide-react";
+import { User, Users, Building2, Smile, Heart, Car, Home, Briefcase, Bike, Truck } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { GradientButton } from "@/components/ui/gradient-button";
@@ -55,6 +55,13 @@ const insuranceProducts = [
     title: "Seguro de Motos",
     description: "Proteção especializada para sua motocicleta com coberturas personalizadas",
     slug: "seguro-moto",
+    featured: false,
+  },
+  {
+    icon: Truck,
+    title: "Seguro de Frotas",
+    description: "Gestão completa e proteção para sua frota empresarial com monitoramento",
+    slug: "seguro-frotas",
     featured: false,
   },
   {

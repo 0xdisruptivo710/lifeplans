@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import { Shield, Car, Home, Building2, CheckCircle, ArrowRight, Bike } from "lucide-react";
+import { Shield, Car, Home, Building2, CheckCircle, ArrowRight, Bike, Truck } from "lucide-react";
 import { Link } from "react-router-dom";
 import luxuryCar from "@/assets/luxury-car-diagonal.jpg";
 import privateJet from "@/assets/private-jet.jpg";
@@ -61,6 +61,13 @@ const insurances = [
     description: "Proteção especializada para sua moto",
     features: ["Assistência 24h", "Guincho especializado", "Cobertura de equipamentos", "Proteção total"],
     link: "/seguro-moto",
+  },
+  {
+    icon: Truck,
+    title: "Seguro de Frotas",
+    description: "Gestão completa para sua frota empresarial",
+    features: ["Múltiplos veículos", "Rastreamento", "Manutenção preventiva", "Assistência 24h"],
+    link: "/seguro-frotas",
   },
   {
     icon: Home,

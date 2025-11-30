@@ -1,8 +1,8 @@
 import { GradientButton } from "@/components/ui/gradient-button";
 import { useState, useEffect } from "react";
 import { useParallax } from "@/hooks/use-parallax";
-import heroImage1 from "@/assets/hero-geometric-3.jpg";
-import heroImage2 from "@/assets/hero-geometric-4.jpg";
+import heroImage1 from "@/assets/corporate-buildings-1.webp";
+import heroImage2 from "@/assets/corporate-buildings-2.jpg";
 const slides = [{
   image: heroImage1,
   title: "Planos de Saúde e Seguros",

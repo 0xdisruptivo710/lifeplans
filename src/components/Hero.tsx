@@ -60,7 +60,9 @@ const Hero = () => {
       >
         <div className="max-w-3xl mx-auto text-center">
           {slides.map((slide, index) => <div key={index} className={`transition-all duration-1000 ${index === currentSlide ? "opacity-100 translate-y-0" : "opacity-0 absolute translate-y-4"}`}>
-              <h1 className="text-white mb-6 text-balance font-raleway font-extralight drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
+              <h1 className="text-white mb-6 text-balance font-raleway font-extralight" style={{
+                textShadow: '0 0 1px rgba(255,255,255,0.8), 0 0 2px rgba(255,255,255,0.4), 0 2px 10px rgba(0,0,0,0.8)'
+              }}>
                 {slide.title}
                 <br />
                 {slide.subtitle}

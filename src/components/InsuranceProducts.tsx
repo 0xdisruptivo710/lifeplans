@@ -1,7 +1,6 @@
 import { User, Users, Building2, Smile, Heart, Car, Home, Briefcase, Bike, Truck } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { GradientButton } from "@/components/ui/gradient-button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const healthProducts = [
@@ -104,20 +103,26 @@ const InsuranceProducts = () => {
         {/* Tabs */}
         <div className="flex justify-center mb-16">
           <div className="inline-flex gap-4">
-            <GradientButton
+            <button
               onClick={() => setActiveTab("saude")}
-              variant={activeTab === "saude" ? "default" : "variant"}
-              className="px-12 py-4 text-base font-light tracking-wider"
+              className={`px-12 py-4 text-base font-light tracking-wider border transition-all duration-300 ${
+                activeTab === "saude"
+                  ? "bg-gradient-gold text-black-primary border-gold-accent"
+                  : "bg-transparent text-gray-light border-gray-dark hover:border-gold-accent hover:text-gold-accent"
+              }`}
             >
               SAÚDE
-            </GradientButton>
-            <GradientButton
+            </button>
+            <button
               onClick={() => setActiveTab("seguros")}
-              variant={activeTab === "seguros" ? "default" : "variant"}
-              className="px-12 py-4 text-base font-light tracking-wider"
+              className={`px-12 py-4 text-base font-light tracking-wider border transition-all duration-300 ${
+                activeTab === "seguros"
+                  ? "bg-gradient-gold text-black-primary border-gold-accent"
+                  : "bg-transparent text-gray-light border-gray-dark hover:border-gold-accent hover:text-gold-accent"
+              }`}
             >
               SEGUROS
-            </GradientButton>
+            </button>
           </div>
         </div>
 

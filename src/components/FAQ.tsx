@@ -36,8 +36,8 @@ const faqs = [
     answer: "Sim, os planos de saúde individuais e familiares não têm fidelidade obrigatória e podem ser cancelados a qualquer momento. Já os planos empresariais podem ter condições específicas de acordo com o contrato estabelecido com a operadora."
   },
   {
-    question: "Vocês atendem apenas em Sorocaba?",
-    answer: "Somos especializados no atendimento em Sorocaba e região, com profundo conhecimento da rede credenciada local. No entanto, também podemos auxiliar na contratação de planos com cobertura nacional, atendendo clientes de outras cidades."
+    question: "Qual a área de atuação da Lifeplans?",
+    answer: "Atendemos mais de 50 cidades do interior de São Paulo, com profundo conhecimento da rede credenciada regional. Também auxiliamos na contratação de planos com cobertura nacional, atendendo clientes em todo o Brasil."
   }
 ];
 

@@ -7,12 +7,12 @@ const slides = [{
   image: heroImage1,
   title: "Planos de Saúde e Seguros",
   subtitle: "Para Você e Sua Família",
-  description: "16 anos protegendo o que realmente importa em Sorocaba-SP"
+  description: "16 anos protegendo o que realmente importa no interior de São Paulo"
 }, {
   image: heroImage2,
   title: "Proteção Completa",
   subtitle: "Com as Melhores Operadoras",
-  description: "16 anos de experiência e confiança em Sorocaba-SP"
+  description: "Atuação em mais de 50 cidades do interior paulista"
 }];
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);

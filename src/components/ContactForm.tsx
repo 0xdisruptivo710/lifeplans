@@ -47,8 +47,8 @@ const ContactForm = () => {
     },
     {
       icon: MapPin,
-      title: "Endereço",
-      info: "Sorocaba - SP",
+      title: "Área de Atuação",
+      info: "Interior de São Paulo - 50+ cidades",
     },
     {
       icon: MessageCircle,

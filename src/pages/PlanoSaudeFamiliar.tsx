@@ -8,7 +8,7 @@ const PlanoSaudeFamiliar = () => {
   const benefits = [
     "Cobertura para todos os membros da família",
     "Atendimento em hospitais e clínicas de excelência",
-    "Rede credenciada ampla em Sorocaba e região",
+    "Rede credenciada ampla em mais de 50 cidades do interior de SP",
     "Telemedicina para toda a família 24/7",
     "Economia com planos familiares",
     "Programas de saúde preventiva e bem-estar",

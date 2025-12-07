@@ -1,7 +1,6 @@
 import { User, Users, Building2, Smile, Heart, Car, Home, Briefcase, Bike, Truck } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useState } from "react";
-import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { useState, useRef, useEffect } from "react";
 
 const healthProducts = [
   {
@@ -79,6 +78,72 @@ const insuranceProducts = [
   },
 ];
 
+// Card component separado para evitar chamada de hook dentro do map
+const ProductCard = ({ product, index }: { product: typeof healthProducts[0]; index: number }) => {
+  const ref = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  const Icon = product.icon;
+
+  return (
+    <div
+      ref={ref}
+      className={`bg-black-primary relative group overflow-hidden transition-all duration-700 ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+      }`}
+      style={{ transitionDelay: `${index * 100}ms` }}
+    >
+      {/* Gold Accent Top Border */}
+      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-gold transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+      
+      {/* Content */}
+      <div className="p-8 border border-gray-dark group-hover:border-gold-accent transition-all duration-500 flex flex-col h-full">
+        <div className="mb-6">
+          <Icon className="text-gray-light group-hover:text-gold-accent transition-colors duration-300" size={48} strokeWidth={1.5} />
+        </div>
+        
+        <h3 className="text-white text-xl font-light mb-4 group-hover:text-gold-accent transition-colors duration-300">
+          {product.title}
+        </h3>
+        
+        <p className="text-gray-medium leading-relaxed mb-6 font-extralight text-sm min-h-[60px]">
+          {product.description}
+        </p>
+        
+        <div className="mt-auto">
+          <Link 
+            to={`/${product.slug}`}
+            className="inline-flex items-center text-gold-accent font-light hover:gap-3 gap-2 transition-all duration-300 text-sm"
+          >
+            Saiba mais
+            <span className="text-lg">→</span>
+          </Link>
+        </div>
+      </div>
+
+      {/* Hover Overlay Effect */}
+      <div className="absolute inset-0 bg-gradient-to-t from-gold-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+    </div>
+  );
+};
+
 const InsuranceProducts = () => {
   const [activeTab, setActiveTab] = useState<"saude" | "seguros">("saude");
 
@@ -128,51 +193,9 @@ const InsuranceProducts = () => {
 
         {/* Products Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {currentProducts.map((product, index) => {
-            const Icon = product.icon;
-            const { ref, isVisible } = useScrollAnimation(0.1);
-            return (
-              <div
-                key={index}
-                ref={ref}
-                className={`bg-black-primary relative group overflow-hidden transition-all duration-700 ${
-                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-                }`}
-                style={{ transitionDelay: `${index * 100}ms` }}
-              >
-                {/* Gold Accent Top Border */}
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-gold transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-                
-                {/* Content */}
-                <div className="p-8 border border-gray-dark group-hover:border-gold-accent transition-all duration-500 flex flex-col h-full">
-                  <div className="mb-6">
-                    <Icon className="text-gray-light group-hover:text-gold-accent transition-colors duration-300" size={48} strokeWidth={1.5} />
-                  </div>
-                  
-                  <h3 className="text-white text-xl font-light mb-4 group-hover:text-gold-accent transition-colors duration-300">
-                    {product.title}
-                  </h3>
-                  
-                  <p className="text-gray-medium leading-relaxed mb-6 font-extralight text-sm min-h-[60px]">
-                    {product.description}
-                  </p>
-                  
-                  <div className="mt-auto">
-                    <Link 
-                      to={`/${product.slug}`}
-                      className="inline-flex items-center text-gold-accent font-light hover:gap-3 gap-2 transition-all duration-300 text-sm"
-                    >
-                      Saiba mais
-                      <span className="text-lg">→</span>
-                    </Link>
-                  </div>
-                </div>
-
-                {/* Hover Overlay Effect */}
-                <div className="absolute inset-0 bg-gradient-to-t from-gold-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-              </div>
-            );
-          })}
+          {currentProducts.map((product, index) => (
+            <ProductCard key={`${activeTab}-${product.slug}`} product={product} index={index} />
+          ))}
         </div>
       </div>
     </section>

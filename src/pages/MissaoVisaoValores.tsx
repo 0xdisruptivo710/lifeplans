@@ -109,10 +109,10 @@ const MissaoVisaoValores = () => {
               Nossa Visão
             </h2>
             <p className="text-gray-light text-lg leading-relaxed font-extralight">
-              Ser referência em Sorocaba e região como a principal consultoria em planos de saúde e 
+              Ser referência no interior de São Paulo como a principal consultoria em planos de saúde e 
               seguros, reconhecida pela qualidade do atendimento, expertise no mercado e pelo 
               compromisso inabalável com a satisfação de nossos clientes. Queremos ser a primeira 
-              escolha quando se trata de proteção e cuidado com a saúde e patrimônio.
+              escolha quando se trata de proteção e cuidado com a saúde e patrimônio em mais de 50 cidades da região.
             </p>
           </div>
         </div>

@@ -28,7 +28,7 @@ const benefits = [
   {
     icon: Star,
     title: "Dentistas Credenciados",
-    description: "Rede com os melhores profissionais de Sorocaba e região",
+    description: "Rede com os melhores profissionais do interior de São Paulo",
   },
   {
     icon: Clock,
@@ -52,7 +52,7 @@ const faqs = [
   },
   {
     question: "Posso escolher qualquer dentista?",
-    answer: "Você pode escolher entre os dentistas credenciados à rede do plano. Oferecemos planos com ampla rede de profissionais em Sorocaba e região. Alguns planos também oferecem cobertura nacional para atendimento em outras cidades."
+    answer: "Você pode escolher entre os dentistas credenciados à rede do plano. Oferecemos planos com ampla rede de profissionais em mais de 50 cidades do interior de São Paulo. Alguns planos também oferecem cobertura nacional para atendimento em outras regiões."
   },
   {
     question: "O plano odontológico cobre aparelho ortodôntico?",

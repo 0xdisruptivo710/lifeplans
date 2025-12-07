@@ -28,7 +28,7 @@ const healthProducts = [
   {
     icon: Smile,
     title: "Planos Odontológicos",
-    description: "Cuide da saúde bucal da sua família com planos completos e rede credenciada em Sorocaba",
+    description: "Cuide da saúde bucal da sua família com planos completos e ampla rede credenciada regional",
     slug: "plano-odontologico",
     featured: false,
   },
@@ -93,7 +93,7 @@ const InsuranceProducts = () => {
             NOSSOS SERVIÇOS
           </span>
           <h2 className="text-white mt-4 mb-6 font-raleway font-light text-4xl lg:text-5xl">
-            Planos de Saúde e Seguros em Sorocaba
+            Planos de Saúde e Seguros no Interior de SP
           </h2>
           <p className="text-gray-light text-lg max-w-2xl mx-auto font-extralight">
             Soluções completas com as melhores operadoras do mercado

@@ -30,10 +30,10 @@ const values = [
 ];
 
 const milestones = [
-  { year: "2009", title: "Fundação", description: "Início das operações em Sorocaba" },
+  { year: "2009", title: "Fundação", description: "Início das operações no interior de São Paulo" },
   { year: "2015", title: "Expansão", description: "Alcançamos 5.000 clientes atendidos" },
   { year: "2020", title: "Consolidação", description: "Parcerias com as maiores operadoras" },
-  { year: "2024", title: "Liderança", description: "Referência regional em planos de saúde e seguros" },
+  { year: "2024", title: "Liderança", description: "Atuação em mais de 50 cidades do interior paulista" },
   { year: "2025", title: "Prêmio Porto Bank", description: "Destaque em Consórcio no mercado regional" },
 ];
 
@@ -65,7 +65,7 @@ const Sobre = () => {
               Sobre a Lifeplans
             </h1>
             <p className="text-lg md:text-xl text-gray-light max-w-2xl mx-auto font-light">
-              Transformando o mercado de planos de saúde e seguros em Sorocaba
+              Transformando o mercado de planos de saúde e seguros no interior de São Paulo
             </p>
           </div>
         </div>

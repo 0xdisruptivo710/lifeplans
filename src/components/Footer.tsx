@@ -33,7 +33,7 @@ const Footer = () => {
               />
             </div>
             <p className="text-gray-medium text-sm leading-relaxed mb-6 font-light">
-              Há 16 anos protegendo famílias e empresas em Sorocaba com planos de saúde, odontológicos e seguros.
+              Há 16 anos protegendo famílias e empresas em mais de 50 cidades do interior de São Paulo com planos de saúde, odontológicos e seguros.
             </p>
             <div className="flex space-x-3">
               {["f", "i", "in", "t"].map((social) => (
@@ -111,7 +111,7 @@ const Footer = () => {
               </li>
               <li className="text-gray-medium">
                 <span className="block font-light text-white mb-1">Localização</span>
-                Sorocaba - SP
+                Interior de São Paulo
               </li>
             </ul>
             <div className="mt-6">

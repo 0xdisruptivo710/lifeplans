@@ -6,7 +6,7 @@ const differentials = [
     icon: Headset,
     number: "16+",
     title: "Anos de Experiência",
-    description: "Expertise consolidada em planos de saúde e seguros em Sorocaba",
+    description: "Expertise consolidada em planos de saúde e seguros no interior de São Paulo",
   },
   {
     icon: Award,

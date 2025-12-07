@@ -4,7 +4,7 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 const differentials = [
   {
     icon: Headset,
-    number: "13+",
+    number: "16+",
     title: "Anos de Experiência",
     description: "Expertise consolidada em planos de saúde e seguros em Sorocaba",
   },

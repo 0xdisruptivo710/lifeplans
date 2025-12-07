@@ -20,6 +20,7 @@ const Header = () => {
   const navItems = [
     { label: "Home", href: "/" },
     { label: "Quem Somos", href: "/sobre" },
+    { label: "Missão, Visão e Valores", href: "/missao-visao-valores" },
     { label: "Planos de Saúde", href: "/planos-saude" },
     { label: "Planos Odontológicos", href: "/planos-odontologicos" },
     { label: "Seguros", href: "/seguros" },

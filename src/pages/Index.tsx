@@ -5,6 +5,7 @@ import OurMission from "@/components/OurMission";
 import InsuranceCategories from "@/components/InsuranceCategories";
 import InsuranceProducts from "@/components/InsuranceProducts";
 import SecondaryInsurance from "@/components/SecondaryInsurance";
+import ConsorciosSection from "@/components/ConsorciosSection";
 import WhyLifePlans from "@/components/WhyLifePlans";
 import HowItWorks from "@/components/HowItWorks";
 import StatisticsCounter from "@/components/StatisticsCounter";
@@ -24,6 +25,7 @@ const Index = () => {
       <InsuranceCategories />
       <InsuranceProducts />
       <SecondaryInsurance />
+      <ConsorciosSection />
       <WhyLifePlans />
       <HowItWorks />
       <StatisticsCounter />

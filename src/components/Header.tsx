@@ -42,6 +42,7 @@ const Header = () => {
     { label: "Planos de Saúde", href: "/planos-saude" },
     { label: "Planos Odontológicos", href: "/planos-odontologicos" },
     { label: "Seguros", href: "/seguros" },
+    { label: "Consórcios", href: "/consorcios" },
   ];
 
   return (

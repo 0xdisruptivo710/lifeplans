@@ -20,6 +20,7 @@ import Sobre from "./pages/Sobre";
 import PlanosOdontologicos from "./pages/PlanosOdontologicos";
 import TrabalheConosco from "./pages/TrabalheConosco";
 import MissaoVisaoValores from "./pages/MissaoVisaoValores";
+import Consorcios from "./pages/Consorcios";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -48,6 +49,7 @@ const App = () => (
           <Route path="/planos-odontologicos" element={<PlanosOdontologicos />} />
           <Route path="/trabalhe-conosco" element={<TrabalheConosco />} />
           <Route path="/missao-visao-valores" element={<MissaoVisaoValores />} />
+          <Route path="/consorcios" element={<Consorcios />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -24,7 +24,7 @@ const operators = [
     name: "Unimed",
     icon: TrendingUp,
     coverage: "Nacional",
-    plans: "Individual e Coletivo",
+    plans: "Apenas CNPJ",
   },
   {
     name: "Porto Seguro",

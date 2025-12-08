@@ -4,9 +4,8 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 const differentials = [
   {
     icon: Headset,
-    number: "16+",
-    title: "Anos de Experiência",
-    description: "Expertise consolidada em planos de saúde e seguros no interior de São Paulo",
+    title: "Experiência de Mercado",
+    description: "Mais de 16 anos de expertise consolidada em planos de saúde e seguros no interior de São Paulo",
   },
   {
     icon: Award,
@@ -75,12 +74,6 @@ const WhyLifePlans = () => {
                     <Icon className="text-gray-light group-hover:text-gold-accent transition-colors duration-300" size={36} />
                   </div>
                 </div>
-
-                {item.number && (
-                  <div className="text-5xl font-bold text-gold-accent mb-3 font-montserrat">
-                    {item.number}
-                  </div>
-                )}
 
                 <h3 className="text-white text-xl font-light mb-4">
                   {item.title}

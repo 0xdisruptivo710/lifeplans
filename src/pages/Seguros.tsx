@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     question: "Como funciona o pagamento de indenização?",
-    answer: "Após a ocorrência de um sinistro coberto, você aciona a seguradora, que analisa o caso e, se aprovado, paga a indenização conforme o valor segurado contratado. O prazo varia de acordo com o tipo de sinistro e seguradora, mas geralmente é de 30 dias."
+    answer: "Após a ocorrência de um sinistro coberto, você aciona a seguradora, que analisa o caso e realiza o pagamento da indenização conforme o valor segurado contratado. O prazo varia de acordo com o tipo de sinistro e seguradora, mas geralmente é de até 30 dias após a entrega de toda documentação."
   },
   {
     question: "Posso contratar mais de um seguro?",

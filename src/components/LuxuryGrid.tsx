@@ -50,7 +50,7 @@ const LuxuryGrid = () => {
       >
         {/* Background image with parallax effect */}
         <div 
-          className="absolute inset-[-50%] bg-cover bg-left md:bg-[center_left_30%]"
+          className="absolute inset-[-50%] bg-cover bg-[center_40%] md:bg-center"
           style={{
             backgroundImage: `url(${luxuryParallaxBanner})`,
             transform: `translateY(${scrollOffset}px)`,

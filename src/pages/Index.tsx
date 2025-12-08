@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import LuxuryGrid from "@/components/LuxuryGrid";
 import OurMission from "@/components/OurMission";
+import NossaAtuacao from "@/components/NossaAtuacao";
 import InsuranceCategories from "@/components/InsuranceCategories";
 import InsuranceProducts from "@/components/InsuranceProducts";
 import SecondaryInsurance from "@/components/SecondaryInsurance";
@@ -22,6 +23,7 @@ const Index = () => {
       <Hero />
       <LuxuryGrid />
       <OurMission />
+      <NossaAtuacao />
       <InsuranceCategories />
       <InsuranceProducts />
       <SecondaryInsurance />

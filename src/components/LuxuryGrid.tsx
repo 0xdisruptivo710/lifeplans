@@ -1,6 +1,6 @@
 import { Shield, Heart, Award, Users } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
-import porscheLuxury from "@/assets/porsche-gold.jpg";
+import luxuryParallaxBanner from "@/assets/luxury-parallax-banner.jpeg";
 
 const LuxuryGrid = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -44,7 +44,7 @@ const LuxuryGrid = () => {
           isVisible ? "opacity-100" : "opacity-0"
         }`}
         style={{
-          backgroundImage: `url(${porscheLuxury})`,
+          backgroundImage: `url(${luxuryParallaxBanner})`,
           backgroundAttachment: 'fixed',
           backgroundPosition: `50% ${scrollY * 0.3}px`,
           backgroundSize: 'cover',

@@ -82,23 +82,23 @@ const StatisticsCounter = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-8">
             {stats.map((stat, index) => {
               const Icon = stat.icon;
               return (
                 <div
                   key={index}
-                  className="text-center p-8 rounded-lg bg-card border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg"
+                  className="text-center p-4 md:p-8 rounded-lg bg-card border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg"
                   style={{ transitionDelay: `${index * 100}ms` }}
                 >
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
-                    <Icon className="w-8 h-8 text-primary" />
+                  <div className="inline-flex items-center justify-center w-10 h-10 md:w-16 md:h-16 rounded-full bg-primary/10 mb-3 md:mb-4">
+                    <Icon className="w-5 h-5 md:w-8 md:h-8 text-primary" />
                   </div>
-                  <div className="text-4xl md:text-5xl font-bold text-foreground mb-2">
+                  <div className="text-2xl md:text-4xl lg:text-5xl font-bold text-foreground mb-1 md:mb-2">
                     {stat.value}
                     <span className="text-primary">{stat.suffix}</span>
                   </div>
-                  <div className="text-muted-foreground font-medium">
+                  <div className="text-muted-foreground font-medium text-xs md:text-base">
                     {stat.label}
                   </div>
                 </div>

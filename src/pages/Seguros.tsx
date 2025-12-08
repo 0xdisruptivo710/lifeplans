@@ -33,7 +33,7 @@ const faqs = [
   },
   {
     question: "O que fazer em caso de sinistro?",
-    answer: "Entre em contato imediatamente com a seguradora através dos canais 24h, forneça as informações necessárias e documentação solicitada. Nossa equipe auxilia em todo o processo, desde a abertura até o recebimento da indenização."
+    answer: "Entre em contato imediatamente com a Lifeplans através do nosso WhatsApp ou telefone. Nossa equipe especializada irá orientá-lo em todo o processo, cuidando da comunicação com a seguradora, documentação necessária e acompanhamento até o recebimento da sua indenização."
   },
   {
     question: "Como é calculado o valor do seguro?",

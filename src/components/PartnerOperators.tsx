@@ -1,40 +1,45 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import { Shield, Award, Heart, TrendingUp } from "lucide-react";
+import amilLogo from "@/assets/logos/amil-logo.jpg";
+import sulamericaLogo from "@/assets/logos/sulamerica-logo.webp";
+import bradescoLogo from "@/assets/logos/bradesco-saude-logo.png";
+import unimedLogo from "@/assets/logos/unimed-logo-new.png";
+import portoLogo from "@/assets/logos/porto-saude-logo.png";
+import notredameLogo from "@/assets/logos/notredame-logo.png";
 
 const operators = [
   {
     name: "Amil",
-    icon: Shield,
+    logo: amilLogo,
     coverage: "Nacional",
     plans: "Individual e Empresarial",
   },
   {
     name: "SulAmérica",
-    icon: Award,
+    logo: sulamericaLogo,
     coverage: "Nacional",
     plans: "PME e Grandes Empresas",
   },
   {
     name: "Bradesco Saúde",
-    icon: Heart,
+    logo: bradescoLogo,
     coverage: "Nacional",
     plans: "Todos os Portes",
   },
   {
     name: "Unimed",
-    icon: TrendingUp,
+    logo: unimedLogo,
     coverage: "Nacional",
     plans: "Apenas CNPJ",
   },
   {
-    name: "Porto Seguro",
-    icon: Shield,
-    coverage: "Региональ e Nacional",
+    name: "Porto Saúde",
+    logo: portoLogo,
+    coverage: "Regional e Nacional",
     plans: "Empresarial",
   },
   {
     name: "NotreDame Intermédica",
-    icon: Award,
+    logo: notredameLogo,
     coverage: "Nacional",
     plans: "PME e Corporativo",
   },
@@ -69,7 +74,6 @@ export const PartnerOperators = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {operators.map((operator, index) => {
-            const Icon = operator.icon;
             const { ref, isVisible } = useScrollAnimation(0.2);
             return (
               <div
@@ -80,10 +84,12 @@ export const PartnerOperators = () => {
                 }`}
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
-                <div className="flex items-center justify-center mb-6">
-                  <div className="w-20 h-20 rounded-full bg-gradient-to-br from-gold-accent to-yellow-600 flex items-center justify-center">
-                    <Icon className="w-10 h-10 text-black-primary" />
-                  </div>
+                <div className="flex items-center justify-center mb-6 h-24">
+                  <img 
+                    src={operator.logo} 
+                    alt={`Logo ${operator.name}`}
+                    className="max-h-20 max-w-[160px] object-contain"
+                  />
                 </div>
                 
                 <h3 className="font-raleway text-2xl font-light text-white text-center mb-4">

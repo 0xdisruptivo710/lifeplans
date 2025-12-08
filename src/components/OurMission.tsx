@@ -42,7 +42,7 @@ const OurMission = () => {
       style={{
         backgroundImage: `url(${mercadoParallax})`,
         backgroundAttachment: 'fixed',
-        backgroundPosition: `center ${scrollY * 0.3}px`,
+        backgroundPosition: `center ${scrollY * 0.1}px`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
       }}

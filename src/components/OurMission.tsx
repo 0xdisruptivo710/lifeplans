@@ -2,17 +2,8 @@ import { useState, useEffect, useRef } from "react";
 import mercadoParallax from "@/assets/mercado-parallax.jpeg";
 
 const OurMission = () => {
-  const [scrollY, setScrollY] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -39,14 +30,14 @@ const OurMission = () => {
       className={`relative w-full h-[180px] md:h-[220px] overflow-hidden transition-opacity duration-1000 ${
         isVisible ? "opacity-100" : "opacity-0"
       }`}
-      style={{
-        backgroundImage: `url(${mercadoParallax})`,
-        backgroundAttachment: 'fixed',
-        backgroundPosition: `center ${scrollY * 0.1}px`,
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-      }}
     >
+      {/* Background image with mobile-friendly approach */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center md:bg-fixed"
+        style={{
+          backgroundImage: `url(${mercadoParallax})`,
+        }}
+      />
       {/* Subtle overlay */}
       <div className="absolute inset-0 bg-black-primary/10" />
     </section>

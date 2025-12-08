@@ -114,26 +114,27 @@ const ProductCard = ({ product, index }: { product: typeof healthProducts[0]; in
       <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-gold transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
       
       {/* Content */}
-      <div className="p-8 border border-gray-dark group-hover:border-gold-accent transition-all duration-500 flex flex-col h-full">
-        <div className="mb-6">
-          <Icon className="text-gray-light group-hover:text-gold-accent transition-colors duration-300" size={48} strokeWidth={1.5} />
+      <div className="p-4 md:p-8 border border-gray-dark group-hover:border-gold-accent transition-all duration-500 flex flex-col h-full">
+        <div className="mb-3 md:mb-6">
+          <Icon className="text-gray-light group-hover:text-gold-accent transition-colors duration-300" size={32} strokeWidth={1.5} />
         </div>
         
-        <h3 className="text-white text-xl font-light mb-4 group-hover:text-gold-accent transition-colors duration-300">
+        <h3 className="text-white text-sm md:text-xl font-light mb-2 md:mb-4 group-hover:text-gold-accent transition-colors duration-300 leading-tight">
           {product.title}
         </h3>
         
-        <p className="text-gray-medium leading-relaxed mb-6 font-extralight text-sm min-h-[60px]">
+        <p className="text-gray-medium leading-relaxed mb-3 md:mb-6 font-extralight text-xs md:text-sm min-h-[40px] md:min-h-[60px] hidden md:block">
           {product.description}
         </p>
         
         <div className="mt-auto">
           <Link 
             to={`/${product.slug}`}
-            className="inline-flex items-center text-gold-accent font-light hover:gap-3 gap-2 transition-all duration-300 text-sm"
+            className="inline-flex items-center text-gold-accent font-light hover:gap-3 gap-2 transition-all duration-300 text-xs md:text-sm"
           >
-            Saiba mais
-            <span className="text-lg">→</span>
+            <span className="hidden md:inline">Saiba mais</span>
+            <span className="md:hidden">Ver</span>
+            <span className="text-base md:text-lg">→</span>
           </Link>
         </div>
       </div>
@@ -150,27 +151,27 @@ const InsuranceProducts = () => {
   const currentProducts = activeTab === "saude" ? healthProducts : insuranceProducts;
 
   return (
-    <section id="planos" className="section-padding bg-black-secondary relative overflow-hidden">
+    <section id="planos" className="py-16 md:py-20 lg:py-28 bg-black-secondary relative overflow-hidden">
       <div className="container-custom">
         {/* Header */}
-        <div className="text-center mb-16">
-          <span className="text-gold-accent font-light text-sm tracking-[0.2em] uppercase mb-4 block">
+        <div className="text-center mb-10 md:mb-16 px-2">
+          <span className="text-gold-accent font-light text-xs md:text-sm tracking-[0.2em] uppercase mb-4 block">
             NOSSOS SERVIÇOS
           </span>
-          <h2 className="text-white mt-4 mb-6 font-raleway font-light text-4xl lg:text-5xl">
+          <h2 className="text-white mt-4 mb-4 md:mb-6 font-raleway font-light text-2xl md:text-4xl lg:text-5xl">
             Planos de Saúde e Seguros no Interior de SP
           </h2>
-          <p className="text-gray-light text-lg max-w-2xl mx-auto font-extralight">
+          <p className="text-gray-light text-sm md:text-lg max-w-2xl mx-auto font-extralight">
             Soluções completas com as melhores operadoras do mercado
           </p>
         </div>
 
         {/* Tabs */}
-        <div className="flex justify-center mb-16">
-          <div className="inline-flex gap-4">
+        <div className="flex justify-center mb-10 md:mb-16">
+          <div className="inline-flex gap-2 md:gap-4">
             <button
               onClick={() => setActiveTab("saude")}
-              className={`px-12 py-4 text-base font-light tracking-wider border transition-all duration-300 ${
+              className={`px-6 md:px-12 py-3 md:py-4 text-sm md:text-base font-light tracking-wider border transition-all duration-300 ${
                 activeTab === "saude"
                   ? "bg-gradient-gold text-black-primary border-gold-accent"
                   : "bg-transparent text-gray-light border-gray-dark hover:border-gold-accent hover:text-gold-accent"
@@ -180,7 +181,7 @@ const InsuranceProducts = () => {
             </button>
             <button
               onClick={() => setActiveTab("seguros")}
-              className={`px-12 py-4 text-base font-light tracking-wider border transition-all duration-300 ${
+              className={`px-6 md:px-12 py-3 md:py-4 text-sm md:text-base font-light tracking-wider border transition-all duration-300 ${
                 activeTab === "seguros"
                   ? "bg-gradient-gold text-black-primary border-gold-accent"
                   : "bg-transparent text-gray-light border-gray-dark hover:border-gold-accent hover:text-gold-accent"
@@ -192,7 +193,7 @@ const InsuranceProducts = () => {
         </div>
 
         {/* Products Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
           {currentProducts.map((product, index) => (
             <ProductCard key={`${activeTab}-${product.slug}`} product={product} index={index} />
           ))}

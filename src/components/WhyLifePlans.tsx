@@ -40,23 +40,23 @@ const WhyLifePlans = () => {
       <div className="container-custom">
         {/* Header */}
         <div
-          className={`text-center mb-20 transition-all duration-700 ${
+          className={`text-center mb-10 md:mb-20 px-2 transition-all duration-700 ${
             titleVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <span className="text-gold-accent font-semibold text-sm tracking-wider uppercase">
+          <span className="text-gold-accent font-semibold text-xs md:text-sm tracking-wider uppercase">
             DIFERENCIAIS
           </span>
-          <h2 className="text-white mt-4 mb-6 font-raleway font-light">
+          <h2 className="text-white mt-4 mb-4 md:mb-6 font-raleway font-light text-2xl md:text-4xl lg:text-5xl">
             Por Que Escolher a Lifeplans
           </h2>
-          <p className="text-gray-light text-lg max-w-2xl mx-auto font-extralight">
+          <p className="text-gray-light text-sm md:text-lg max-w-2xl mx-auto font-extralight">
             Profissionais especializados com atendimento de excelência
           </p>
         </div>
 
         {/* Differentials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 lg:gap-12">
           {differentials.map((item, index) => {
             const Icon = item.icon;
             const { ref, isVisible } = useScrollAnimation(0.1);
@@ -69,17 +69,17 @@ const WhyLifePlans = () => {
                 }`}
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
-                <div className="mb-6 flex justify-center">
-                  <div className="w-20 h-20 rounded-full border-2 border-gray-dark flex items-center justify-center group-hover:border-gold-accent transition-colors duration-300">
-                    <Icon className="text-gray-light group-hover:text-gold-accent transition-colors duration-300" size={36} />
+                <div className="mb-4 md:mb-6 flex justify-center">
+                  <div className="w-14 h-14 md:w-20 md:h-20 rounded-full border-2 border-gray-dark flex items-center justify-center group-hover:border-gold-accent transition-colors duration-300">
+                    <Icon className="text-gray-light group-hover:text-gold-accent transition-colors duration-300" size={24} />
                   </div>
                 </div>
 
-                <h3 className="text-white text-xl font-light mb-4">
+                <h3 className="text-white text-sm md:text-xl font-light mb-2 md:mb-4">
                   {item.title}
                 </h3>
 
-                <p className="text-gray-medium leading-relaxed font-extralight">
+                <p className="text-gray-medium leading-relaxed font-extralight text-xs md:text-base">
                   {item.description}
                 </p>
               </div>

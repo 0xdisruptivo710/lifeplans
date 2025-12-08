@@ -62,44 +62,44 @@ const ConsorciosSection = () => {
       <div className="container-custom relative z-10">
         {/* Header */}
         <div
-          className={`text-center mb-16 transition-all duration-700 ${
+          className={`text-center mb-10 md:mb-16 px-2 transition-all duration-700 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <Trophy className="text-gold-accent" size={32} />
-            <span className="text-gold-accent uppercase tracking-widest text-sm font-medium">
+          <div className="flex items-center justify-center gap-2 md:gap-3 mb-4">
+            <Trophy className="text-gold-accent" size={24} />
+            <span className="text-gold-accent uppercase tracking-widest text-xs md:text-sm font-medium">
               Prêmio Porto Bank 2025
             </span>
           </div>
-          <h2 className="text-3xl md:text-5xl font-light text-foreground mb-6">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-light text-foreground mb-4 md:mb-6">
             Consórcios <span className="text-gold-accent font-normal">Premiados</span>
           </h2>
-          <p className="text-gray-light text-lg max-w-2xl mx-auto">
+          <p className="text-gray-light text-sm md:text-lg max-w-2xl mx-auto">
             Reconhecidos como referência em consórcios no interior de São Paulo. 
             Planeje seu futuro com segurança e sem juros abusivos.
           </p>
         </div>
 
         {/* Cards */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mb-10 md:mb-16">
           {consorcioTypes.map((tipo, index) => (
             <div
               key={tipo.title}
-              className={`group bg-black-primary border border-gray-dark rounded-2xl p-8 hover:border-gold-accent/50 transition-all duration-500 ${
+              className={`group bg-black-primary border border-gray-dark rounded-xl md:rounded-2xl p-5 md:p-8 hover:border-gold-accent/50 transition-all duration-500 ${
                 isVisible
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-8"
               }`}
               style={{ transitionDelay: `${index * 150}ms` }}
             >
-              <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-gold-accent/20 to-gold-accent/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                <tipo.icon className="text-gold-accent" size={32} />
+              <div className="w-12 h-12 md:w-16 md:h-16 rounded-lg md:rounded-xl bg-gradient-to-br from-gold-accent/20 to-gold-accent/5 flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300">
+                <tipo.icon className="text-gold-accent" size={24} />
               </div>
-              <h3 className="text-xl font-medium text-foreground mb-3">
+              <h3 className="text-base md:text-xl font-medium text-foreground mb-2 md:mb-3">
                 {tipo.title}
               </h3>
-              <p className="text-gray-light text-sm leading-relaxed">
+              <p className="text-gray-light text-xs md:text-sm leading-relaxed">
                 {tipo.description}
               </p>
             </div>

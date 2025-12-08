@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import segurosHero1 from "@/assets/seguros-hero-1.png";
 import segurosHero2 from "@/assets/seguros-hero-2.png";
 import segurosHero3 from "@/assets/seguros-hero-3.png";
-import luxuryYacht from "@/assets/luxury-yacht.png";
+import jetskiLuxury from "@/assets/jetski-luxury.png";
 
 const heroImages = [segurosHero1, segurosHero2, segurosHero3];
 import {
@@ -209,7 +209,7 @@ const Seguros = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative h-[400px] lg:h-[500px] overflow-hidden rounded-lg order-2 lg:order-1">
               <img 
-                src={luxuryYacht} 
+                src={jetskiLuxury} 
                 alt="Proteção premium" 
                 className="w-full h-full object-cover"
               />

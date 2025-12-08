@@ -1,11 +1,16 @@
+import { useState, useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Shield, Car, Home, Building2, CheckCircle, ArrowRight, Bike, Truck } from "lucide-react";
 import { Link } from "react-router-dom";
-import luxuryCar from "@/assets/luxury-car-diagonal.jpg";
+import segurosHero1 from "@/assets/seguros-hero-1.png";
+import segurosHero2 from "@/assets/seguros-hero-2.png";
+import segurosHero3 from "@/assets/seguros-hero-3.png";
 import luxuryYacht from "@/assets/luxury-yacht.png";
+
+const heroImages = [segurosHero1, segurosHero2, segurosHero3];
 import {
   Accordion,
   AccordionContent,
@@ -97,6 +102,14 @@ const advantages = [
 const Seguros = () => {
   const { ref: heroRef, isVisible: heroVisible } = useScrollAnimation(0.1);
   const { ref: advantagesRef, isVisible: advantagesVisible } = useScrollAnimation(0.2);
+  const [currentImage, setCurrentImage] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % heroImages.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="min-h-screen bg-background">
@@ -104,12 +117,17 @@ const Seguros = () => {
       
       {/* Hero Section */}
       <section className="relative h-[60vh] md:h-[70vh] overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${luxuryCar})`,
-          }}
-        />
+        {heroImages.map((image, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${
+              currentImage === index ? "opacity-100" : "opacity-0"
+            }`}
+            style={{
+              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${image})`,
+            }}
+          />
+        ))}
         <div className="relative h-full flex items-center justify-center text-center px-4">
           <div
             ref={heroRef}

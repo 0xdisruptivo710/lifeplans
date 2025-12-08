@@ -44,16 +44,18 @@ const LuxuryGrid = () => {
       {/* Parallax Section */}
       <section 
         ref={sectionRef}
-        className={`relative w-full h-[100px] md:h-[220px] overflow-hidden transition-opacity duration-1000 ${
+        className={`relative w-full h-[180px] md:h-[320px] overflow-hidden transition-opacity duration-1000 ${
           isVisible ? "opacity-100" : "opacity-0"
         }`}
       >
         {/* Background image with parallax effect */}
         <div 
-          className="absolute inset-[-50%] bg-cover bg-[center_40%] md:bg-center"
+          className="absolute inset-0 bg-cover bg-[center_center]"
           style={{
             backgroundImage: `url(${luxuryParallaxBanner})`,
-            transform: `translateY(${scrollOffset}px)`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center center',
+            transform: `translateY(${scrollOffset}px) scale(1.1)`,
             transition: 'transform 0.1s ease-out',
           }}
         />

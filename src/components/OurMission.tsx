@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import luxuryParallaxBanner from "@/assets/luxury-parallax-banner.jpeg";
+import mercadoParallax from "@/assets/mercado-parallax.jpeg";
 
 const OurMission = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -40,7 +40,7 @@ const OurMission = () => {
         isVisible ? "opacity-100" : "opacity-0"
       }`}
       style={{
-        backgroundImage: `url(${luxuryParallaxBanner})`,
+        backgroundImage: `url(${mercadoParallax})`,
         backgroundAttachment: 'fixed',
         backgroundPosition: `center ${scrollY * 0.3}px`,
         backgroundSize: 'cover',

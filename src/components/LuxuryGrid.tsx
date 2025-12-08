@@ -1,13 +1,20 @@
 import { Shield, Heart, Award, Users } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
-import { useParallax } from "@/hooks/use-parallax";
 import porscheLuxury from "@/assets/porsche-gold.jpg";
 
 const LuxuryGrid = () => {
+  const [scrollY, setScrollY] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-  const [scrollPosition, setScrollPosition] = useState(0);
   const sectionRef = useRef<HTMLElement>(null);
-  const parallaxImage = useParallax(0.15);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -28,90 +35,24 @@ const LuxuryGrid = () => {
     };
   }, []);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (sectionRef.current) {
-        const rect = sectionRef.current.getBoundingClientRect();
-        const scrollProgress = -rect.top / window.innerHeight;
-        setScrollPosition(scrollProgress * 100);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
     <>
-      {/* Diagonal Luxury Section with Geometric Effect */}
+      {/* Parallax Section */}
       <section 
         ref={sectionRef}
-        className={`relative w-full h-[200px] md:h-[280px] overflow-hidden transition-all duration-1000 ${
+        className={`relative w-full h-[200px] md:h-[250px] overflow-hidden transition-opacity duration-1000 ${
           isVisible ? "opacity-100" : "opacity-0"
         }`}
+        style={{
+          backgroundImage: `url(${porscheLuxury})`,
+          backgroundAttachment: 'fixed',
+          backgroundPosition: `50% ${scrollY * 0.3}px`,
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+        }}
       >
-        {/* Dark geometric background */}
-        <div className="absolute inset-0 bg-black-primary" />
-        
-        {/* Left diagonal gold stripe */}
-        <div 
-          className="absolute left-0 top-0 w-[55%] h-full bg-gold-accent"
-          style={{
-            clipPath: "polygon(0 0, 85% 0, 100% 100%, 0 100%)",
-            transform: `translateX(${Math.min(scrollPosition * 0.3, 30)}px)`,
-            transition: 'transform 0.1s ease-out',
-          }}
-        />
-        
-        {/* Center dark diagonal section with car */}
-        <div 
-          className="absolute left-[25%] top-0 w-[60%] h-full overflow-hidden"
-          style={{
-            clipPath: "polygon(15% 0, 100% 0, 85% 100%, 0 100%)",
-          }}
-        >
-          <div
-            className="absolute inset-[-20%] bg-cover bg-center"
-            style={{
-              backgroundImage: `url(${porscheLuxury})`,
-              transform: `translateY(${parallaxImage}px) scale(1.2)`,
-              transition: 'transform 0.1s ease-out',
-            }}
-          />
-          <div className="absolute inset-0 bg-black-primary/30" />
-        </div>
-        
-        {/* Right diagonal gold stripe */}
-        <div 
-          className="absolute right-0 top-0 w-[35%] h-full bg-gold-accent"
-          style={{
-            clipPath: "polygon(25% 0, 100% 0, 100% 100%, 0 100%)",
-            transform: `translateX(${Math.max(-scrollPosition * 0.3, -30)}px)`,
-            transition: 'transform 0.1s ease-out',
-          }}
-        />
-        
-        {/* Right image section */}
-        <div 
-          className="absolute right-0 top-0 w-[30%] h-full overflow-hidden"
-          style={{
-            clipPath: "polygon(20% 0, 100% 0, 100% 100%, 0 100%)",
-          }}
-        >
-          <div
-            className="absolute inset-[-20%] bg-cover bg-right"
-            style={{
-              backgroundImage: `url(${porscheLuxury})`,
-              transform: `translateY(${parallaxImage * 0.5}px) scale(1.3)`,
-              transition: 'transform 0.1s ease-out',
-            }}
-          />
-          <div className="absolute inset-0 bg-black-primary/20" />
-        </div>
-        
-        {/* Subtle top and bottom borders */}
-        <div className="absolute top-0 left-0 right-0 h-[2px] bg-gold-accent/50" />
-        <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gold-accent/50" />
+        {/* Subtle overlay for better contrast */}
+        <div className="absolute inset-0 bg-black-primary/10" />
       </section>
 
       {/* Features Section */}

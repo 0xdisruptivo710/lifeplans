@@ -47,15 +47,12 @@ const NossaAtuacao = () => {
           {/* Glow effect behind image */}
           <div className="absolute inset-0 bg-gradient-radial from-gold-accent/5 via-transparent to-transparent blur-3xl" />
           
-          {/* Image container with invert filter to work on dark bg */}
-          <div className="relative bg-black-secondary/50 backdrop-blur-sm rounded-lg p-8 md:p-12 border border-gray-dark/30">
+          {/* Image container */}
+          <div className="relative bg-white/95 backdrop-blur-sm rounded-lg p-8 md:p-12 border border-gold-accent/30">
             <img 
               src={nossaAtuacaoImg} 
               alt="Nossa Atuação - Benefícios, Private, Corporativo e Linhas Financeiras"
-              className="w-full h-auto invert brightness-90"
-              style={{
-                filter: 'invert(1) brightness(0.9) sepia(0.1) hue-rotate(10deg)',
-              }}
+              className="w-full h-auto"
             />
           </div>
 

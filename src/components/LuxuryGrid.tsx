@@ -40,7 +40,7 @@ const LuxuryGrid = () => {
       {/* Parallax Section */}
       <section 
         ref={sectionRef}
-        className={`relative w-full h-[200px] md:h-[250px] overflow-hidden transition-opacity duration-1000 ${
+        className={`relative w-full h-[140px] md:h-[180px] overflow-hidden transition-opacity duration-1000 ${
           isVisible ? "opacity-100" : "opacity-0"
         }`}
         style={{

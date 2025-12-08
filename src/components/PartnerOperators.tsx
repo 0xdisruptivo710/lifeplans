@@ -85,11 +85,13 @@ export const PartnerOperators = () => {
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
                 <div className="flex items-center justify-center mb-6 h-24">
-                  <img 
-                    src={operator.logo} 
-                    alt={`Logo ${operator.name}`}
-                    className="max-h-20 max-w-[160px] object-contain"
-                  />
+                  <div className="w-32 h-20 bg-white rounded-lg flex items-center justify-center p-3 overflow-hidden">
+                    <img 
+                      src={operator.logo} 
+                      alt={`Logo ${operator.name}`}
+                      className="max-h-full max-w-full object-contain"
+                    />
+                  </div>
                 </div>
                 
                 <h3 className="font-raleway text-2xl font-light text-white text-center mb-4">

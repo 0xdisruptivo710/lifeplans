@@ -3,6 +3,7 @@ import mercadoParallax from "@/assets/mercado-parallax.jpeg";
 
 const OurMission = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [scrollOffset, setScrollOffset] = useState(0);
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -24,18 +25,33 @@ const OurMission = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (sectionRef.current) {
+        const rect = sectionRef.current.getBoundingClientRect();
+        const scrollProgress = -rect.top * 0.15;
+        setScrollOffset(scrollProgress);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <section 
       ref={sectionRef}
-      className={`relative w-full h-[180px] md:h-[220px] overflow-hidden transition-opacity duration-1000 ${
+      className={`relative w-full h-[100px] md:h-[220px] overflow-hidden transition-opacity duration-1000 ${
         isVisible ? "opacity-100" : "opacity-0"
       }`}
     >
-      {/* Background image with mobile-friendly approach */}
+      {/* Background image with parallax effect */}
       <div 
-        className="absolute inset-0 bg-cover bg-center md:bg-fixed"
+        className="absolute inset-[-50%] bg-cover bg-center"
         style={{
           backgroundImage: `url(${mercadoParallax})`,
+          transform: `translateY(${scrollOffset}px)`,
+          transition: 'transform 0.1s ease-out',
         }}
       />
       {/* Subtle overlay */}

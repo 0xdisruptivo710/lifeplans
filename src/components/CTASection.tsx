@@ -1,21 +1,39 @@
+import { useState, useEffect } from "react";
 import { GradientButton } from "@/components/ui/gradient-button";
 import { MessageCircle } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import luxuryCarImage from "@/assets/luxury-car-diagonal.jpg";
+import ctaHero1 from "@/assets/cta-hero-1.png";
+import ctaHero2 from "@/assets/cta-hero-2.png";
+import ctaHero3 from "@/assets/cta-hero-3.png";
+
+const heroImages = [ctaHero1, ctaHero2, ctaHero3];
 
 const CTASection = () => {
   const { ref, isVisible } = useScrollAnimation(0.2);
+  const [currentImage, setCurrentImage] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % heroImages.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
   
   return (
     <section className="relative py-32 overflow-hidden">
-      {/* Background Image with Overlay */}
+      {/* Background Images with Overlay */}
       <div className="absolute inset-0 z-0">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url(${luxuryCarImage})`,
-          }}
-        />
+        {heroImages.map((image, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${
+              currentImage === index ? "opacity-100" : "opacity-0"
+            }`}
+            style={{
+              backgroundImage: `url(${image})`,
+            }}
+          />
+        ))}
         <div className="absolute inset-0 bg-gradient-cta" />
       </div>
 

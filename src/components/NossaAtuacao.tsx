@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import nossaAtuacaoImg from "@/assets/teste-reference.png";
 import nossaAtuacaoBg from "@/assets/nossa-atuacao-bg.jpeg";
@@ -6,15 +5,6 @@ import nossaAtuacaoBg from "@/assets/nossa-atuacao-bg.jpeg";
 const NossaAtuacao = () => {
   const { ref: sectionRef, isVisible } = useScrollAnimation(0.1);
   const { ref: imageRef, isVisible: imageVisible } = useScrollAnimation(0.2);
-  const [scrollY, setScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   return (
     <section 
@@ -22,7 +12,7 @@ const NossaAtuacao = () => {
       style={{
         backgroundImage: `url(${nossaAtuacaoBg})`,
         backgroundAttachment: 'fixed',
-        backgroundPosition: `50% ${scrollY * 0.2}px`,
+        backgroundPosition: 'center',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
       }}

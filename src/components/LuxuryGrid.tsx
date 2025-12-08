@@ -46,7 +46,7 @@ const LuxuryGrid = () => {
         style={{
           backgroundImage: `url(${luxuryParallaxBanner})`,
           backgroundAttachment: 'fixed',
-          backgroundPosition: `50% ${scrollY * 0.3}px`,
+          backgroundPosition: `50% ${scrollY * 0.1}px`,
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
         }}

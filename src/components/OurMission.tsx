@@ -41,11 +41,11 @@ const OurMission = () => {
               }`}
             >
               <p className="text-gray-light text-base lg:text-lg leading-relaxed font-extralight">
-                A indústria brasileira de planos de saúde e seguros vem se modernizando e está cada vez mais alinhada ao nível de 
-                governança e complexidade de mercados mais desenvolvidos. Neste cenário, a Lifeplans vem contribuindo
-                para a consolidação de um novo modelo de corretoras que assumem um papel consultivo e 100% 
-                orientado para o cliente. Oferecemos nossa competência técnica ao mercado para atender as expectativas 
-                e demandas de toda a cadeia, construindo uma relação agregadora entre todas as partes.
+                Cuidar de quem você ama e proteger o que você conquistou não deveria ser complicado. 
+                Na Lifeplans, acreditamos que cada família, cada empresa e cada sonho merece a proteção certa. 
+                Por isso, há mais de 16 anos conectamos pessoas aos melhores planos de saúde, seguros e consórcios 
+                do mercado, sempre com atendimento consultivo e personalizado. Não vendemos produtos — 
+                construímos soluções sob medida para a sua tranquilidade.
               </p>
             </div>
           </div>

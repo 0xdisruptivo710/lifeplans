@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import mercadoParallax from "@/assets/mercado-parallax.jpeg";
+import mercadoParallax from "@/assets/porshe.jpg.png";
 
 const OurMission = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -47,9 +47,11 @@ const OurMission = () => {
     >
       {/* Background image with parallax effect */}
       <div 
-        className="absolute inset-[-50%] bg-cover bg-center"
+        className="absolute inset-[-20%] bg-cover"
         style={{
           backgroundImage: `url(${mercadoParallax})`,
+          backgroundPosition: '50% center',
+          backgroundSize: 'cover',
           transform: `translateY(${scrollOffset}px)`,
           transition: 'transform 0.1s ease-out',
         }}

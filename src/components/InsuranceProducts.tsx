@@ -1,4 +1,4 @@
-import { User, Users, Building2, Smile, Heart, Car, Home, Briefcase, Bike, Truck } from "lucide-react";
+import { User, Users, Building2, Smile, Heart, Car, Home, Briefcase, Bike, Truck, Dog, Smartphone } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState, useRef, useEffect } from "react";
 
@@ -74,6 +74,20 @@ const insuranceProducts = [
     title: "Seguro Empresarial",
     description: "Soluções completas para proteger seu negócio e garantir continuidade operacional",
     slug: "seguro-empresarial",
+    featured: false,
+  },
+  {
+    icon: Dog,
+    title: "Seguro Pet",
+    description: "Cuidado completo para seu animal de estimação com cobertura veterinária e assistência",
+    slug: "seguro-pet",
+    featured: false,
+  },
+  {
+    icon: Smartphone,
+    title: "Seguro Celular",
+    description: "Proteção total para seu smartphone contra roubo, furto, quebra e danos acidentais",
+    slug: "seguro-celular",
     featured: false,
   },
 ];
@@ -159,7 +173,7 @@ const InsuranceProducts = () => {
             NOSSOS SERVIÇOS
           </span>
           <h2 className="text-white mt-4 mb-4 md:mb-6 font-raleway font-light text-2xl md:text-4xl lg:text-5xl">
-            Planos de Saúde e Seguros no Interior de SP
+            Planos de Saúde e Seguros - Localizada em Sorocaba com Atendimento em Todo Brasil
           </h2>
           <p className="text-gray-light text-sm md:text-lg max-w-2xl mx-auto font-extralight">
             Soluções completas com as melhores operadoras do mercado

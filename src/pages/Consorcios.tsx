@@ -14,7 +14,8 @@ import {
   Clock,
   Users,
   Award,
-  Wallet
+  Wallet,
+  Sparkles
 } from "lucide-react";
 import { useRef, useState, useEffect } from "react";
 
@@ -44,6 +45,12 @@ const Consorcios = () => {
       title: "Consórcio de Motos",
       description: "Sua moto nova com as melhores condições do mercado e sem complicações.",
       benefits: ["Cartas de R$ 10 mil a R$ 50 mil", "Parcelas de 36 a 72 meses", "Contemplação rápida"],
+    },
+    {
+      icon: Sparkles,
+      title: "Consórcio de Procedimentos Estéticos",
+      description: "Invista em você! Realize procedimentos estéticos, cirurgias plásticas e tratamentos de beleza com planejamento financeiro acessível.",
+      benefits: ["Cartas de R$ 10 mil a R$ 150 mil", "Parcelas de 24 a 60 meses", "Clínicas e cirurgiões credenciados"],
     },
   ];
 
@@ -203,7 +210,7 @@ const Consorcios = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {consorcioTypes.map((tipo, index) => (
               <div
                 key={tipo.title}

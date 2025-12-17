@@ -3,12 +3,12 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import { Shield, Car, Home, Building2, CheckCircle, ArrowRight, Bike, Truck } from "lucide-react";
+import { Shield, Car, Home, Building2, CheckCircle, ArrowRight, Bike, Truck, Dog, Smartphone } from "lucide-react";
 import { Link } from "react-router-dom";
-import segurosHero1 from "@/assets/seguros-hero-1.png";
-import segurosHero2 from "@/assets/seguros-hero-2.png";
-import segurosHero3 from "@/assets/seguros-hero-3.png";
-import jetskiLuxury from "@/assets/jetski-luxury.png";
+import segurosHero1 from "@/assets/carro_1.jpg.png";
+import segurosHero2 from "@/assets/carro_2.jpg.png";
+import segurosHero3 from "@/assets/carro_3.jpg.png";
+import jetskiLuxury from "@/assets/jetski-new.jpg.png";
 
 const heroImages = [segurosHero1, segurosHero2, segurosHero3];
 import {
@@ -88,6 +88,20 @@ const insurances = [
     features: ["Proteção patrimonial", "Responsabilidade civil", "Lucros cessantes", "Equipamentos"],
     link: "/seguro-empresarial",
   },
+  {
+    icon: Dog,
+    title: "Seguro Pet",
+    description: "Cuidado completo para seu animal de estimação",
+    features: ["Consultas veterinárias", "Cirurgias e internações", "Vacinas e exames", "Emergências 24h"],
+    link: "/seguro-pet",
+  },
+  {
+    icon: Smartphone,
+    title: "Seguro Celular",
+    description: "Proteção total para seu smartphone",
+    features: ["Roubo e furto", "Quebra e danos", "Oxidação por água", "Aparelho reserva"],
+    link: "/seguro-celular",
+  },
 ];
 
 const advantages = [
@@ -115,8 +129,8 @@ const Seguros = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Hero Section */}
-      <section className="relative h-[60vh] md:h-[70vh] overflow-hidden">
+      {/* Hero Section - Reorganizado para dar MÁXIMO espaço aos carros */}
+      <section className="relative h-[75vh] md:h-[85vh] overflow-hidden flex flex-col">
         {heroImages.map((image, index) => (
           <div
             key={index}
@@ -124,23 +138,52 @@ const Seguros = () => {
               currentImage === index ? "opacity-100" : "opacity-0"
             }`}
             style={{
-              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${image})`,
+              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${image})`,
             }}
           />
         ))}
-        <div className="relative h-full flex items-center justify-center text-center px-4">
-          <div
-            ref={heroRef}
-            className={`transition-all duration-1000 ${
-              heroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
-            }`}
-          >
-            <h1 className="text-4xl md:text-6xl font-raleway font-light text-white mb-6">
-              Seguros Completos
-            </h1>
-            <p className="text-lg md:text-xl text-gray-light max-w-2xl mx-auto font-light">
-              Proteja o que você mais valoriza com soluções sob medida
+        
+        {/* Conteúdo Reorganizado */}
+        <div className="relative h-full flex flex-col justify-between px-4">
+          {/* Título BEM NO TOPO */}
+          <div className="flex-none pt-24 md:pt-28 text-center">
+            <div
+              ref={heroRef}
+              className={`transition-all duration-1000 ${
+                heroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
+              }`}
+            >
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-raleway font-light text-white mb-0">
+                Pronto para Garantir Sua Tranquilidade?
+              </h1>
+            </div>
+          </div>
+          
+          {/* MÁXIMO ESPAÇO CENTRAL para ver os carros */}
+          <div className="flex-1 min-h-[200px] md:min-h-[300px]"></div>
+          
+          {/* Subtítulo e Botões BEM EMBAIXO */}
+          <div className="flex-none pb-16 md:pb-20 text-center">
+            <p className="text-base md:text-lg text-white max-w-2xl mx-auto font-light mb-10">
+              Fale com nossos especialistas e encontre o seguro ideal
             </p>
+            
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link
+                to="/contato"
+                className="bg-gold-accent hover:bg-gold-light text-black-primary px-8 py-4 font-medium transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
+                SOLICITAR COTAÇÃO
+              </Link>
+              <a
+                href="https://wa.me/551541412625"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-2 border-white text-white hover:bg-white hover:text-black-primary px-8 py-4 font-medium transition-all duration-300"
+              >
+                FALAR NO WHATSAPP
+              </a>
+            </div>
           </div>
         </div>
       </section>

@@ -43,6 +43,24 @@ const operators = [
     coverage: "Nacional",
     plans: "PME e Corporativo",
   },
+  {
+    name: "Fenix",
+    logo: notredameLogo,
+    coverage: "Regional",
+    plans: "Individual e Empresarial",
+  },
+  {
+    name: "AMI Med",
+    logo: notredameLogo,
+    coverage: "Regional",
+    plans: "Todos os Portes",
+  },
+  {
+    name: "Eva Saúde",
+    logo: notredameLogo,
+    coverage: "Nacional",
+    plans: "Empresarial",
+  },
 ];
 
 export const PartnerOperators = () => {

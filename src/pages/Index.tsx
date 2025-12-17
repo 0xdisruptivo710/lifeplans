@@ -15,25 +15,40 @@ import CTASection from "@/components/CTASection";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import NoiseOverlay from "@/components/NoiseOverlay";
+import ScrollProgress from "@/components/ScrollProgress";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
+      {/* Film Grain Texture Overlay */}
+      <NoiseOverlay />
+      
+      {/* Scroll Progress Bar */}
+      <ScrollProgress />
+      
       <Header />
       <Hero />
+      
+      {/* BLOCO 1: APRESENTAÇÃO DA EMPRESA */}
       <LuxuryGrid />
       <OurMission />
       <NossaAtuacao />
-      <InsuranceCategories />
-      <InsuranceProducts />
-      <SecondaryInsurance />
-      <ConsorciosSection />
       <WhyLifePlans />
-      <HowItWorks />
       <StatisticsCounter />
+      
+      {/* BLOCO 2: PRODUTOS E SERVIÇOS */}
+      <InsuranceProducts />
+      <InsuranceCategories />
+      <SecondaryInsurance />
+      <HowItWorks />
+      <ConsorciosSection />
+      
+      {/* BLOCO 3: CONVERSÃO E CONTATO */}
       <CTASection />
       <FAQ />
       <ContactForm />
+      
       <Footer />
       <WhatsAppButton />
     </div>

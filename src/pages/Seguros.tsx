@@ -9,8 +9,13 @@ import segurosHero1 from "@/assets/carro_1.jpg.png";
 import segurosHero2 from "@/assets/carro_2.jpg.png";
 import segurosHero3 from "@/assets/carro_3.jpg.png";
 import jetskiLuxury from "@/assets/jetski-new.jpg.png";
+// Novas imagens
+import novaFoto1 from "@/assets/porsche-cta.jpg.png";
+import novaFoto2 from "@/assets/mclaren-cta.jpg.png";
+import novaFoto3 from "@/assets/ferrari-cta.jpg.png";
 
-const heroImages = [segurosHero1, segurosHero2, segurosHero3];
+// Intercalando: 1 existente, 1 nova, 1 existente, 1 nova, 1 existente, 1 nova
+const heroImages = [segurosHero1, novaFoto1, segurosHero2, novaFoto2, segurosHero3, novaFoto3];
 import {
   Accordion,
   AccordionContent,

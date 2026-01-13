@@ -6,7 +6,8 @@ import unimedLogo from "@/assets/logos/unimed.jpg.png";
 import portoLogo from "@/assets/logos/porto.jpg.png";
 import fenixLogo from "@/assets/logos/fenix.jpg.png";
 import evaLogo from "@/assets/logos/Eva.jpg.png";
-import hapvidaLogo from "@/assets/logos/hapvida.jpg.png";
+import notredameLogo from "@/assets/notredame.jpg.png";
+import amhemedLogo from "@/assets/amhemed.jpg.png";
 
 const operators = [
   {
@@ -41,7 +42,7 @@ const operators = [
   },
   {
     name: "NotreDame Intermédica",
-    logo: hapvidaLogo, // Usando hapvida como placeholder - ajuste se tiver logo específico
+    logo: notredameLogo,
     coverage: "Nacional",
     plans: "PME e Corporativo",
   },
@@ -52,8 +53,8 @@ const operators = [
     plans: "Individual e Empresarial",
   },
   {
-    name: "AMI Med",
-    logo: hapvidaLogo, // Usando hapvida como placeholder - ajuste se tiver logo específico
+    name: "Amhe Med",
+    logo: amhemedLogo,
     coverage: "Regional",
     plans: "Todos os Portes",
   },

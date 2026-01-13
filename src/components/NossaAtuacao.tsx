@@ -1,5 +1,5 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import nossaAtuacaoImg from "@/assets/solucoes2.jpg.png";
+import nossaAtuacaoImg from "@/assets/solucoes.jpg.png";
 import nossaAtuacaoBg from "@/assets/nossa-atuacao-bg.jpeg";
 
 const NossaAtuacao = () => {

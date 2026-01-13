@@ -1,10 +1,12 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import amilLogo from "@/assets/logos/amil-logo.jpg";
-import sulamericaLogo from "@/assets/logos/sulamerica-logo.webp";
-import bradescoLogo from "@/assets/logos/bradesco-saude-logo.png";
-import unimedLogo from "@/assets/logos/unimed-logo-new.png";
-import portoLogo from "@/assets/logos/porto-saude-logo.png";
-import notredameLogo from "@/assets/logos/notredame-logo.png";
+import amilLogo from "@/assets/logos/amil.jpg.png";
+import sulamericaLogo from "@/assets/logos/sulamerica.jpg.png";
+import bradescoLogo from "@/assets/logos/bradesco.jpg.png";
+import unimedLogo from "@/assets/logos/unimed.jpg.png";
+import portoLogo from "@/assets/logos/porto.jpg.png";
+import fenixLogo from "@/assets/logos/fenix.jpg.png";
+import evaLogo from "@/assets/logos/Eva.jpg.png";
+import hapvidaLogo from "@/assets/logos/hapvida.jpg.png";
 
 const operators = [
   {
@@ -39,25 +41,25 @@ const operators = [
   },
   {
     name: "NotreDame Intermédica",
-    logo: notredameLogo,
+    logo: hapvidaLogo, // Usando hapvida como placeholder - ajuste se tiver logo específico
     coverage: "Nacional",
     plans: "PME e Corporativo",
   },
   {
     name: "Fenix",
-    logo: notredameLogo,
+    logo: fenixLogo,
     coverage: "Regional",
     plans: "Individual e Empresarial",
   },
   {
     name: "AMI Med",
-    logo: notredameLogo,
+    logo: hapvidaLogo, // Usando hapvida como placeholder - ajuste se tiver logo específico
     coverage: "Regional",
     plans: "Todos os Portes",
   },
   {
     name: "Eva Saúde",
-    logo: notredameLogo,
+    logo: evaLogo,
     coverage: "Nacional",
     plans: "Empresarial",
   },

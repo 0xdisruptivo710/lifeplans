@@ -1,5 +1,5 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import nossaAtuacaoImg from "@/assets/solucoes.jpg.png";
+import nossaAtuacaoImg from "@/assets/fundo_oficial.jpg.png";
 import nossaAtuacaoBg from "@/assets/nossa-atuacao-bg.jpeg";
 
 const NossaAtuacao = () => {
@@ -8,7 +8,7 @@ const NossaAtuacao = () => {
 
   return (
     <section 
-      className="relative py-20 md:py-28 overflow-hidden"
+      className="relative py-4 md:py-6 overflow-hidden"
       style={{
         backgroundImage: `url(${nossaAtuacaoBg})`,
         backgroundAttachment: 'fixed',
@@ -24,14 +24,14 @@ const NossaAtuacao = () => {
         {/* Header */}
         <div
           ref={sectionRef}
-          className={`text-center mb-16 transition-all duration-1000 ${
+          className={`text-center mb-3 md:mb-4 transition-all duration-1000 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <span className="text-gold-accent font-light text-sm tracking-wider uppercase mb-4 block">
+          <span className="text-gold-accent font-light text-sm tracking-wider uppercase mb-1 block">
             ÁREAS DE ATUAÇÃO
           </span>
-          <h2 className="text-3xl md:text-5xl font-raleway font-light mb-6 text-white">
+          <h2 className="text-3xl md:text-5xl font-raleway font-light mb-3 text-white">
             Soluções
           </h2>
         </div>

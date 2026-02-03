@@ -2,36 +2,36 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Button } from "@/components/ui/button";
-import { Smile, Check, Star } from "lucide-react";
+import { Heart, Check, Users, Shield } from "lucide-react";
 
-const PlanoOdontologico = () => {
+const PlanoSaudeColetivo = () => {
   const benefits = [
-    "Consultas e check-ups dentários regulares",
-    "Limpezas, restaurações e tratamento de canal",
-    "Ortodontia e implantes (conforme plano)",
-    "Rede credenciada ampla com dentistas qualificados",
-    "Atendimento de urgência 24h",
-    "Planos individual, familiar e empresarial",
+    "Planos para profissionais de diversas categorias",
+    "Preços mais acessíveis que planos individuais",
+    "Rede credenciada ampla em mais de 50 cidades do interior de SP",
+    "Telemedicina 24/7",
+    "Sem necessidade de vínculo empregatício",
+    "Possibilidade de incluir dependentes",
   ];
 
   return (
     <div className="min-h-screen bg-black-primary">
       <Header />
-      
+
       <section className="pt-32 pb-20 bg-black-secondary">
         <div className="container-custom">
           <div className="max-w-4xl">
             <span className="text-gold-accent font-light text-sm tracking-[0.2em] uppercase mb-4 block">
-              PLANOS ODONTOLÓGICOS
+              PLANOS DE SAÚDE
             </span>
             <h1 className="text-white text-5xl lg:text-6xl font-raleway font-light mb-6">
-              Plano Odontológico
+              Coletivo por Adesão
             </h1>
             <p className="text-gray-light text-xl font-extralight leading-relaxed mb-8">
-              Cuide da saúde bucal de toda sua família com planos completos e acessíveis. 
-              Prevenção e tratamento com dentistas de qualidade.
+              Planos de saúde com condições especiais para profissionais e categorias.
+              Aproveite preços diferenciados sem precisar de CNPJ.
             </p>
-            <a href="https://wa.me/551541412625?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20Plano%20Odontol%C3%B3gico" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/551541412625?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20Plano%20Coletivo%20por%20Ades%C3%A3o" target="_blank" rel="noopener noreferrer">
               <Button className="bg-gradient-gold text-black-primary hover:opacity-90 font-light px-10 py-6 rounded-none text-base shadow-elegant uppercase tracking-wider">
                 Solicitar Cotação
               </Button>
@@ -45,16 +45,16 @@ const PlanoOdontologico = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div>
               <h2 className="text-white text-4xl font-raleway font-light mb-8">
-                Saúde Bucal é Essencial
+                Vantagens do Coletivo por Adesão
               </h2>
               <p className="text-gray-light text-lg font-extralight leading-relaxed mb-6">
-                O plano odontológico é fundamental para manter a saúde bucal em dia e prevenir problemas
-                mais graves. A Lifeplans trabalha com as melhores operadoras odontológicas, conectando você
-                a uma rede credenciada de dentistas qualificados em mais de 50 cidades do interior de São Paulo.
+                O plano coletivo por adesão é a opção ideal para profissionais liberais, autônomos e
+                trabalhadores de categorias específicas que desejam um plano de saúde com preços mais acessíveis.
               </p>
               <p className="text-gray-light text-lg font-extralight leading-relaxed">
-                Trabalhamos com planos de diferentes coberturas, desde básicas até completas com ortodontia
-                e implantes, para atender todas as necessidades da sua família.
+                A Lifeplans trabalha com diversas entidades de classe e associações profissionais,
+                oferecendo condições especiais para advogados, contadores, engenheiros, profissionais
+                da saúde e muitas outras categorias.
               </p>
             </div>
             <div className="space-y-4">
@@ -76,24 +76,24 @@ const PlanoOdontologico = () => {
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-black-primary p-8 border border-gray-dark hover:border-gold-accent transition-all duration-300">
-              <Smile className="text-gold-accent mb-6" size={48} strokeWidth={1.5} />
-              <h3 className="text-white text-2xl font-light mb-4">Prevenção</h3>
+              <Users className="text-gold-accent mb-6" size={48} strokeWidth={1.5} />
+              <h3 className="text-white text-2xl font-light mb-4">Para Profissionais</h3>
               <p className="text-gray-medium font-extralight leading-relaxed">
-                Limpezas regulares e check-ups preventivos para evitar problemas futuros.
+                Advogados, contadores, engenheiros, profissionais da saúde e diversas outras categorias.
               </p>
             </div>
             <div className="bg-black-primary p-8 border border-gray-dark hover:border-gold-accent transition-all duration-300">
-              <Star className="text-gold-accent mb-6" size={48} strokeWidth={1.5} />
-              <h3 className="text-white text-2xl font-light mb-4">Qualidade</h3>
+              <Shield className="text-gold-accent mb-6" size={48} strokeWidth={1.5} />
+              <h3 className="text-white text-2xl font-light mb-4">Preços Especiais</h3>
               <p className="text-gray-medium font-extralight leading-relaxed">
-                Rede credenciada com dentistas experientes e clínicas bem equipadas.
+                Condições diferenciadas e mensalidades mais acessíveis que planos individuais tradicionais.
               </p>
             </div>
             <div className="bg-black-primary p-8 border border-gray-dark hover:border-gold-accent transition-all duration-300">
-              <Check className="text-gold-accent mb-6" size={48} strokeWidth={1.5} />
-              <h3 className="text-white text-2xl font-light mb-4">Economia</h3>
+              <Heart className="text-gold-accent mb-6" size={48} strokeWidth={1.5} />
+              <h3 className="text-white text-2xl font-light mb-4">Cobertura Completa</h3>
               <p className="text-gray-medium font-extralight leading-relaxed">
-                Planos acessíveis com mensalidades que cabem no seu bolso.
+                Consultas, exames, internações, cirurgias e tratamentos com as melhores operadoras.
               </p>
             </div>
           </div>
@@ -103,12 +103,12 @@ const PlanoOdontologico = () => {
       <section className="section-padding bg-black-primary text-center">
         <div className="container-custom">
           <h2 className="text-white text-4xl lg:text-5xl font-raleway font-light mb-6">
-            Garanta Seu Sorriso Saudável
+            Encontre Seu Plano Coletivo
           </h2>
           <p className="text-gray-light text-xl font-extralight mb-10 max-w-2xl mx-auto">
-            Fale com nossos consultores e encontre o plano odontológico ideal
+            Fale com nossos consultores e descubra as opções disponíveis para sua categoria
           </p>
-          <a href="https://wa.me/551541412625?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20Plano%20Odontol%C3%B3gico" target="_blank" rel="noopener noreferrer">
+          <a href="https://wa.me/551541412625?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20Plano%20Coletivo%20por%20Ades%C3%A3o" target="_blank" rel="noopener noreferrer">
             <Button className="bg-gradient-gold text-black-primary hover:opacity-90 font-light px-12 py-6 rounded-none text-lg shadow-elegant uppercase tracking-wider">
               Solicitar Cotação Gratuita
             </Button>
@@ -122,4 +122,4 @@ const PlanoOdontologico = () => {
   );
 };
 
-export default PlanoOdontologico;
+export default PlanoSaudeColetivo;

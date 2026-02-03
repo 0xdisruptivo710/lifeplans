@@ -8,6 +8,7 @@ import fenixLogo from "@/assets/logos/fenix.jpg.png";
 import evaLogo from "@/assets/logos/Eva.jpg.png";
 import notredameLogo from "@/assets/notredame.jpg.png";
 import amhemedLogo from "@/assets/amhemed.jpg.png";
+import hapvidaLogo from "@/assets/logos/hapvida.jpg.png";
 
 const operators = [
   {
@@ -63,6 +64,12 @@ const operators = [
     logo: evaLogo,
     coverage: "Nacional",
     plans: "Empresarial",
+  },
+  {
+    name: "Hapvida",
+    logo: hapvidaLogo,
+    coverage: "Nacional",
+    plans: "Todos os Portes",
   },
 ];
 

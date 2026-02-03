@@ -21,6 +21,7 @@ const PlanoSaudeIndividual = () => {
     "Unimed Sorocaba",
     "Intermédica",
     "Fênix Saúde",
+    "Hapvida",
   ];
 
   return (

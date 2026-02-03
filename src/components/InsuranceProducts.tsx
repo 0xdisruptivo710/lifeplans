@@ -12,9 +12,9 @@ const healthProducts = [
   },
   {
     icon: Users,
-    title: "Plano de Saúde Familiar",
-    description: "Proteção para toda sua família com coberturas personalizadas e rede credenciada ampla",
-    slug: "plano-saude-familiar",
+    title: "Coletivo por Adesão",
+    description: "Planos para profissionais e categorias com condições especiais e preços diferenciados",
+    slug: "coletivo-por-adesao",
     featured: false,
   },
   {

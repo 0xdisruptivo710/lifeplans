@@ -52,10 +52,10 @@ const plans = [
   },
   {
     icon: Users,
-    title: "Plano de Saúde Familiar",
-    description: "Proteção integral para toda sua família",
-    features: ["Cobertura para dependentes", "Pediatria especializada", "Maternidade completa", "Descontos progressivos"],
-    link: "/plano-saude-familiar",
+    title: "Coletivo por Adesão",
+    description: "Planos para profissionais e categorias",
+    features: ["Preços diferenciados", "Sem necessidade de CNPJ", "Diversas categorias", "Inclua dependentes"],
+    link: "/coletivo-por-adesao",
   },
   {
     icon: Building2,

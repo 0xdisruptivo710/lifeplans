@@ -111,7 +111,7 @@ const Footer = () => {
               </li>
               <li className="text-gray-medium">
                 <span className="block font-light text-white mb-1">Localização</span>
-                Interior de São Paulo
+                Sorocaba e Região
               </li>
             </ul>
             <div className="mt-4 md:mt-6">

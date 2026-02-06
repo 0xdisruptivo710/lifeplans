@@ -39,8 +39,8 @@ const benefits = [
 
 const faqs = [
   {
-    question: "Qual a diferença entre plano odontológico individual e familiar?",
-    answer: "O plano individual cobre apenas o titular, enquanto o familiar permite incluir dependentes (cônjuge, filhos e pais) com condições e preços mais vantajosos. O plano familiar oferece economia quando comparado à contratação de planos individuais separados."
+    question: "Quais são os tipos de planos odontológicos disponíveis?",
+    answer: "Trabalhamos com planos a partir de 2 pessoas, incluindo planos familiares, completos (com ortodontia e implantes) e empresariais. Cada modalidade oferece diferentes níveis de cobertura para atender às necessidades do seu perfil."
   },
   {
     question: "Quais procedimentos estão cobertos no plano odontológico?",
@@ -66,21 +66,21 @@ const faqs = [
 
 const plans = [
   {
-    name: "Individual",
-    description: "Ideal para quem busca cuidados odontológicos completos",
+    name: "Familiar",
+    description: "Proteção odontológica para você e sua família (a partir de 2 pessoas)",
     features: [
+      "A partir de 2 pessoas",
       "Consultas ilimitadas",
       "Limpeza e prevenção",
       "Procedimentos básicos",
-      "Raio-X incluído",
       "Emergências 24h",
     ],
   },
   {
-    name: "Familiar",
-    description: "Proteção odontológica para toda a família",
+    name: "Completo",
+    description: "Cobertura ampla com ortodontia e implantes",
     features: [
-      "Até 5 dependentes",
+      "A partir de 2 pessoas",
       "Ortodontia incluída",
       "Cobertura nacional",
       "Próteses e implantes",

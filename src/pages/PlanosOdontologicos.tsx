@@ -6,6 +6,7 @@ import HowItWorks from "@/components/HowItWorks";
 import { GradientButton } from "@/components/ui/gradient-button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Smile, Shield, Star, Clock, Users, CheckCircle } from "lucide-react";
+import { useEffect } from "react";
 import healthImage from "@/assets/dental-instruments.png";
 import {
   Accordion,
@@ -101,6 +102,10 @@ const plans = [
 ];
 
 const PlanosOdontologicos = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const { ref: heroRef, isVisible: heroVisible } = useScrollAnimation(0.1);
   const { ref: benefitsRef, isVisible: benefitsVisible } = useScrollAnimation(0.2);
   const { ref: plansRef, isVisible: plansVisible } = useScrollAnimation(0.2);

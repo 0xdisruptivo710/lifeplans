@@ -5,7 +5,7 @@ import { GradientButton } from "@/components/ui/gradient-button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Briefcase, TrendingUp, Users, Heart, Award, Target } from "lucide-react";
 import corporateBuildings from "@/assets/corporate-buildings.jpg";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { toast } from "sonner";
 
 const benefits = [
@@ -50,6 +50,10 @@ const positions = [
 ];
 
 const TrabalheConosco = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const { ref: heroRef, isVisible: heroVisible } = useScrollAnimation(0.1);
   const { ref: benefitsRef, isVisible: benefitsVisible } = useScrollAnimation(0.2);
   const { ref: positionsRef, isVisible: positionsVisible } = useScrollAnimation(0.2);

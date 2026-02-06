@@ -24,6 +24,7 @@ const Consorcios = () => {
   const [isHeroVisible, setIsHeroVisible] = useState(false);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     setIsHeroVisible(true);
   }, []);
 

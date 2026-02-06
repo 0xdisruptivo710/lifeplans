@@ -6,6 +6,7 @@ import HowItWorks from "@/components/HowItWorks";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Heart, Users, Building2, Stethoscope, CheckCircle, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 import heroFamily from "@/assets/health-plan-hero.png";
 import healthInsurance from "@/assets/health-insurance.jpg";
 import {
@@ -83,6 +84,10 @@ const benefits = [
 ];
 
 const PlanosSaude = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const { ref: heroRef, isVisible: heroVisible } = useScrollAnimation(0.1);
   const { ref: benefitsRef, isVisible: benefitsVisible } = useScrollAnimation(0.2);
 

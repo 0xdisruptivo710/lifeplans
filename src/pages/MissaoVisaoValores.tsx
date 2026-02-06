@@ -1,10 +1,15 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import { useEffect } from "react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Target, Eye, Heart, Users, Shield, Sparkles } from "lucide-react";
 
 const MissaoVisaoValores = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation(0.2);
   const { ref: missionRef, isVisible: missionVisible } = useScrollAnimation(0.2);
   const { ref: visionRef, isVisible: visionVisible } = useScrollAnimation(0.2);

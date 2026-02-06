@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import { useEffect } from "react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Target, Award, Users, Heart, TrendingUp, Shield } from "lucide-react";
 import missionImage from "@/assets/mission-image.jpg";
@@ -38,6 +39,10 @@ const milestones = [
 ];
 
 const Sobre = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const { ref: heroRef, isVisible: heroVisible } = useScrollAnimation(0.1);
   const { ref: missionRef, isVisible: missionVisible } = useScrollAnimation(0.2);
   const { ref: valuesRef, isVisible: valuesVisible } = useScrollAnimation(0.2);

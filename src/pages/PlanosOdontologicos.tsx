@@ -52,7 +52,7 @@ const faqs = [
   },
   {
     question: "Posso escolher qualquer dentista?",
-    answer: "Você pode escolher entre os dentistas credenciados à rede do plano. Oferecemos planos com ampla rede de profissionais em mais de 50 cidades do interior de São Paulo. Alguns planos também oferecem cobertura nacional para atendimento em outras regiões."
+    answer: "Você pode escolher entre os dentistas credenciados à rede do plano. Trabalhamos com planos com ampla rede de profissionais em mais de 50 cidades do interior de São Paulo. Alguns planos também oferecem cobertura nacional para atendimento em outras regiões."
   },
   {
     question: "O plano odontológico cobre aparelho ortodôntico?",

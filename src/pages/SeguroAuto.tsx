@@ -3,8 +3,12 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Button } from "@/components/ui/button";
 import { Car, Check, Shield, Wrench } from "lucide-react";
+import { useEffect } from "react";
 
 const SeguroAuto = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const benefits = [
     "Cobertura completa para colisão, roubo e furto",
     "Assistência 24 horas em todo território nacional",

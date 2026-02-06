@@ -3,8 +3,12 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Button } from "@/components/ui/button";
 import { Heart, Check, Shield, Clock } from "lucide-react";
+import { useEffect } from "react";
 
 const PlanoSaudeIndividual = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const benefits = [
     "Atendimento em hospitais e clínicas de primeira linha",
     "Cobertura para consultas, exames e procedimentos",

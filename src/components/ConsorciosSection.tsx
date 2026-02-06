@@ -142,7 +142,7 @@ const ConsorciosSection = () => {
             <p className="text-gray-light mb-8">
               Fale com nossos especialistas e descubra o consórcio ideal para 
               realizar seus sonhos. Atendimento personalizado em mais de 50 
-              cidades do interior de São Paulo.
+              cidades de Sorocaba e região.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a 

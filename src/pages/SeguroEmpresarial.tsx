@@ -3,8 +3,12 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Button } from "@/components/ui/button";
 import { Building2, Check, Shield, TrendingUp } from "lucide-react";
+import { useEffect } from "react";
 
 const SeguroEmpresarial = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const benefits = [
     "Cobertura para incêndio e riscos patrimoniais",
     "Proteção contra roubo de equipamentos e mercadorias",

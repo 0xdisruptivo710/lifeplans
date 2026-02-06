@@ -3,8 +3,12 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Button } from "@/components/ui/button";
 import { Shield, Check, Heart, Umbrella } from "lucide-react";
+import { useEffect } from "react";
 
 const SeguroVida = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const benefits = [
     "Indenização para os beneficiários em caso de falecimento",
     "Cobertura para invalidez permanente",

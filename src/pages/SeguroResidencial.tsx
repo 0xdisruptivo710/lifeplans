@@ -3,8 +3,12 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Button } from "@/components/ui/button";
 import { Home, Check, Shield, Droplet } from "lucide-react";
+import { useEffect } from "react";
 
 const SeguroResidencial = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const benefits = [
     "Cobertura para incêndio, raio e explosão",
     "Proteção contra danos elétricos e vendaval",

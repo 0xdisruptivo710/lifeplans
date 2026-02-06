@@ -3,8 +3,12 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Button } from "@/components/ui/button";
 import { Building2, Check, TrendingUp, Users } from "lucide-react";
+import { useEffect } from "react";
 
 const PlanoSaudeEmpresarial = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const benefits = [
     "Planos personalizados para empresas de todos os portes",
     "Gestão completa com assessoria especializada",

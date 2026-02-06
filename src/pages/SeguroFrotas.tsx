@@ -3,8 +3,12 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Button } from "@/components/ui/button";
 import { Truck, Check, Shield, Wrench, BarChart3 } from "lucide-react";
+import { useEffect } from "react";
 
 const SeguroFrotas = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const benefits = [
     "Gestão integrada de toda a frota empresarial",
     "Rastreamento e monitoramento em tempo real",

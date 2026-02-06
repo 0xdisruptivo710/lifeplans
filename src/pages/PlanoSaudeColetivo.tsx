@@ -3,8 +3,12 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Button } from "@/components/ui/button";
 import { Heart, Check, Users, Shield } from "lucide-react";
+import { useEffect } from "react";
 
 const PlanoSaudeColetivo = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const benefits = [
     "Planos para profissionais de diversas categorias",
     "Preços mais acessíveis que planos individuais",

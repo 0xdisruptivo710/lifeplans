@@ -48,7 +48,7 @@ const ContactForm = () => {
     {
       icon: MapPin,
       title: "Área de Atuação",
-      info: "Interior de São Paulo - 50+ cidades",
+      info: "Sorocaba - SP",
     },
     {
       icon: MessageCircle,

@@ -5,7 +5,7 @@ import { PartnerOperators } from "@/components/PartnerOperators";
 import HowItWorks from "@/components/HowItWorks";
 import { GradientButton } from "@/components/ui/gradient-button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import { Smile, Shield, Star, Clock, Users, CheckCircle } from "lucide-react";
+import { Smile, Shield, Star, Clock, CheckCircle } from "lucide-react";
 import { useEffect } from "react";
 import healthImage from "@/assets/dental-instruments.png";
 import {
@@ -18,23 +18,23 @@ import {
 const benefits = [
   {
     icon: Smile,
-    title: "Cobertura Completa",
-    description: "Consultas, limpezas, tratamentos e procedimentos odontológicos",
+    title: "Cobertura Nacional",
+    description: "Rede credenciada vasta e qualificada em capitais e interior de todo o Brasil",
   },
   {
     icon: Shield,
-    title: "Sem Carência",
-    description: "Planos com carência reduzida ou zero para emergências",
+    title: "Operadoras Líderes",
+    description: "Trabalhamos exclusivamente com as melhores e mais renomadas operadoras do mercado",
   },
   {
     icon: Star,
-    title: "Dentistas Credenciados",
-    description: "Rede com os melhores profissionais do interior de São Paulo",
+    title: "Planos Flexíveis",
+    description: "Ampla variedade de coberturas que se encaixam perfeitamente às suas necessidades",
   },
   {
     icon: Clock,
-    title: "Atendimento Ágil",
-    description: "Marque suas consultas com facilidade e rapidez",
+    title: "Atendimento Personalizado",
+    description: "Suporte dedicado para encontrar o plano ideal para você, sua família ou empresa",
   },
 ];
 
@@ -53,7 +53,7 @@ const faqs = [
   },
   {
     question: "Posso escolher qualquer dentista?",
-    answer: "Você pode escolher entre os dentistas credenciados à rede do plano. Trabalhamos com planos com ampla rede de profissionais em mais de 50 cidades do interior de São Paulo. Alguns planos também oferecem cobertura nacional para atendimento em outras regiões."
+    answer: "Você pode escolher entre os dentistas credenciados à rede do plano. Trabalhamos com planos com ampla rede de profissionais com cobertura nacional, em capitais e interior de todo o Brasil."
   },
   {
     question: "O plano odontológico cobre aparelho ortodôntico?",
@@ -67,10 +67,10 @@ const faqs = [
 
 const plans = [
   {
-    name: "Familiar",
-    description: "Proteção odontológica para você e sua família (a partir de 2 pessoas)",
+    name: "Essenciais",
+    description: "Para consultas de rotina, limpezas e prevenção básica",
     features: [
-      "A partir de 2 pessoas",
+      "A partir de 2 vidas",
       "Consultas ilimitadas",
       "Limpeza e prevenção",
       "Procedimentos básicos",
@@ -78,25 +78,25 @@ const plans = [
     ],
   },
   {
-    name: "Completo",
-    description: "Cobertura ampla com ortodontia e implantes",
+    name: "Completos",
+    description: "Incluindo tratamentos como restaurações, canal, extrações e muito mais",
     features: [
-      "A partir de 2 pessoas",
-      "Ortodontia incluída",
+      "A partir de 2 vidas",
+      "Restaurações e canal",
+      "Extrações",
       "Cobertura nacional",
-      "Próteses e implantes",
-      "Desconto em procedimentos estéticos",
+      "Procedimentos preventivos avançados",
     ],
   },
   {
-    name: "Empresarial",
-    description: "Benefício completo para seus colaboradores",
+    name: "Premium",
+    description: "Com procedimentos avançados como Ortodontia e Implantes, para um sorriso duradouro e confiante",
     features: [
-      "A partir de 3 vidas",
-      "Gestão simplificada",
-      "Relatórios de utilização",
-      "Sem reajuste por sinistralidade",
-      "Implantação rápida",
+      "A partir de 2 vidas",
+      "Ortodontia incluída",
+      "Próteses e implantes",
+      "Cobertura nacional",
+      "Procedimentos estéticos",
     ],
   },
 ];
@@ -130,14 +130,14 @@ const PlanosOdontologicos = () => {
             }`}
           >
             <span className="text-gold-accent font-light text-sm md:text-base tracking-wider uppercase mb-4 block">
-              CUIDADO COMPLETO COM SEU SORRISO
+              SEU SORRISO PROTEGIDO, EM QUALQUER LUGAR DO BRASIL
             </span>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-raleway font-light text-white mb-6">
               Planos Odontológicos
             </h1>
             <p className="text-lg md:text-xl text-gray-light max-w-3xl mx-auto mb-8 font-light">
-              Tenha acesso aos melhores dentistas e tratamentos com planos odontológicos 
-              completos e com preços acessíveis
+              As Melhores Operadoras, o Melhor Cuidado com Cobertura Nacional e Acessível
+              para Você, Sua Família ou Sua Empresa.
             </p>
             <a href="https://wa.me/551541412625?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20planos%20odontol%C3%B3gicos" target="_blank" rel="noopener noreferrer">
               <GradientButton className="uppercase tracking-wider text-sm px-8 py-4">
@@ -158,14 +158,15 @@ const PlanosOdontologicos = () => {
             }`}
           >
             <span className="text-gold-accent font-light text-sm tracking-wider uppercase mb-4 block">
-              VANTAGENS
+              SUA PARCEIRA ESTRATÉGICA
             </span>
             <h2 className="text-3xl md:text-5xl font-raleway font-light mb-6 text-white">
-              Por Que Escolher Nossos Planos?
+              Mais Que Um Plano, É Tranquilidade
             </h2>
-            <p className="text-gray-light text-lg max-w-2xl mx-auto font-light">
-              Oferecemos os melhores planos odontológicos com cobertura completa e 
-              atendimento personalizado
+            <p className="text-gray-light text-lg max-w-3xl mx-auto font-light">
+              Na Lifeplans, somos sua ponte para as melhores soluções em saúde bucal. Como corretora
+              especializada, conectamos você às operadoras líderes de mercado, garantindo prevenção
+              eficaz, tratamentos de alta qualidade e o suporte que você merece.
             </p>
           </div>
 
@@ -209,7 +210,7 @@ const PlanosOdontologicos = () => {
               NOSSOS PLANOS
             </span>
             <h2 className="text-3xl md:text-5xl font-raleway font-light mb-6 text-white">
-              Escolha o Plano Ideal Para Você
+              Encontre o Plano Perfeito para o Seu Sorriso
             </h2>
           </div>
 
@@ -287,10 +288,10 @@ const PlanosOdontologicos = () => {
       <section className="py-20 bg-black-secondary">
         <div className="container-custom text-center">
           <h2 className="text-3xl md:text-4xl font-raleway font-light text-white mb-6">
-            Pronto Para Cuidar do Seu Sorriso?
+            Garanta o Melhor para a Sua Saúde Bucal Agora!
           </h2>
           <p className="text-gray-light text-lg mb-8 max-w-2xl mx-auto font-light">
-            Entre em contato e encontre o plano odontológico perfeito para você e sua família
+            Fale com nossos consultores e encontre o plano odontológico ideal para você, sua família ou sua empresa
           </p>
           <a href="https://wa.me/551541412625?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20uma%20cota%C3%A7%C3%A3o" target="_blank" rel="noopener noreferrer">
             <GradientButton className="uppercase tracking-wider text-sm px-8 py-4">

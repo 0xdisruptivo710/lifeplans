@@ -40,9 +40,9 @@ const Index = () => {
       {/* BLOCO 2: PRODUTOS E SERVIÇOS */}
       <InsuranceProducts />
       <InsuranceCategories />
+      <ConsorciosSection />
       <SecondaryInsurance />
       <HowItWorks />
-      <ConsorciosSection />
       
       {/* BLOCO 3: CONVERSÃO E CONTATO */}
       <CTASection />

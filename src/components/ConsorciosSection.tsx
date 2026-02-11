@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { GradientButton } from "@/components/ui/gradient-button";
-import { Car, Home, Bike, Trophy, TrendingUp, CheckCircle } from "lucide-react";
+import { Car, Home, Bike, Trophy, TrendingUp, CheckCircle, Sparkles } from "lucide-react";
 
 const ConsorciosSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -39,6 +39,11 @@ const ConsorciosSection = () => {
       icon: Bike,
       title: "Consórcio de Motos",
       description: "Sua moto nova com planejamento financeiro inteligente",
+    },
+    {
+      icon: Sparkles,
+      title: "Consórcio de Serviços",
+      description: "Energia solar, viagens, estética e cirurgias plásticas com planejamento inteligente",
     },
   ];
 
@@ -82,7 +87,7 @@ const ConsorciosSection = () => {
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mb-10 md:mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 mb-10 md:mb-16">
           {consorcioTypes.map((tipo, index) => (
             <div
               key={tipo.title}

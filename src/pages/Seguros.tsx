@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import { Shield, Car, Home, Building2, CheckCircle, ArrowRight, Bike, Truck, Dog, Smartphone } from "lucide-react";
+import { Shield, Car, Home, Building2, CheckCircle, ArrowRight, Bike, Truck, Dog, Smartphone, HardHat } from "lucide-react";
 import { Link } from "react-router-dom";
 import segurosHero1 from "@/assets/carro_1.jpg.png";
 import segurosHero2 from "@/assets/carro_2.jpg.png";
@@ -76,7 +76,7 @@ const insurances = [
     icon: Truck,
     title: "Seguro de Frotas",
     description: "Gestão completa para sua frota empresarial",
-    features: ["Múltiplos veículos", "Rastreamento", "Manutenção preventiva", "Assistência 24h"],
+    features: ["Múltiplos veículos", "Gestão integrada", "Redução de custos", "Assistência 24h"],
     link: "/seguro-frotas",
   },
   {
@@ -106,6 +106,13 @@ const insurances = [
     description: "Proteção total para seu smartphone",
     features: ["Roubo e furto", "Quebra e danos", "Oxidação por água", "Aparelho reserva"],
     link: "/seguro-celular",
+  },
+  {
+    icon: HardHat,
+    title: "Engenharia e RC",
+    description: "Proteção para obras, construções e responsabilidade civil",
+    features: ["Riscos de engenharia", "RC geral e profissional", "Máquinas e equipamentos", "Garantia de obras"],
+    link: "/seguro-engenharia",
   },
 ];
 

@@ -13,7 +13,7 @@ const SeguroAuto = () => {
     "Cobertura completa para colisão, roubo e furto",
     "Assistência 24 horas em todo território nacional",
     "Carro reserva em caso de sinistro",
-    "Cobertura para terceiros e danos materiais",
+    "Cobertura para terceiros, danos materiais e corporais",
     "Proteção para vidros, faróis e retrovisores",
     "Descontos por bom histórico e dispositivos de segurança",
   ];

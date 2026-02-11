@@ -2,20 +2,23 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { GradientButton } from "@/components/ui/gradient-button";
-import { 
-  Car, 
-  Home, 
-  Bike, 
-  Trophy, 
-  TrendingUp, 
-  CheckCircle, 
+import {
+  Car,
+  Home,
+  Bike,
+  Trophy,
+  TrendingUp,
+  CheckCircle,
   Calculator,
   Shield,
   Clock,
   Users,
   Award,
   Wallet,
-  Sparkles
+  Sparkles,
+  Sun,
+  Plane,
+  Scissors
 } from "lucide-react";
 import { useRef, useState, useEffect } from "react";
 
@@ -27,6 +30,33 @@ const Consorcios = () => {
     window.scrollTo(0, 0);
     setIsHeroVisible(true);
   }, []);
+
+  const consorcioServicos = [
+    {
+      icon: Sun,
+      title: "Placas Solares",
+      description: "Invista em energia solar com parcelas acessíveis. Reduza sua conta de luz e valorize seu imóvel com sustentabilidade.",
+      benefits: ["Cartas de R$ 15 mil a R$ 200 mil", "Economia na conta de energia", "Valorização do imóvel"],
+    },
+    {
+      icon: Plane,
+      title: "Viagens Programadas",
+      description: "Planeje a viagem dos seus sonhos sem comprometer seu orçamento. Destinos nacionais e internacionais ao seu alcance.",
+      benefits: ["Cartas de R$ 5 mil a R$ 50 mil", "Parcelas de 24 a 60 meses", "Viagens nacionais e internacionais"],
+    },
+    {
+      icon: Sparkles,
+      title: "Procedimentos Estéticos",
+      description: "Invista em você! Realize tratamentos de beleza, harmonização facial e procedimentos estéticos com planejamento financeiro.",
+      benefits: ["Cartas de R$ 10 mil a R$ 150 mil", "Parcelas de 24 a 60 meses", "Clínicas credenciadas"],
+    },
+    {
+      icon: Scissors,
+      title: "Cirurgias Plásticas",
+      description: "Realize a cirurgia plástica que você deseja com segurança financeira e profissionais qualificados.",
+      benefits: ["Cartas de R$ 15 mil a R$ 200 mil", "Cirurgiões credenciados", "Planejamento sem juros"],
+    },
+  ];
 
   const consorcioTypes = [
     {
@@ -46,12 +76,6 @@ const Consorcios = () => {
       title: "Consórcio de Motos",
       description: "Sua moto nova com as melhores condições do mercado e sem complicações.",
       benefits: ["Cartas de R$ 10 mil a R$ 50 mil", "Parcelas de 36 a 72 meses", "Contemplação rápida"],
-    },
-    {
-      icon: Sparkles,
-      title: "Consórcio de Procedimentos Estéticos",
-      description: "Invista em você! Realize procedimentos estéticos, cirurgias plásticas e tratamentos de beleza com planejamento financeiro acessível.",
-      benefits: ["Cartas de R$ 10 mil a R$ 150 mil", "Parcelas de 24 a 60 meses", "Clínicas e cirurgiões credenciados"],
     },
   ];
 
@@ -194,6 +218,52 @@ const Consorcios = () => {
                 reafirmando nosso compromisso com a qualidade e atendimento diferenciado.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Consórcio de Serviços - Destaque */}
+      <section className="py-20 md:py-32 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-gold-accent/15 via-gold-accent/5 to-transparent pointer-events-none" />
+        <div className="container-custom relative z-10">
+          <div className="text-center mb-16">
+            <span className="text-gold-accent uppercase tracking-widest text-sm font-medium mb-3 block">
+              Novidade
+            </span>
+            <h2 className="text-3xl md:text-4xl font-light text-foreground mb-4">
+              Consórcio de <span className="text-gold-accent">Serviços</span>
+            </h2>
+            <p className="text-gray-light max-w-2xl mx-auto">
+              Muito além de bens materiais! Agora você pode usar o consórcio para
+              investir em energia solar, viagens, estética e muito mais.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {consorcioServicos.map((tipo) => (
+              <div
+                key={tipo.title}
+                className="group bg-black-primary/80 backdrop-blur-sm border border-gold-accent/30 rounded-2xl p-8 hover:border-gold-accent/70 hover:shadow-[0_0_30px_rgba(212,175,55,0.15)] transition-all duration-500"
+              >
+                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-gold-accent/30 to-gold-accent/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <tipo.icon className="text-gold-accent" size={32} />
+                </div>
+                <h3 className="text-xl font-medium text-foreground mb-3">
+                  {tipo.title}
+                </h3>
+                <p className="text-gray-light text-sm leading-relaxed mb-6">
+                  {tipo.description}
+                </p>
+                <ul className="space-y-2">
+                  {tipo.benefits.map((benefit, i) => (
+                    <li key={i} className="flex items-center gap-2 text-sm">
+                      <CheckCircle className="text-gold-accent shrink-0" size={16} />
+                      <span className="text-gray-light">{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
       </section>

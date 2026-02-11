@@ -21,6 +21,10 @@ import PlanosOdontologicos from "./pages/PlanosOdontologicos";
 import TrabalheConosco from "./pages/TrabalheConosco";
 import MissaoVisaoValores from "./pages/MissaoVisaoValores";
 import Consorcios from "./pages/Consorcios";
+import Financiamento from "./pages/Financiamento";
+import SeguroEngenharia from "./pages/SeguroEngenharia";
+import SeguroPet from "./pages/SeguroPet";
+import SeguroCelular from "./pages/SeguroCelular";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -50,6 +54,10 @@ const App = () => (
           <Route path="/trabalhe-conosco" element={<TrabalheConosco />} />
           <Route path="/missao-visao-valores" element={<MissaoVisaoValores />} />
           <Route path="/consorcios" element={<Consorcios />} />
+          <Route path="/financiamento" element={<Financiamento />} />
+          <Route path="/seguro-engenharia" element={<SeguroEngenharia />} />
+          <Route path="/seguro-pet" element={<SeguroPet />} />
+          <Route path="/seguro-celular" element={<SeguroCelular />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

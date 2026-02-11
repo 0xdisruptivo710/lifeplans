@@ -2,24 +2,27 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Button } from "@/components/ui/button";
-import { Truck, Check, Shield, Wrench, BarChart3 } from "lucide-react";
+import { Smartphone, Check, Shield, RefreshCw } from "lucide-react";
 import { useEffect } from "react";
 
-const SeguroFrotas = () => {
+const SeguroCelular = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   const benefits = [
-    "Gestão integrada de toda a frota empresarial",
-    "Assistência 24 horas em todo território nacional",
-    "Redução de custos operacionais",
-    "Relatórios detalhados de desempenho e sinistros",
+    "Proteção contra roubo e furto qualificado",
+    "Cobertura para quebra acidental e danos",
+    "Proteção contra oxidação por líquidos",
+    "Aparelho reserva durante o reparo",
+    "Cobertura para danos elétricos",
+    "Válido em todo território nacional",
   ];
 
   return (
     <div className="min-h-screen bg-black-primary">
       <Header />
-      
+
       <section className="pt-32 pb-20 bg-black-secondary">
         <div className="container-custom">
           <div className="max-w-4xl">
@@ -27,13 +30,13 @@ const SeguroFrotas = () => {
               SEGUROS
             </span>
             <h1 className="text-white text-5xl lg:text-6xl font-raleway font-light mb-6">
-              Seguro de Frotas
+              Seguro Celular
             </h1>
             <p className="text-gray-light text-xl font-extralight leading-relaxed mb-8">
-              Gestão completa e inteligente para sua frota empresarial. 
-              Proteja seus veículos e otimize custos operacionais.
+              Proteção total para seu smartphone contra roubo, quebra, danos e oxidação.
+              Mantenha seu aparelho sempre protegido.
             </p>
-            <a href="https://wa.me/551541412625?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20Seguro%20de%20Frotas" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/551541412625?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20Seguro%20Celular" target="_blank" rel="noopener noreferrer">
               <Button className="bg-gradient-gold text-black-primary hover:opacity-90 font-light px-10 py-6 rounded-none text-base shadow-elegant uppercase tracking-wider">
                 Solicitar Cotação
               </Button>
@@ -47,15 +50,15 @@ const SeguroFrotas = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div>
               <h2 className="text-white text-4xl font-raleway font-light mb-8">
-                Por Que Ter um Seguro de Frotas?
+                Por Que Ter um Seguro de Celular?
               </h2>
               <p className="text-gray-light text-lg font-extralight leading-relaxed mb-6">
-                O seguro de frotas é essencial para empresas que dependem de múltiplos veículos em suas operações. 
-                Oferece gestão centralizada, proteção patrimonial e redução significativa de custos operacionais.
+                Seu smartphone é uma ferramenta essencial no dia a dia. Proteja seu investimento
+                contra os imprevistos mais comuns como roubo, quedas e danos por líquidos.
               </p>
               <p className="text-gray-light text-lg font-extralight leading-relaxed">
-                Com a Lifeplans, você tem acesso a soluções completas de gestão de frotas com as melhores
-                seguradoras do mercado e suporte especializado.
+                Com a Lifeplans, você garante cobertura completa para seu aparelho com
+                as melhores condições e agilidade no atendimento de sinistros.
               </p>
             </div>
             <div className="space-y-4">
@@ -77,24 +80,24 @@ const SeguroFrotas = () => {
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-black-primary p-8 border border-gray-dark hover:border-gold-accent transition-all duration-300">
-              <Truck className="text-gold-accent mb-6" size={48} strokeWidth={1.5} />
-              <h3 className="text-white text-2xl font-light mb-4">Cobertura Total</h3>
+              <Smartphone className="text-gold-accent mb-6" size={48} strokeWidth={1.5} />
+              <h3 className="text-white text-2xl font-light mb-4">Todas as Marcas</h3>
               <p className="text-gray-medium font-extralight leading-relaxed">
-                Proteção completa para todos os veículos da frota contra colisão, roubo, furto e danos.
+                Cobertura para smartphones de todas as marcas e modelos do mercado.
               </p>
             </div>
             <div className="bg-black-primary p-8 border border-gray-dark hover:border-gold-accent transition-all duration-300">
               <Shield className="text-gold-accent mb-6" size={48} strokeWidth={1.5} />
-              <h3 className="text-white text-2xl font-light mb-4">Assistência 24h</h3>
+              <h3 className="text-white text-2xl font-light mb-4">Proteção Total</h3>
               <p className="text-gray-medium font-extralight leading-relaxed">
-                Suporte completo em todo território nacional com guincho e socorro mecânico.
+                Roubo, furto, quebra, danos por líquidos e defeitos elétricos cobertos.
               </p>
             </div>
             <div className="bg-black-primary p-8 border border-gray-dark hover:border-gold-accent transition-all duration-300">
-              <BarChart3 className="text-gold-accent mb-6" size={48} strokeWidth={1.5} />
-              <h3 className="text-white text-2xl font-light mb-4">Gestão Inteligente</h3>
+              <RefreshCw className="text-gold-accent mb-6" size={48} strokeWidth={1.5} />
+              <h3 className="text-white text-2xl font-light mb-4">Aparelho Reserva</h3>
               <p className="text-gray-medium font-extralight leading-relaxed">
-                Relatórios detalhados, análise de desempenho e otimização de custos operacionais.
+                Não fique sem comunicação enquanto seu aparelho está em reparo ou substituição.
               </p>
             </div>
           </div>
@@ -104,12 +107,12 @@ const SeguroFrotas = () => {
       <section className="section-padding bg-black-primary text-center">
         <div className="container-custom">
           <h2 className="text-white text-4xl lg:text-5xl font-raleway font-light mb-6">
-            Proteja Sua Frota Agora
+            Proteja Seu Celular Agora
           </h2>
           <p className="text-gray-light text-xl font-extralight mb-10 max-w-2xl mx-auto">
-            Faça uma cotação gratuita e descubra como reduzir custos
+            Não espere o imprevisto acontecer. Garanta seu smartphone hoje mesmo.
           </p>
-          <a href="https://wa.me/551541412625?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20Seguro%20de%20Frotas" target="_blank" rel="noopener noreferrer">
+          <a href="https://wa.me/551541412625?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20Seguro%20Celular" target="_blank" rel="noopener noreferrer">
             <Button className="bg-gradient-gold text-black-primary hover:opacity-90 font-light px-12 py-6 rounded-none text-lg shadow-elegant uppercase tracking-wider">
               Solicitar Cotação Gratuita
             </Button>
@@ -123,4 +126,4 @@ const SeguroFrotas = () => {
   );
 };
 
-export default SeguroFrotas;
+export default SeguroCelular;

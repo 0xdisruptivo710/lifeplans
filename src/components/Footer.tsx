@@ -1,4 +1,5 @@
 import logoLifePlans from "@/assets/lifeplans-logo.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const products = [
@@ -55,14 +56,14 @@ const Footer = () => {
             <ul className="space-y-2 md:space-y-3">
               {products.map((product) => (
                 <li key={product.name}>
-                  <a
-                    href={product.link}
+                  <Link
+                    to={product.link}
                     className="text-gray-medium hover:text-gold-accent text-xs md:text-sm transition-colors duration-300 group"
                   >
                     <span className="group-hover:translate-x-1 inline-block transition-transform duration-300">
                       {product.name}
                     </span>
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -74,14 +75,25 @@ const Footer = () => {
             <ul className="space-y-2 md:space-y-3">
               {company.map((item) => (
                 <li key={item.name}>
-                  <a
-                    href={item.link}
-                    className="text-gray-medium hover:text-gold-accent text-xs md:text-sm transition-colors duration-300 group"
-                  >
-                    <span className="group-hover:translate-x-1 inline-block transition-transform duration-300">
-                      {item.name}
-                    </span>
-                  </a>
+                  {item.link.startsWith('/#') ? (
+                    <a
+                      href={item.link}
+                      className="text-gray-medium hover:text-gold-accent text-xs md:text-sm transition-colors duration-300 group"
+                    >
+                      <span className="group-hover:translate-x-1 inline-block transition-transform duration-300">
+                        {item.name}
+                      </span>
+                    </a>
+                  ) : (
+                    <Link
+                      to={item.link}
+                      className="text-gray-medium hover:text-gold-accent text-xs md:text-sm transition-colors duration-300 group"
+                    >
+                      <span className="group-hover:translate-x-1 inline-block transition-transform duration-300">
+                        {item.name}
+                      </span>
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>

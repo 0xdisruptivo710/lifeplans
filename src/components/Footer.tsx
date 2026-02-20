@@ -12,11 +12,11 @@ const Footer = () => {
 
   const company = [
     { name: "Sobre a Lifeplans", link: "/sobre" },
-    { name: "Como Funciona", link: "/como-funciona" },
-    { name: "Blog", link: "/blog" },
+    { name: "Como Funciona", link: "/#como-funciona" },
+    { name: "Blog", link: "/#" },
     { name: "Trabalhe Conosco", link: "/trabalhe-conosco" },
-    { name: "Perguntas Frequentes", link: "/faq" },
-    { name: "Política de Privacidade", link: "/privacidade" },
+    { name: "Perguntas Frequentes", link: "/#faq" },
+    { name: "Política de Privacidade", link: "/#" },
   ];
 
   return (

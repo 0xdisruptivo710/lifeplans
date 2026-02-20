@@ -36,8 +36,8 @@ const ContactForm = () => {
     {
       icon: Phone,
       title: "Telefone",
-      info: "(15) 4141-2625",
-      link: "tel:+551541412625",
+      info: "(15) 3411-8501",
+      link: "tel:+551534118501",
     },
     {
       icon: Mail,
@@ -48,13 +48,13 @@ const ContactForm = () => {
     {
       icon: MapPin,
       title: "Área de Atuação",
-      info: "Sorocaba - SP",
+      info: "Todo o Brasil",
     },
     {
       icon: MessageCircle,
       title: "WhatsApp",
-      info: "(15) 4141-2625",
-      link: "https://wa.me/551541412625?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es",
+      info: "(15) 3411-8501",
+      link: "https://wa.me/551534118501?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es",
     },
   ];
 

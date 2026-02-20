@@ -178,7 +178,7 @@ const Hero = () => {
                 transition={{ duration: 0.8, delay: 1 }}
               >
                 <a
-                  href="https://wa.me/551541412625?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es"
+                  href="https://wa.me/551534118501?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

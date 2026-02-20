@@ -27,7 +27,7 @@ const faqs = [
   },
   {
     question: "Quais são as principais operadoras disponíveis?",
-    answer: "Trabalhamos com as melhores operadoras do mercado: Amil, SulAmérica, Bradesco Saúde, Unimed, Intermédica, entre outras. Cada uma oferece diferentes tipos de cobertura e redes credenciadas para atender suas necessidades específicas no interior de São Paulo."
+    answer: "Trabalhamos com as melhores operadoras do mercado: Amil, SulAmérica, Bradesco Saúde, Unimed, Intermédica, entre outras. Cada uma oferece diferentes tipos de cobertura e redes credenciadas para atender suas necessidades específicas em Sorocaba e interior de São Paulo."
   },
   {
     question: "Como escolher o melhor plano de saúde?",

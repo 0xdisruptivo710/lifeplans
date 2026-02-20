@@ -203,7 +203,7 @@ const Header = () => {
                   <LinkedInIcon className="w-4 h-4 text-gray-light group-hover:text-black-primary transition-colors" />
                 </a>
                 <a
-                  href="https://wa.me/551541412625?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es"
+                  href="https://wa.me/551534118501?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center hover:bg-gold-accent hover:border-gold-accent hover:text-black-primary transition-all duration-300 group"
@@ -215,7 +215,7 @@ const Header = () => {
 
               {/* CTA Button */}
               <a
-                href="https://wa.me/551541412625?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es"
+                href="https://wa.me/551534118501?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -326,7 +326,7 @@ const Header = () => {
                 ))}
 
                 <a
-                  href="https://wa.me/551541412625?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es"
+                  href="https://wa.me/551534118501?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full"
@@ -361,7 +361,7 @@ const Header = () => {
                       <LinkedInIcon className="w-5 h-5 text-gray-light group-hover:text-black-primary transition-colors" />
                     </a>
                     <a
-                      href="https://wa.me/551541412625?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es"
+                      href="https://wa.me/551534118501?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-10 h-10 rounded-full border border-gray-dark flex items-center justify-center hover:bg-gold-accent hover:border-gold-accent hover:text-black-primary transition-all duration-300 group"

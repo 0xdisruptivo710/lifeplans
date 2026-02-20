@@ -192,7 +192,7 @@ const Seguros = () => {
                 SOLICITAR COTAÇÃO
               </Link>
               <a
-                href="https://wa.me/551541412625"
+                href="https://wa.me/551534118501"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border-2 border-white text-white hover:bg-white hover:text-black-primary px-8 py-4 font-medium transition-all duration-300"

@@ -35,7 +35,7 @@ const PlanoSaudeEmpresarial = () => {
               Cuide da saúde dos seus colaboradores e invista no crescimento da sua empresa. 
               Planos corporativos sob medida para seu negócio.
             </p>
-            <a href="https://wa.me/551541412625?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20Plano%20de%20Sa%C3%BAde%20Empresarial" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/551534118501?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20Plano%20de%20Sa%C3%BAde%20Empresarial" target="_blank" rel="noopener noreferrer">
               <Button className="bg-gradient-gold text-black-primary hover:opacity-90 font-light px-10 py-6 rounded-none text-base shadow-elegant uppercase tracking-wider">
                 Solicitar Cotação
               </Button>
@@ -111,7 +111,7 @@ const PlanoSaudeEmpresarial = () => {
           <p className="text-gray-light text-xl font-extralight mb-10 max-w-2xl mx-auto">
             Nossos consultores especializados estão prontos para atender sua empresa
           </p>
-          <a href="https://wa.me/551541412625?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20Plano%20de%20Sa%C3%BAde%20Empresarial" target="_blank" rel="noopener noreferrer">
+          <a href="https://wa.me/551534118501?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20Plano%20de%20Sa%C3%BAde%20Empresarial" target="_blank" rel="noopener noreferrer">
             <Button className="bg-gradient-gold text-black-primary hover:opacity-90 font-light px-12 py-6 rounded-none text-lg shadow-elegant uppercase tracking-wider">
               Falar com Especialista
             </Button>

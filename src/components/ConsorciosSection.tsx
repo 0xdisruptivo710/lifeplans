@@ -142,11 +142,11 @@ const ConsorciosSection = () => {
             <p className="text-gray-light mb-8">
               Fale com nossos especialistas e descubra o consórcio ideal para 
               realizar seus sonhos. Atendimento personalizado em mais de 50 
-              cidades de Sorocaba e região.
+              todo o Brasil.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
-                href="https://wa.me/551541412625?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20cons%C3%B3rcios" 
+                href="https://wa.me/551534118501?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20cons%C3%B3rcios" 
                 target="_blank" 
                 rel="noopener noreferrer"
               >

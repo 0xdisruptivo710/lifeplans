@@ -12,7 +12,7 @@ const PlanoSaudeIndividual = () => {
   const benefits = [
     "Atendimento em hospitais e clínicas de primeira linha",
     "Cobertura para consultas, exames e procedimentos",
-    "Rede credenciada ampla em Sorocaba e região",
+    "Rede credenciada ampla em todo o Brasil",
     "Telemedicina disponível 24/7",
     "Cobertura para urgência e emergência",
     "Planos com ou sem coparticipação",
@@ -46,7 +46,7 @@ const PlanoSaudeIndividual = () => {
               Proteção completa para sua saúde com as melhores operadoras do mercado. 
               Atendimento personalizado e planos sob medida para suas necessidades.
             </p>
-            <a href="https://wa.me/551541412625?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20Plano%20de%20Sa%C3%BAde%20Individual" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/551534118501?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20Plano%20de%20Sa%C3%BAde%20Individual" target="_blank" rel="noopener noreferrer">
               <Button className="bg-gradient-gold text-black-primary hover:opacity-90 font-light px-10 py-6 rounded-none text-base shadow-elegant uppercase tracking-wider">
                 Solicitar Cotação
               </Button>
@@ -153,7 +153,7 @@ const PlanoSaudeIndividual = () => {
           <p className="text-gray-light text-xl font-extralight mb-10 max-w-2xl mx-auto">
             Fale com nossos especialistas e receba uma cotação personalizada
           </p>
-          <a href="https://wa.me/551541412625?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20Plano%20de%20Sa%C3%BAde%20Individual" target="_blank" rel="noopener noreferrer">
+          <a href="https://wa.me/551534118501?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20Plano%20de%20Sa%C3%BAde%20Individual" target="_blank" rel="noopener noreferrer">
             <Button className="bg-gradient-gold text-black-primary hover:opacity-90 font-light px-12 py-6 rounded-none text-lg shadow-elegant uppercase tracking-wider">
               Solicitar Cotação Gratuita
             </Button>

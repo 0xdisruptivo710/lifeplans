@@ -139,7 +139,7 @@ const PlanosOdontologicos = () => {
               As Melhores Operadoras, o Melhor Cuidado com Cobertura Nacional e Acessível
               para Você, Sua Família ou Sua Empresa.
             </p>
-            <a href="https://wa.me/551541412625?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20planos%20odontol%C3%B3gicos" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/551534118501?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20planos%20odontol%C3%B3gicos" target="_blank" rel="noopener noreferrer">
               <GradientButton className="uppercase tracking-wider text-sm px-8 py-4">
                 Solicitar Cotação
               </GradientButton>
@@ -237,7 +237,7 @@ const PlanosOdontologicos = () => {
                     </li>
                   ))}
                 </ul>
-                <a href="https://wa.me/551541412625?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20plano%20odontol%C3%B3gico" target="_blank" rel="noopener noreferrer" className="block">
+                <a href="https://wa.me/551534118501?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20plano%20odontol%C3%B3gico" target="_blank" rel="noopener noreferrer" className="block">
                   <GradientButton className="w-full uppercase tracking-wider">
                     Solicitar Cotação
                   </GradientButton>
@@ -293,7 +293,7 @@ const PlanosOdontologicos = () => {
           <p className="text-gray-light text-lg mb-8 max-w-2xl mx-auto font-light">
             Fale com nossos consultores e encontre o plano odontológico ideal para você, sua família ou sua empresa
           </p>
-          <a href="https://wa.me/551541412625?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20uma%20cota%C3%A7%C3%A3o" target="_blank" rel="noopener noreferrer">
+          <a href="https://wa.me/551534118501?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20uma%20cota%C3%A7%C3%A3o" target="_blank" rel="noopener noreferrer">
             <GradientButton className="uppercase tracking-wider text-sm px-8 py-4">
               Fale Conosco
             </GradientButton>

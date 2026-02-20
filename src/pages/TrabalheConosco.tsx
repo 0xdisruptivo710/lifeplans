@@ -76,7 +76,7 @@ const TrabalheConosco = () => {
       `Vaga de interesse: ${formData.position}%0A%0A` +
       `Mensagem: ${formData.message}`;
     
-    window.open(`https://wa.me/551541412625?text=${message}`, '_blank');
+    window.open(`https://wa.me/551534118501?text=${message}`, '_blank');
     
     toast.success("Redirecionando para o WhatsApp...");
     

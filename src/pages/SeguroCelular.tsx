@@ -36,7 +36,7 @@ const SeguroCelular = () => {
               Proteção total para seu smartphone contra roubo, quebra, danos e oxidação.
               Mantenha seu aparelho sempre protegido.
             </p>
-            <a href="https://wa.me/551541412625?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20Seguro%20Celular" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/551534118501?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20Seguro%20Celular" target="_blank" rel="noopener noreferrer">
               <Button className="bg-gradient-gold text-black-primary hover:opacity-90 font-light px-10 py-6 rounded-none text-base shadow-elegant uppercase tracking-wider">
                 Solicitar Cotação
               </Button>
@@ -112,7 +112,7 @@ const SeguroCelular = () => {
           <p className="text-gray-light text-xl font-extralight mb-10 max-w-2xl mx-auto">
             Não espere o imprevisto acontecer. Garanta seu smartphone hoje mesmo.
           </p>
-          <a href="https://wa.me/551541412625?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20Seguro%20Celular" target="_blank" rel="noopener noreferrer">
+          <a href="https://wa.me/551534118501?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20Seguro%20Celular" target="_blank" rel="noopener noreferrer">
             <Button className="bg-gradient-gold text-black-primary hover:opacity-90 font-light px-12 py-6 rounded-none text-lg shadow-elegant uppercase tracking-wider">
               Solicitar Cotação Gratuita
             </Button>

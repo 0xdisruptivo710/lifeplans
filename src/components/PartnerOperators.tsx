@@ -141,6 +141,19 @@ export const PartnerOperators = () => {
                 <div className="text-center md:hidden">
                   <span className="font-raleway text-xs text-gray-light">{operator.coverage}</span>
                 </div>
+                
+                {operator.name === "Amhe Med" && (
+                  <div className="mt-4 md:mt-6">
+                    <a 
+                      href="https://wa.me/551534118501?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20Amhe%20Med" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="block w-full bg-gradient-gold text-black-primary hover:opacity-90 transition-opacity py-2 px-4 rounded-lg text-center text-sm font-medium"
+                    >
+                      Solicitar Orçamento
+                    </a>
+                  </div>
+                )}
               </div>
             );
           })}

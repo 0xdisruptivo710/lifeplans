@@ -2,21 +2,21 @@ import logoLifePlans from "@/assets/lifeplans-logo.png";
 
 const Footer = () => {
   const products = [
-    "Planos de Saúde Individual",
-    "Planos de Saúde Familiar",
-    "Planos de Saúde Empresarial",
-    "Planos Odontológicos",
-    "Seguro de Vida",
-    "Seguro Auto",
+    { name: "Planos de Saúde Individual", link: "/plano-saude-individual" },
+    { name: "Planos de Saúde Familiar", link: "/plano-saude-familiar" },
+    { name: "Planos de Saúde Empresarial", link: "/plano-saude-empresarial" },
+    { name: "Planos Odontológicos", link: "/planos-odontologicos" },
+    { name: "Seguro de Vida", link: "/seguro-vida" },
+    { name: "Seguro Auto", link: "/seguro-auto" },
   ];
 
   const company = [
-    "Sobre a Lifeplans",
-    "Como Funciona",
-    "Blog",
-    "Trabalhe Conosco",
-    "Perguntas Frequentes",
-    "Política de Privacidade",
+    { name: "Sobre a Lifeplans", link: "/sobre" },
+    { name: "Como Funciona", link: "/como-funciona" },
+    { name: "Blog", link: "/blog" },
+    { name: "Trabalhe Conosco", link: "/trabalhe-conosco" },
+    { name: "Perguntas Frequentes", link: "/faq" },
+    { name: "Política de Privacidade", link: "/privacidade" },
   ];
 
   return (
@@ -33,7 +33,7 @@ const Footer = () => {
               />
             </div>
             <p className="text-gray-medium text-xs md:text-sm leading-relaxed mb-4 md:mb-6 font-light">
-              Há 16 anos protegendo famílias e empresas em Sorocaba e região com planos de saúde, odontológicos e seguros.
+              Há 16 anos protegendo famílias e empresas em Todo o Brasil com planos de saúde, odontológicos e seguros.
             </p>
             <div className="flex space-x-2 md:space-x-3">
               {["f", "i", "in", "t"].map((social) => (
@@ -54,13 +54,13 @@ const Footer = () => {
             <h4 className="text-sm md:text-lg font-light mb-3 md:mb-6 text-white">Nossos Serviços</h4>
             <ul className="space-y-2 md:space-y-3">
               {products.map((product) => (
-                <li key={product}>
+                <li key={product.name}>
                   <a
-                    href="#planos"
+                    href={product.link}
                     className="text-gray-medium hover:text-gold-accent text-xs md:text-sm transition-colors duration-300 group"
                   >
                     <span className="group-hover:translate-x-1 inline-block transition-transform duration-300">
-                      {product}
+                      {product.name}
                     </span>
                   </a>
                 </li>
@@ -73,13 +73,13 @@ const Footer = () => {
             <h4 className="text-sm md:text-lg font-semibold mb-3 md:mb-6 text-white">Institucional</h4>
             <ul className="space-y-2 md:space-y-3">
               {company.map((item) => (
-                <li key={item}>
+                <li key={item.name}>
                   <a
-                    href="#"
+                    href={item.link}
                     className="text-gray-medium hover:text-gold-accent text-xs md:text-sm transition-colors duration-300 group"
                   >
                     <span className="group-hover:translate-x-1 inline-block transition-transform duration-300">
-                      {item}
+                      {item.name}
                     </span>
                   </a>
                 </li>
@@ -93,14 +93,14 @@ const Footer = () => {
             <ul className="space-y-3 md:space-y-4 text-xs md:text-sm">
               <li className="text-gray-medium">
                 <span className="block font-light text-white mb-1">Telefone</span>
-                <a href="tel:+551541412625" className="hover:text-gold-accent transition-colors">
-                  (15) 4141-2625
+                <a href="tel:+551534118501" className="hover:text-gold-accent transition-colors">
+                  (15) 3411-8501
                 </a>
               </li>
               <li className="text-gray-medium">
                 <span className="block font-light text-white mb-1">WhatsApp</span>
-                <a href="https://wa.me/551541412625?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es" target="_blank" rel="noopener noreferrer" className="hover:text-gold-accent transition-colors">
-                  (15) 4141-2625
+                <a href="https://wa.me/551534118501?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es" target="_blank" rel="noopener noreferrer" className="hover:text-gold-accent transition-colors">
+                  (15) 3411-8501
                 </a>
               </li>
               <li className="text-gray-medium">
@@ -110,8 +110,8 @@ const Footer = () => {
                 </a>
               </li>
               <li className="text-gray-medium">
-                <span className="block font-light text-white mb-1">Localização</span>
-                Sorocaba e Região
+                <span className="block font-light text-white mb-1">Atendimento</span>
+                Todo o Brasil
               </li>
             </ul>
             <div className="mt-4 md:mt-6">

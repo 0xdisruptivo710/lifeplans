@@ -4,7 +4,6 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import { GradientButton } from "@/components/ui/gradient-button";
 import {
   Car,
-  Home,
   Bike,
   Trophy,
   TrendingUp,
@@ -64,12 +63,6 @@ const Consorcios = () => {
       title: "Consórcio de Automóveis",
       description: "Adquira seu veículo novo ou seminovo com parcelas que cabem no seu bolso, sem os juros do financiamento tradicional.",
       benefits: ["Cartas de R$ 30 mil a R$ 300 mil", "Parcelas de 60 a 100 meses", "Use como entrada ou valor total"],
-    },
-    {
-      icon: Home,
-      title: "Consórcio Imobiliário",
-      description: "Realize o sonho da casa própria, apartamento ou terreno com planejamento financeiro inteligente.",
-      benefits: ["Cartas de R$ 100 mil a R$ 1 milhão", "Parcelas de 120 a 240 meses", "Use para construção ou reforma"],
     },
     {
       icon: Bike,
@@ -147,10 +140,6 @@ const Consorcios = () => {
     {
       question: "Como funciona a contemplação?",
       answer: "A contemplação pode ocorrer por sorteio mensal (todos têm chance igual) ou por lance (você oferta um valor para antecipar sua carta de crédito).",
-    },
-    {
-      question: "Posso usar o FGTS no consórcio imobiliário?",
-      answer: "Sim! Você pode usar o FGTS para dar lances, complementar o valor da carta ou amortizar parcelas no consórcio imobiliário.",
     },
     {
       question: "E se eu desistir do consórcio?",
@@ -281,7 +270,7 @@ const Consorcios = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {consorcioTypes.map((tipo, index) => (
               <div
                 key={tipo.title}

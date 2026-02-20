@@ -3,7 +3,6 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Button } from "@/components/ui/button";
 import {
-  Home,
   Car,
   Briefcase,
   User,
@@ -23,12 +22,6 @@ const Financiamento = () => {
   }, []);
 
   const tiposFinanciamento = [
-    {
-      icon: Home,
-      title: "Financiamento Imobiliário",
-      description: "Realize o sonho da casa própria com as melhores taxas e condições do mercado.",
-      features: ["Taxas competitivas", "Prazos de até 35 anos", "Use seu FGTS", "Imóveis novos e usados"],
-    },
     {
       icon: Car,
       title: "Financiamento Veicular",
@@ -148,7 +141,7 @@ const Financiamento = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {tiposFinanciamento.map((tipo, index) => {
               const Icon = tipo.icon;
               return (

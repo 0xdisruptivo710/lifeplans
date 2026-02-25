@@ -19,7 +19,7 @@ const StatisticsCounter = () => {
     const interval = duration / steps;
 
     const targets = {
-      clients: 50000,
+      clients: 10000,
       years: 16,
       partners: 50,
       satisfaction: 98,

@@ -99,7 +99,7 @@ const features: Feature[] = [
     icon: Award,
     title: "Excelência",
     description: "Credibilidade e confiança construídas ao longo de anos no mercado",
-    stat: "5.000+",
+    stat: "10.000+",
     statLabel: "clientes atendidos",
     span: "md:col-span-1",
   },

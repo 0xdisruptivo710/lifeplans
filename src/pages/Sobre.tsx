@@ -32,7 +32,7 @@ const values = [
 
 const milestones = [
   { year: "2009", title: "Fundação", description: "Início das operações no interior de São Paulo" },
-  { year: "2015", title: "Expansão", description: "Alcançamos 5.000 clientes atendidos" },
+  { year: "2015", title: "Expansão", description: "Alcançamos 10.000 clientes atendidos" },
   { year: "2020", title: "Consolidação", description: "Parcerias com as maiores operadoras" },
   { year: "2024", title: "Liderança", description: "Atuação em mais de 50 cidades do interior paulista" },
   { year: "2025", title: "Prêmio Porto Bank", description: "Destaque em Consórcio no mercado regional" },

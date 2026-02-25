@@ -62,7 +62,7 @@ const operators = [
   {
     name: "Eva Saúde",
     logo: evaLogo,
-    coverage: "Nacional",
+    coverage: "Regional",
     plans: "Empresarial",
   },
   {

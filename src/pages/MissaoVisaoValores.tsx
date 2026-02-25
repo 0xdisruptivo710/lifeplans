@@ -114,10 +114,10 @@ const MissaoVisaoValores = () => {
               Nossa Visão
             </h2>
             <p className="text-gray-light text-lg leading-relaxed font-extralight">
-              Ser referência no interior de São Paulo como a principal consultoria em planos de saúde e 
-              seguros, reconhecida pela qualidade do atendimento, expertise no mercado e pelo 
-              compromisso inabalável com a satisfação de nossos clientes. Queremos ser a primeira 
-              escolha quando se trata de proteção e cuidado com a saúde e patrimônio em mais de 50 cidades da região.
+              Ser referência nacional em consultoria de planos de saúde e seguros, destacando-se pela 
+              excelência no atendimento, expertise no mercado e um compromisso inabalável com a confiança 
+              e satisfação de nossos clientes. Almejamos ser a primeira escolha quando o assunto é cuidado 
+              com a saúde, proteção patrimonial e segurança, sempre antecipando as necessidades do futuro.
             </p>
           </div>
         </div>

@@ -14,12 +14,18 @@ import {
   Handshake,
   CheckCircle
 } from "lucide-react";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 const Financiamento = () => {
+  const simulacaoRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const scrollToSimulacao = () => {
+    simulacaoRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
   const tiposFinanciamento = [
     {
@@ -117,11 +123,37 @@ const Financiamento = () => {
               condições de financiamento para você. Trabalhamos com os principais bancos e
               instituições financeiras do Brasil.
             </p>
-            <a href="https://wa.me/551534118501?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20Financiamento" target="_blank" rel="noopener noreferrer">
-              <Button className="bg-gradient-gold text-black-primary hover:opacity-90 font-light px-10 py-6 rounded-none text-base shadow-elegant uppercase tracking-wider">
-                Simular Financiamento
-              </Button>
-            </a>
+            <Button
+              onClick={scrollToSimulacao}
+              className="bg-gradient-gold text-black-primary hover:opacity-90 font-light px-10 py-6 rounded-none text-base shadow-elegant uppercase tracking-wider"
+            >
+              Simular Financiamento
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Simulação Teddy Finance */}
+      <section ref={simulacaoRef} className="bg-black-primary">
+        <div className="container-custom py-16">
+          <div className="text-center mb-10">
+            <span className="text-gold-accent font-light text-sm tracking-[0.2em] uppercase mb-4 block">
+              SIMULADOR ONLINE
+            </span>
+            <h2 className="text-white text-3xl md:text-4xl font-raleway font-light mb-4">
+              Simule Seu <span className="text-gold-accent">Financiamento</span>
+            </h2>
+            <p className="text-gray-light max-w-2xl mx-auto font-extralight">
+              Use nosso simulador online para encontrar as melhores condições de crédito de forma rápida e prática
+            </p>
+          </div>
+          <div className="border border-gray-dark overflow-hidden rounded-lg">
+            <iframe
+              src="https://app.teddy360.com.br/#/store/70ef20ba-b8d0-4ec1-b5d6-982332a11c67/v2/?iframe=true"
+              title="Simulador de Financiamento - Teddy Finance"
+              className="w-full border-none h-[210vh] md:h-[100vh]"
+              allowFullScreen
+            />
           </div>
         </div>
       </section>

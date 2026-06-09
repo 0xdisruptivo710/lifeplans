@@ -122,6 +122,17 @@ const Footer = () => {
                 </a>
               </li>
               <li className="text-gray-medium">
+                <span className="block font-light text-white mb-1">Endereço</span>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Av.+Bar%C3%A3o+de+Tatu%C3%AD%2C+741+-+Jardim+Vergueiro%2C+Sorocaba+-+SP%2C+18030-000"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-gold-accent transition-colors not-italic"
+                >
+                  Av. Barão de Tatuí, 741 - Jardim Vergueiro, Sorocaba - SP, 18030-000
+                </a>
+              </li>
+              <li className="text-gray-medium">
                 <span className="block font-light text-white mb-1">Atendimento</span>
                 Todo o Brasil
               </li>
